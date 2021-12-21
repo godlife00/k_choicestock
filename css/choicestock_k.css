@@ -4443,14 +4443,14 @@ html {
   text-align: right;
 }
 
-.globalStock .sub_search .search_top .attention_box .lately_update .lately_swiper .game_allo {
+.globalStock .sub_search .search_top .attention_box .lately_update .game_allo {
   font-size: 0.75rem;
   line-height: 1.33;
   letter-spacing: normal;
   color: #82929F;
 }
 
-.globalStock .sub_search .search_top .attention_box .lately_update .lately_swiper .game_allo span {
+.globalStock .sub_search .search_top .attention_box .lately_update .game_allo span {
   padding-left: 5px;
   color: #333;
 }
