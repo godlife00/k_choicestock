@@ -467,7 +467,7 @@ $(document).ready(function () {
         // return false;
      });
 
-     //경쟁사 투자매력도
+    //경쟁사 투자매력도
     $('.globalStock .sub_search .sub_mid.diagnosis .investCharm_area .compet_chart .chart_area').on("click", function () {        
         $('.globalStock .sub_search .sub_mid.tabs_area .compet_chart .chart_star').hide().css('height', '0');
         $('.globalStock .sub_search .sub_mid.tabs_area .compet_chart .chart_star .more ').hide();
@@ -477,6 +477,11 @@ $(document).ready(function () {
         }, 'fast', function () {            
             $(this).parent().children().children(".more").show();
         });
+    });
+    //경쟁사 투자매력도 - 정렬 버튼 active
+    $('.globalStock .md-modal .sort li').on("click", function () {
+        $('.globalStock .md-modal .sort li').removeClass('active');
+        $(this).addClass('active');
     });
 
     /* 목록 드래그 드롭 */
