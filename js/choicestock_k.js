@@ -331,12 +331,12 @@ $(document).ready(function () {
     });
     // 최근 배당락일
     var swiper = new Swiper('.lately_swiper', {
-        autoplay: {
-            delay: 3500,
-            disableOnInteraction: false,
-        },
-        direction: 'vertical',
-        loop: true,
+        // autoplay: {
+        //     delay: 3500,
+        //     disableOnInteraction: false,
+        // },
+        // direction: 'vertical',
+        // loop: true,
         pagination: {
             el: '.swiper-pagination',
             clickable: true,
