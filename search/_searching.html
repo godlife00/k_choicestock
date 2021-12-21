@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no" />
+    <title>초이스스탁</title>
+    <meta name="robots" content="한경미국주식 - 미국주식 쉽고 편리하게'">
+    <meta name="description" content="투자를 쉽고 편리하게, 미국주식가이드, 종목분석, 종목토론, 데이터히어로">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="theme-color" content="#2C295D">
+    <!-- 오픈 그래프 -->
+    <meta property="og:title" content="한경미국주식 - 미국주식 쉽고 편리하게'" />
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="투자를 쉽고 편리하게, 미국주식가이드, 종목분석, 종목토론, 데이터히어로">
+    <meta property="og:image" content="http://godlife.ivyro.net/test/img/choicestockus_thumb.png">
+    <meta property="og:image:width" content="410" />
+    <meta property="og:image:height" content="210" />
+    <meta property="og:url" content="www.choicestock.co.kr">
+    <!-- 파비콘 favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="img/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <!-- jquery-1.12 -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <!-- highcharts -->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/series-label.js"></script>
+    <script src="https://code.highcharts.com/highcharts-more.js"></script>
+    <script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <script src="https://code.highcharts.com/modules/no-data-to-display.js"></script>
+    <script src="https://code.highcharts.com/modules/debugger.js"></script>
+    <script src="../js/chartjs_k.js"></script>
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+    <!-- css -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <!-- <link rel="stylesheet" type="text/css" href="css/choicestock_k.css" /> -->
+    <link rel="stylesheet" type="text/css" href="../css/choicestock_k.css" />
+    <!-- js -->
+    <script src="../js/choicestock_k.js"></script>
+</head>
+
+<body class="globalStock">
+    <div id="wrap">        
+
+        <!-- 종목검색 class = sub_search-->
+        <div id="container" class="sub_search schfix_inc">
+            <!-- 주요 콘텐츠 -->
+            <!-- 상단 따라다니는 검색바가 포함된 경우 경우 id="container" 에 class = schfix_inc 추가, 검색바 상단 고정된 경우 class = fix_sch 추가  -->
+            <div class="search_top searching">
+                <div class="searchArea">
+                    <div class="top_btn">
+                        <a href="../stock/menu.html" class="btn_memu menu-trigger">
+                            <span> </span>
+                            <span> </span>
+                            <span> </span>
+                        </a>
+                    </div>
+                    <!-- 종목명 검색창 -->
+                    <div class="sch_title">진단</div>
+                    <form action="">
+                        <fieldset>
+                            <input type="text" placeholder="종목명 또는 심볼을 입력하세요.." class="searchInput">
+                            <input type="image" src="../img/icon_search.svg" alt="검색" class="searchBtn">
+                        </fieldset>
+                    </form>
+                </div>
+                <!-- //종목명 검색창 -->
+
+                <!-- 검색어 입력시 자동완성 -->
+                <div class="sch_autocomplete">
+                    <!-- //자동완성 결과 노출 class : _show -->
+                    <!-- 검색결과 있을경우 -->
+                    <ul>
+                        <li>
+                            <a href="search_diagnosis.html" class="_on">
+                                <span class="schCode">APPLAPPLAPPLAPPL</span>
+                                <span class="schList"><strong>Ap</strong>ple Inc 애플</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="search_diagnosis.html">
+                                <span class="schCode">AP</span>
+                                <span class="schList">AmpcoPittsburgh Corporation 애플</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="search_diagnosis.html">
+                                <span class="schCode">APLT</span>
+                                <span class="schList"><strong>Ap</strong>plied Ther<strong>ap</strong>eutics, Inc.
+                                    애플</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <!-- 검색결과 없을경우 -->
+                    <div class="no_result">
+                        <p><strong>sdyfsd</strong>에 대한 검색결과가 없습니다.</p>
+                    </div>
+                    <!-- //no_result -->
+                </div>
+                <!-- //sch_autocomplete -->
+            </div>
+            <!-- //sub_top -->
+
+            <div class="sub_mid latest_results">                
+
+                <div class="tabsArea">
+                    <div class="tab_area">
+                        <ul class="tabs inside_tabs">
+                            <li class="active" rel="tab1">관심종목</li>
+                            <li rel="tab2">인기종목</li>
+                        </ul>                        
+                    </div>                    
+                    
+                    <div class="tab_container">
+                        <!-- 관심종목 -->
+                        <div id="tab1" class="tab_content">
+
+                            <div class="one_step no_bg">
+                                <span class="txt">나의 관심종목은 얼마나 매력적일까?</span>
+                                <a href="searching.html" class="more">원스탑 진단</a>
+                            </div>
+
+                            <div class="tableth_box">
+                                <table cellspacing="0" border="0" class="tableRanking box_table">                                
+                                    <tbody>
+                                        <tr>
+                                            <td class="title">
+                                                <a href="search_diagnosis.html">애
+                                                    <span class="remark">
+                                                        <div class="txt_filter size_M"><i></i><i></i><i></i><i></i></div>
+                                                    </span>                                                    
+                                                </a>
+                                            </td>
+                                            <td class="num">
+                                                <span>12,839.<b>00</b></span>
+                                                <span class="decrease">-2.9<b>%</b></span><!-- increase 증가, decrease 감소 -->
+                                            </td>
+                                            <td class="score"><span>67<b>점</b></span></td>                                            
+                                            <td class="prm_lock">                                                
+                                                <a href="#" class="lock_white"><img src="../img/icon_prm_lock.svg" alt="프리미엄 회원 전용"></a>
+                                            </td>                                            
+                                        </tr>                                        
+                                        <tr>
+                                            <td class="title"><a href="search_diagnosis.html">삼성전자엘지휴대폰</a>
+                                            </td>
+                                            <td class="num">
+                                                <span>69.<b>00</b></span>
+                                                <span class="increase">2.9<b>%</b></span><!-- increase 증가, decrease 감소 -->
+                                            </td>
+                                            <td class="score"><span>67<b>점</b></span></td>
+                                            <td class="num">
+                                                <span>8869.<b>00</b></span>
+                                                <span class="hit">적정주가</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="title"><a href="search_diagnosis.html">삼성전자</a>
+                                            </td>
+                                            <td class="num">
+                                                <span>69.<b>00</b></span>
+                                                <span class="increase">2.9<b>%</b></span><!-- increase 증가, decrease 감소 -->
+                                            </td>
+                                            <td class="score"><span>67<b>점</b></span></td>
+                                            <td class="num">
+                                                <span>8869.<b>00</b></span>
+                                                <span class="hit">적정주가</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="title"><a href="search_diagnosis.html">삼성전자엘지휴대폰</a>
+                                            </td>
+                                            <td class="num">
+                                                <span>69.<b>00</b></span>
+                                                <span class="increase">2.9<b>%</b></span><!-- increase 증가, decrease 감소 -->
+                                            </td>
+                                            <td class="score"><span>67<b>점</b></span></td>
+                                            <td class="num">
+                                                <span>8869.<b>00</b></span>
+                                                <span class="hit">적정주가</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="title"><a href="search_diagnosis.html">삼성전자</a>
+                                            </td>
+                                            <td class="num">
+                                                <span>69.<b>00</b></span>
+                                                <span class="increase">2.9<b>%</b></span><!-- increase 증가, decrease 감소 -->
+                                            </td>
+                                            <td class="score"><span>67<b>점</b></span></td>
+                                            <td class="num">
+                                                <span>8869.<b>00</b></span>
+                                                <span class="hit">적정주가</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="title"><a href="search_diagnosis.html">삼성전자엘지휴대폰</a>
+                                            </td>
+                                            <td class="num">
+                                                <span>69.<b>00</b></span>
+                                                <span class="increase">2.9<b>%</b></span><!-- increase 증가, decrease 감소 -->
+                                            </td>
+                                            <td class="score"><span>67<b>점</b></span></td>
+                                            <td class="num">
+                                                <span>8869.<b>00</b></span>
+                                                <span class="hit">적정주가</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="title"><a href="search_diagnosis.html">삼성전자</a>
+                                            </td>
+                                            <td class="num">
+                                                <span>69.<b>00</b></span>
+                                                <span class="increase">2.9<b>%</b></span><!-- increase 증가, decrease 감소 -->
+                                            </td>
+                                            <td class="score"><span>67<b>점</b></span></td>
+                                            <td class="num">
+                                                <span>8869.<b>00</b></span>
+                                                <span class="hit">적정주가</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="title"><a href="search_diagnosis.html">LG</a>
+                                            </td>
+                                            <td class="num">
+                                                <span>69.<b>00</b></span>
+                                                <span class="increase">2.9<b>%</b></span><!-- increase 증가, decrease 감소 -->
+                                            </td>
+                                            <td class="score"><span>67<b>점</b></span></td>
+                                            <td class="num">
+                                                <span>8869.<b>00</b></span>
+                                                <span class="hit">적정주가</span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>                            
+                            <!-- //tableth_box -->
+                        </div>
+                        <!-- 인기종목 -->
+                        <div id="tab2" class="tab_content">                            
+                            <div class="txt_box">
+                                <p class="txt">투자자가 가장 많이 매매하고 있는 인기종목의 투자매력점수 및 적정주가를 제공합니다.</p>
+                            </div>
+                            <!-- //txt_box -->
+                            <table cellspacing="0" border="0" class="tableRanking box_table">                                
+                                <tbody>
+                                    <tr>
+                                        <td class="title"><a href="search_diagnosis.html">애질런트 테크놀러지스<span
+                                                    class="ticker">AAPL</span></a>
+                                        </td>
+                                        <td class="num">
+                                            <span>8769.<b>00</b></span>
+                                            <span class="increase">2.9<b>%</b></span><!-- increase 증가, decrease 감소 -->
+                                        </td>
+                                        <td class="score"><span>67<b>점</b></span></td>
+                                        <td class="prm_lock">                                                
+                                            <a href="#" class="lock_white"><img src="../img/icon_prm_lock.svg" alt="프리미엄 회원 전용"></a>
+                                        </td>                                           
+                                    </tr>
+                                    <tr>
+                                        <td class="title"><a href="search_diagnosis.html">애질런트 테크놀러지스<span
+                                                    class="ticker">A</span></a>
+                                        </td>
+                                        <td class="num">
+                                            <span>69.<b>00</b></span>
+                                            <span class="decrease">-2.9<b>%</b></span><!-- increase 증가, decrease 감소 -->
+                                        </td>
+                                        <td class="score"><span>67<b>점</b></span></td>
+                                        <td class="recom"><span>고평가</span></td>
+
+                                    </tr>
+                                    <tr>
+                                        <td class="title"><a href="search_diagnosis.html">애질런트 테크놀러지스<span
+                                                    class="ticker">AAPL</span></a>
+                                        </td>
+                                        <td class="num">
+                                            <span>69.<b>00</b></span>
+                                            <span class="increase">2.9<b>%</b></span><!-- increase 증가, decrease 감소 -->
+                                        </td>
+                                        <td class="score"><span>67<b>점</b></span></td>
+                                        <td class="recom"><span>고평가</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="title"><a href="search_diagnosis.html">애질런트 테크놀러지스<span
+                                                    class="ticker">AAPL</span></a>
+                                        </td>
+                                        <td class="num">
+                                            <span>69.<b>00</b></span>
+                                            <span class="increase">2.9<b>%</b></span><!-- increase 증가, decrease 감소 -->
+                                        </td>
+                                        <td class="score"><span>67<b>점</b></span></td>
+                                        <td class="recom"><span>고평가</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="title"><a href="search_diagnosis.html">애질런트 테크놀러지스<span
+                                                    class="ticker">AAPL</span></a>
+                                        </td>
+                                        <td class="num">
+                                            <span>69.<b>00</b></span>
+                                            <span class="increase">2.9<b>%</b></span><!-- increase 증가, decrease 감소 -->
+                                        </td>
+                                        <td class="score"><span>67<b>점</b></span></td>
+                                        <td class="recom"><span>고평가</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <h2 class="tab_title">급등주</h2>
+                            <table cellspacing="0" border="0" class="tableRanking box_table">
+                                <colgroup>
+                                    <col width="100px">
+                                    <col width="">
+                                    <col width="">
+                                    <col width="">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <td class="title"><a href="search_diagnosis.html">애질런트 테크놀러지스<span
+                                                    class="ticker">AAPL</span></a>
+                                        </td>
+                                        <td class="num">
+                                            <span>69.<b>00</b></span>
+                                            <span class="increase">2.9<b>%</b></span><!-- increase 증가, decrease 감소 -->
+                                        </td>
+                                        <td class="score"><span>67<b>점</b></span></td>
+                                        <!-- 프리미엄 서비스 부분 -->
+                                        <td class="prm_lock">                                                
+                                            <a href="#" class="lock_white"><img src="../img/icon_prm_lock.svg" alt="프리미엄 회원 전용"></a>
+                                        </td>                                           
+                                    </tr>
+                                    <tr>
+                                        <td class="title"><a href="search_diagnosis.html">애질런트 테크놀러지스<span
+                                                    class="ticker">A</span></a>
+                                        </td>
+                                        <td class="num">
+                                            <span>69.<b>00</b></span>
+                                            <span class="decrease">-2.9<b>%</b></span><!-- increase 증가, decrease 감소 -->
+                                        </td>
+                                        <td class="score"><span>67<b>점</b></span></td>
+                                        <td class="recom"><span>고평가</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="title"><a href="search_diagnosis.html">애질런트 테크놀러지스<span
+                                                    class="ticker">AAPL</span></a>
+                                        </td>
+                                        <td class="num">
+                                            <span>69.<b>00</b></span>
+                                            <span class="increase">2.9<b>%</b></span><!-- increase 증가, decrease 감소 -->
+                                        </td>
+                                        <td class="score"><span>67<b>점</b></span></td>
+                                        <td class="recom"><span>고평가</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="title"><a href="search_diagnosis.html">애질런트 테크놀러지스<span
+                                                    class="ticker">AAPL</span></a>
+                                        </td>
+                                        <td class="num">
+                                            <span>69.<b>00</b></span>
+                                            <span class="increase">2.9<b>%</b></span><!-- increase 증가, decrease 감소 -->
+                                        </td>
+                                        <td class="score"><span>67<b>점</b></span></td>
+                                        <td class="recom"><span>고평가</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="title"><a href="search_diagnosis.html">애질런트 테크놀러지스<span
+                                                    class="ticker">AAPL</span></a>
+                                        </td>
+                                        <td class="num">
+                                            <span>69.<b>00</b></span>
+                                            <span class="increase">2.9<b>%</b></span><!-- increase 증가, decrease 감소 -->
+                                        </td>
+                                        <td class="score"><span>67<b>점</b></span></td>
+                                        <td class="recom"><span>고평가</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- //tab_container -->
+                </div>
+                <!-- //tabsArea -->
+            </div>
+            <!-- //sub_mid -->
+        </div>
+        <!-- //container -->
+
+        <div id="footer" class="f_main">
+            <div class="service_info">
+                <p class="txt">본 서비스는 투자판단에 참고용으로만 사용하실 수 있으며, 모든 투자판단은 투자자 본인의 책임으로 당사는 그 결과에 대해 법적인 일체의 책임을 지지 않습니다.
+                </p>
+                <span class="f_logo"><img src="../img/f_logo.svg" alt="데이터히어로"> </span>
+            </div>
+        </div>
+        <!-- //footer -->
+    </div>
+    <!-- //wrap -->
+</body>
+
+</html>

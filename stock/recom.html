@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no" />
+    <title>초이스스탁</title>
+    <meta name="robots" content="한경미국주식 - 미국주식 쉽고 편리하게'">
+    <meta name="description" content="투자를 쉽고 편리하게, 미국주식가이드, 종목분석, 종목토론, 데이터히어로">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="theme-color" content="#2C295D">
+    <!-- 오픈 그래프 -->
+    <meta property="og:title" content="한경미국주식 - 미국주식 쉽고 편리하게'" />
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="투자를 쉽고 편리하게, 미국주식가이드, 종목분석, 종목토론, 데이터히어로">
+    <meta property="og:image" content="http://godlife.ivyro.net/test/img/choicestockus_thumb.png">
+    <meta property="og:image:width" content="410" />
+    <meta property="og:image:height" content="210" />
+    <meta property="og:url" content="www.choicestock.co.kr">
+    <!-- 파비콘 favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="img/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <!-- jquery-1.12 -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <!-- highcharts -->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/series-label.js"></script>
+    <script src="https://code.highcharts.com/highcharts-more.js"></script>
+    <script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <script src="https://code.highcharts.com/modules/no-data-to-display.js"></script>
+    <script src="https://code.highcharts.com/modules/debugger.js"></script>
+    <script src="../js/chartjs_k.js"></script>
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+    <!-- css -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <!-- <link rel="stylesheet" type="text/css" href="css/choicestock_k.css" /> -->
+    <link rel="stylesheet" type="text/css" href="../css/choicestock_k.css" />
+    <!-- js -->
+    <script src="../js/choicestock_k.js"></script>
+</head>
+
+<body class="globalStock">
+    <div id="wrap">
+
+        <!-- 종목추천 class = sub_recom-->
+        <div id="container" class="sub_recom schfix_inc">
+            <!-- 주요 콘텐츠 -->
+            <!-- 상단 따라다니는 검색바가 포함된 경우 경우 id="container" 에 class = schfix_inc 추가, 검색바 상단 고정된 경우 class = fix_sch 추가  -->
+            <div class="search_top searching">
+                <div class="searchArea">
+                    <div class="top_btn">
+                        <a href="stock/menu.html" class="btn_memu menu-trigger">
+                            <span> </span>
+                            <span> </span>
+                            <span> </span>
+                        </a>
+                    </div>
+                    <!-- 종목명 검색창 -->
+                    <div class="sch_title">추천</div>
+                    <form action="">
+                        <fieldset>
+                            <input type="text" placeholder="종목명 또는 심볼을 입력하세요.." class="searchInput">
+                            <input type="image" src="../img/icon_search.svg" alt="검색" class="searchBtn">
+                        </fieldset>
+                    </form>
+                </div>
+                <!-- //종목명 검색창 -->
+
+                <!-- 검색어 입력시 자동완성 -->
+                <div class="sch_autocomplete">
+                    <!-- //자동완성 결과 노출 class : _show -->
+                    <!-- 검색결과 있을경우 -->
+                    <ul>
+                        <li>
+                            <a href="search_diagnosis.html" class="_on">
+                                <span class="schCode">APPLAPPLAPPLAPPL</span>
+                                <span class="schList"><strong>Ap</strong>ple Inc 애플</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="search_diagnosis.html">
+                                <span class="schCode">AP</span>
+                                <span class="schList">AmpcoPittsburgh Corporation 애플</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="search_diagnosis.html">
+                                <span class="schCode">APLT</span>
+                                <span class="schList"><strong>Ap</strong>plied Ther<strong>ap</strong>eutics, Inc.
+                                    애플</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <!-- 검색결과 없을경우 -->
+                    <div class="no_result">
+                        <p><strong>sdyfsd</strong>에 대한 검색결과가 없습니다.</p>
+                    </div>
+                    <!-- //no_result -->
+                </div>
+                <!-- //sch_autocomplete -->
+            </div>
+            <!-- //sub_top -->
+
+            <div class="tab_area">
+                <ul class="tbas_lb">
+                    <li class="active"><a href="recom.html">종목추천</a></li>
+                    <li><a href="portfolio.html">포트폴리오</a></li>
+                    <li><a href="game.html">승부주</a></li>
+                </ul>
+            </div>
+            <!-- //tab_area -->
+
+            <div class="sub_top">
+                <div class="txt_box">
+                    <p class="txt">
+                        <strong>투자포인트, 추천가, 목표가, 매도가</strong>를 포함한 매매전략을 제공합니다.
+                        종목추천 주기는 주 2회(화,목) 입니다.
+                    </p>
+                </div>
+                <!-- //txt_box -->
+            </div>
+            <!-- //sub_top -->
+
+            <div class="sub_mid service_info">                
+                <p class="txt"><i></i>종목추천&amp;포트폴리오 운영안내 <a href="#more" class="more">자세히</a></p>                
+                
+            </div>
+            <!-- //service_info -->
+
+            <div class="sub_mid eventPicks_area">
+
+                <div class="ptfo_area">
+                    <span class="day">19.05/15 기준</span>
+                    
+                    <div class="recom_chartList">
+                        <div class="chartData">
+                            <div class="left">
+                                <h4 class="event_name">
+                                    <span data-modal="modal-4" class="btn_free md-trigger">존<span class="remark">
+                                            <div class="txt_filter size_M"><i></i><i></i><i></i><i></i></div>
+                                        </span>
+                                    </span>
+                                </h4>
+                                <ul class="info">
+                                    <li class="sum">
+                                        <span class="eng"><a href="">전기차 시장 성장 주목… 올해 실적 급증</a></span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- //chartData -->
+                        <div class="chartGoal">
+                            <div class="target">
+                                <span class="th">목표가</span>
+                                <span class="att dod prm_lock">                                    
+                                    <a href="#" class="lock_white"><img src="../img/icon_prm_lock.svg" alt="프리미엄 회원 전용"></a>                                    
+                                </span>                                                                                        
+                            </div>
+                            <div class="revenue">
+                                <span class="th">수익률</span>
+                                <span class="increase dod">23.99<b>%</b></span>
+                                <!-- increase 증가, decrease 감소 -->
+                            </div>
+                        </div>
+                        <!-- //chartGoal -->                                    
+                        
+                    </div>
+                    
+                    <div class="recom_chartList">
+                        <div class="chartData">
+                            <div class="left">
+                                <h4 class="event_name"><a href="recom_view.html">마이크로소프트마이크로소프트</a></h4>
+                                <ul class="info">
+                                    <li class="sum">
+                                        <span class="eng"><a href="">전기차 시장 성장 주목… 올해 실적 급증전기차 시장 성장 주목… 올해 실적 급증전기차 시장 성장 주목… 올해 실적 급증</a></span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- //chartData -->
+                        <div class="chartGoal">
+                            <div class="target">
+                                <span class="th">목표가</span>
+                                <span class="att dod">8888.<b>88</b></span>                                            
+                            </div>
+                            <div class="revenue">
+                                <span class="th">수익률</span>
+                                <span class="increase dod">888.88<b>%</b></span>
+                                <!-- increase 증가, decrease 감소 -->
+                            </div>
+                        </div>
+                        <!-- //chartGoal -->           
+                    </div>
+                    <div class="recom_chartList">
+                        <div class="chartData">
+                            <div class="left">
+                                <h4 class="event_name"><a href="recom_view.html">마이크로소프트</a></h4>
+                                <ul class="info">
+                                    <li class="sum">
+                                        <span class="eng"><a href="">전기차 시장 성장 주목… 올해 실적 급증전기차 시장 성장 주목… 올해 실적 급증</a></span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- //chartData -->
+                        <div class="chartGoal">
+                            <div class="target">
+                                <span class="th">목표가</span>
+                                <span class="att dod">5335.<b>00</b></span>                                            
+                            </div>
+                            <div class="revenue">
+                                <span class="th">수익률</span>
+                                <span class="decrease dod">-23.99<b>%</b></span>
+                                <!-- increase 증가, decrease 감소 -->
+                            </div>
+                        </div>
+                        <!-- //chartGoal -->           
+                    </div>                                
+                    <div class="recom_chartList">
+                        <div class="chartData">
+                            <div class="left">
+                                <h4 class="event_name"><a href="recom_view.html">마이크로소프트</a></h4>
+                                <ul class="info">
+                                    <li class="sum">
+                                        <span class="eng"><a href="">전기차 시장 성장 주목… 올해 실적 급증</a></span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- //chartData -->
+                        <div class="chartGoal">
+                            <div class="target">
+                                <span class="th">목표가</span>
+                                <span class="att dod">5335.<b>00</b></span>                                            
+                            </div>
+                            <!-- 목표가 달성 attainment_com -->
+                            <div class="revenue attainment_com">
+                                <span class="th">목표가 달성</span>
+                                <span class="dod">823.99<b>%</b></span>
+                                <!-- increase 증가, decrease 감소 -->
+                            </div>
+                        </div>
+                        <!-- //chartGoal -->           
+                    </div>         
+                    <div class="recom_chartList">
+                        <div class="chartData">
+                            <div class="left">
+                                <h4 class="event_name"><a href="recom_view.html">마이크로소프트</a></h4>
+                                <ul class="info">
+                                    <li class="sum">
+                                        <span class="eng"><a href="">전기차 시장 성장 주목… 올해 실적 급증</a></span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- //chartData -->
+                        <div class="chartGoal">
+                            <div class="target">
+                                <span class="th">목표가</span>
+                                <span class="att dod">5335.<b>00</b></span>                                            
+                            </div>
+                            <!-- 손절가매도 loss_cut -->
+                            <div class="revenue loss_cut">
+                                <span class="th">손절가매도</span>
+                                <span class="dod">-23.99<b>%</b></span>
+                                <!-- increase 증가, decrease 감소 -->
+                            </div>
+                        </div>
+                        <!-- //chartGoal -->           
+                    </div>   
+                    
+                    <div class="recom_chartList">
+                        <div class="chartData">
+                            <div class="left">
+                                <h4 class="event_name"><a href="recom_view.html">마이크로소프트</a></h4>
+                                <ul class="info">
+                                    <li class="sum">
+                                        <span class="eng"><a href="">전기차 시장 성장 주목… 올해 실적 급증</a></span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- //chartData -->
+                        <div class="chartGoal">
+                            <div class="target">
+                                <span class="th">목표가</span>
+                                <span class="att dod">5335.<b>00</b></span>                                            
+                            </div>
+                            <!-- 교체매도 attainment -->
+                            <div class="revenue attainment">
+                                <span class="th">교체매도</span>
+                                <span class="increase dod">823.99<b>%</b></span>
+                                <!-- increase 증가, decrease 감소 -->
+                            </div>
+                        </div>
+                        <!-- //chartGoal -->           
+                    </div> 
+
+                    <div class="recom_chartList">
+                        <div class="chartData">
+                            <div class="left">
+                                <h4 class="event_name"><a href="recom_view.html">마이크로소프트</a></h4>
+                                <ul class="info">
+                                    <li class="sum">
+                                        <span class="eng"><a href="">전기차 시장 성장 주목… 올해 실적 급증</a></span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- //chartData -->
+                        <div class="chartGoal">
+                            <div class="target">
+                                <span class="th">목표가</span>
+                                <span class="att dod">5335.<b>00</b></span>                                            
+                            </div>
+                            <!-- 교체매도 attainment -->
+                            <div class="revenue attainment">
+                                <span class="th">교체매도</span>
+                                <span class="decrease dod">-23.99<b>%</b></span>
+                                <!-- increase 증가, decrease 감소 -->
+                            </div>
+                        </div>
+                        <!-- //chartGoal -->           
+                    </div> 
+
+                    <div class="btn_more">
+                        <a href="">더보기</a>
+                    </div>
+                    <!-- //btn_more -->
+                </div>
+                <!-- //ptfo_area -->
+
+                <div class="bandchart_sume" id="more">
+
+					<div class="box info">
+						<p><i></i>‘종목추천&amp;포트폴리오’는 (주)데이터히어로의 금융 빅 데이터 분석과 알고리즘에 따라 저평가 우량주를 최적의 시점에 매매할 수 있도록 도움을 드리는 서비스입니다.</p>
+					</div>
+					<!-- //box -->
+
+					<div class="box sum">
+						<p class="title">종목추천&amp;포트폴리오 서비스는</p>
+						<p class="txt">매일 미국주식 5,700여개 종목에 대한 실적, 재무, 적정주가, 주가추세 분석을 통해 최고의 주식을 발굴합니다. </p>
+						<ul>
+							<li>기업의 수익성, 성장성, 안전성, 독점력 등을 평가하고 최고의 우량주를 발굴합니다.</li>
+							<li>자체 개발한 적정주가 산정 알고리즘에 따라 최적의 적정주가를 계산합니다.</li>
+							<li>주가가 빠르게 상승할 가능성이 있는지, 단기/중기/장기 주가 추세 분석을 통해 최적의 매매 시점을 알려 드립니다. </li>
+						</ul>                        
+					</div>
+					<!-- //box -->
+
+					<div class="box rule">
+						<p class="title">[운영원칙]</p>
+						<ul>
+							<li>종목 추천은 주 2회(화,목) 진행합니다.</li>
+							<li>포트폴리오 종목별 투자비중은 3%입니다.</li>
+							<li>포트폴리오 최대 보유 종목수는 33종목입니다.(장기보유 9종목, 3개월 보유 24종목) 단, 목표가/손절가 도달시 일괄 매도를 원칙으로 합니다.</li>
+							<li>CNN의 주식시장 탐욕, 공포 지수 등을 활용해 주식과 현금 비중을 조절합니다.</li>
+						</ul>
+					</div>
+					<!-- //box -->
+				</div>
+
+            </div>
+            <!-- //sub_mid -->
+        </div>
+        <!-- //container -->
+
+        <div id="footer" class="f_main">
+            <div class="service_info">
+                <p class="txt">본 서비스는 투자판단에 참고용으로만 사용하실 수 있으며, 모든 투자판단은 투자자 본인의 책임으로 당사는 그 결과에 대해 법적인 일체의 책임을 지지 않습니다.
+                </p>
+                <span class="f_logo"><img src="../img/f_logo.svg" alt="데이터히어로"> </span>
+            </div>
+        </div>
+        <!-- //footer -->
+    </div>
+    <!-- //wrap -->
+</body>
+
+</html>

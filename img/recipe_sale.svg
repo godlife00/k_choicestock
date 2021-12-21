@@ -1,0 +1,15 @@
+<svg id="지금_세일중" data-name="지금 세일중" xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60">
+  <rect id="사각형_2821" data-name="사각형 2821" width="60" height="60" fill="#fff" opacity="0"/>
+  <g id="그룹_2908" data-name="그룹 2908" transform="translate(19.77 4.391)">
+    <path id="교차_1" data-name="교차 1" d="M16.738,18.751a9.437,9.437,0,1,0-11.174,0H2.993A11.15,11.15,0,0,1,19.036,3.267a11.149,11.149,0,0,1,.274,15.485Z" fill="#fff"/>
+    <g id="그룹_2907" data-name="그룹 2907" transform="translate(5.105 5.623)">
+      <rect id="사각형_3134" data-name="사각형 3134" width="1.389" height="11.109" rx="0.694" transform="matrix(0.966, -0.259, 0.259, 0.966, 0.873, 0.359)" fill="#fff"/>
+      <rect id="사각형_3137" data-name="사각형 3137" width="1.389" height="8.291" rx="0.694" transform="matrix(0.966, -0.259, 0.259, 0.966, 5.317, 3.081)" fill="#fff"/>
+      <rect id="사각형_3135" data-name="사각형 3135" width="1.389" height="11.109" rx="0.694" transform="matrix(0.966, 0.259, -0.259, 0.966, 10.044, 0)" fill="#fff"/>
+      <rect id="사각형_3136" data-name="사각형 3136" width="1.389" height="8.332" rx="0.694" transform="matrix(0.966, 0.259, -0.259, 0.966, 5.622, 2.683)" fill="#fff"/>
+      <rect id="사각형_3138" data-name="사각형 3138" width="1.389" height="12.093" rx="0.694" transform="translate(0 6.239) rotate(-90)" fill="#fff"/>
+    </g>
+  </g>
+  <path id="Icon_awesome-cart-arrow-down" data-name="Icon awesome-cart-arrow-down" d="M34.48,21.861H14.454l.447,2.186H33.238a1.64,1.64,0,0,1,1.6,2l-.377,1.658a3.827,3.827,0,1,1-4.345.711H15.793a3.826,3.826,0,1,1-4.58-.585L6.414,4.372H1.64A1.64,1.64,0,0,1,0,2.733V1.64A1.64,1.64,0,0,1,1.64,0h7A1.64,1.64,0,0,1,10.25,1.311l.626,3.061H37.71a1.64,1.64,0,0,1,1.6,2l-3.229,14.21A1.64,1.64,0,0,1,34.48,21.861Zm-6.947-8.744h-2.94v-4.1a.82.82,0,0,0-.82-.82h-1.64a.82.82,0,0,0-.82.82v4.1h-2.94a.82.82,0,0,0-.58,1.4L22.374,19.1a.82.82,0,0,0,1.159,0l4.579-4.579A.82.82,0,0,0,27.533,13.117Z" transform="translate(7.861 18.677)" fill="#fff"/>
+  <rect id="사각형_3139" data-name="사각형 3139" width="54.857" height="1.954" rx="0.977" transform="translate(3.439 53.655)" fill="#fff"/>
+</svg>

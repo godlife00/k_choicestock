@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no" />
+    <title>초이스스탁</title>
+    <meta name="robots" content="한경미국주식 - 미국주식 쉽고 편리하게'">
+    <meta name="description" content="투자를 쉽고 편리하게, 미국주식가이드, 종목분석, 종목토론, 데이터히어로">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="theme-color" content="#2C295D">
+    <!-- 오픈 그래프 -->
+    <meta property="og:title" content="한경미국주식 - 미국주식 쉽고 편리하게'" />
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="투자를 쉽고 편리하게, 미국주식가이드, 종목분석, 종목토론, 데이터히어로">
+    <meta property="og:image" content="http://godlife.ivyro.net/test/img/choicestockus_thumb.png">
+    <meta property="og:image:width" content="410" />
+    <meta property="og:image:height" content="210" />
+    <meta property="og:url" content="www.choicestock.co.kr">
+    <!-- 파비콘 favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="img/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <!-- jquery-1.12 -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <!-- highcharts -->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/series-label.js"></script>
+    <script src="https://code.highcharts.com/highcharts-more.js"></script>
+    <script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <script src="https://code.highcharts.com/modules/no-data-to-display.js"></script>
+    <script src="https://code.highcharts.com/modules/debugger.js"></script>
+    <script src="../js/chartjs_k.js"></script>
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+    <!-- css -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <!-- <link rel="stylesheet" type="text/css" href="css/choicestock_k.css" /> -->
+    <link rel="stylesheet" type="text/css" href="../css/choicestock_k.css" />
+    <!-- js -->
+    <script src="../js/choicestock_k.js"></script>
+</head>
+
+<body class="globalStock">
+    <div id="wrap">
+
+        <div id="header" class="header header_sch">
+            <div class="headerTop">
+                <h1 class="headerLogo"><span>종목추천</span></h1>
+                <a href="#" class="his_back"><img src="../img/icon_back.svg" alt="뒤로가기"></a>
+                <div class="hm">
+
+                </div>
+                <!-- //hm -->
+            </div>
+            <!-- //headerTop -->
+        </div>
+
+        <!-- 종목추천 class = sub_recom-->
+        <div id="container" class="sub_recom">
+            <!-- 주요 콘텐츠 -->
+            <div class="sub_top view">
+                <div class="chart_area">
+                    <div class="chartData">
+                        <h2 class="title">
+                            <a href="../search/search_outline.html">카카오게임즈</a>
+                        </h2>
+                        <ul class="detail">
+                            <li class="num">154.<b>53</b></li>
+                            <li class="per">
+                                <span class="increase"> 4.<b>81</b> <span>(+3.33<b>%</b>)</span></span>
+                                <!-- increase 증가, decrease 감소 -->
+                            </li>
+                            <li class="day">19.05/15, USD</li>
+                        </ul>
+
+                        <div class="detail_data">
+                            <table cellspacing="0" border="1" class="tableRanking">
+                                <tbody>
+                                    <tr>
+                                        <th class="recom"><span>추천가</span><span class="day">19.04/20</span></th>
+                                        <th class="stopLoss"><span>손절가</span></th>
+                                        <th class="goal_num"><span>목표가<span class="day">19.04/20</span></th>
+                                    </tr>
+                                    <tr>
+                                        <td class="recom_num"><span>1253.<b>03</b></span></td>
+                                        <td class="stopLoss_num"><span>157,<b>03</b></span></td>
+                                        <td class="goal_num"><span>157,<b>03</b></span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <!--  수익률(목표가-현재가 수익%) 표시 -->
+                            <div class="revenue_box" style="display: none;">
+                                <span class="title"><i></i> 수익률</span>
+                                <span class="percent"><i></i> 10.<b>23%</b></span>
+                            </div>
+                            <!-- //수익률(목표가-현재가 수익%) 표시 -->
+
+                            <!-- 목표가 달성시 -->
+                            <div class="attainment_box">
+                                <span class="title"><i></i> 목표가달성</span>
+                                <span class="percent"><i></i> 10.<b>23%</b></span>
+                            </div>
+                            <!-- //목표가 달성시 -->
+                        </div>
+
+                        <!-- //detail -->
+                        <div id="containerArea_1" class="containerArea_1"></div><!-- 종목추천 id = containerArea_1 -->
+                    </div>
+                    <!-- //chartData -->
+                </div>
+                <!-- //chart_area -->
+            </div>
+            <!-- //sub_top -->
+            
+            <div class="sub_mid outline_box">    
+                <h3 class="title"><a href="../search/search_diagnosis.html">종목진단</a></h3>
+                <div class="box">
+                    <p class="title"><span>투자매력점수</span></p>
+                    <div class="con">
+                        <div class="charmNum_box">
+                            <strong class="charm_num">88</strong>
+                            <p class="charm_average">업종평균 <b>54</b></p>
+                        </div>
+                        <!-- //charmNum_box -->
+                        <p class="charm_ranking">전체상위 <span>0.45%</span></p>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <p class="title"><span>투자지표</span></p>
+                    <div class="con">
+                        <div class="data_attainment">
+                            <ul>
+                                <li>PER(배)
+                                    <span>8,887<b>.80</b></span>
+                                </li>
+                                <li>PSR(배)
+                                    <span>27<b>.80</b></span>
+                                </li>
+                                <li>ROE(%)
+                                    <span>27<b>.20</b></span>
+                                </li>
+                                <li>DY(%)
+                                    <span>27<b>.50</b></span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //outline_box -->
+
+            <div class="adequate_stock">
+                <div class="box">                    
+                    <div class="con">
+                        <div class="adequate_price">
+                            <div class="line">
+                                <!-- 활성화된 적정주가 domain active -->
+                                <div class="domain active">
+                                    <div class="price">
+                                        <span>현재가</span>
+                                        <span class="sync_price">2333.<b>00</b></span>
+                                    </div>
+                                    <div class="price_line">
+                                        <span>적극매수</span>
+                                    </div>
+                                </div>
+                                <div class="domain">
+                                    <div class="price">
+                                        <span>현재가</span>
+                                        <span class="sync_price">232.<b>42</b></span>
+                                    </div>
+                                    <div class="price_line">
+                                        <span>매수</span>
+                                    </div>
+                                </div>
+                                <div class="domain active">
+                                    <div class="price">
+                                        <span>현재가</span>
+                                        <span class="sync_price">232.<b>42</b></span>
+                                    </div>
+                                    <div class="price_line">
+                                        <span>보유</span>
+                                        <span class="g_action" style="left: 50%;"></span>
+                                    </div>
+                                </div>
+                                <div class="domain">
+                                    <div class="price">
+                                        <span>현재가</span>
+                                        <span class="sync_price">232.<b>42</b></span>
+                                    </div>
+                                    <div class="price_line">
+                                        <span>매도</span>
+                                    </div>
+                                </div>
+                                <div class="domain active">
+                                    <div class="price">
+                                        <span>현재가</span>
+                                        <span class="sync_price">232.<b>42</b></span>
+                                    </div>
+                                    <div class="price_line">
+                                        <span>적극매도</span>
+                                    </div>
+                                </div>
+                            </div>                            
+                        </div>
+                        <!-- //adequate_price -->
+                    </div>
+                    
+                </div>
+            </div>
+            <!-- //adequate_stock -->
+
+            <!-- 벨류라인 데이터가 없는 경우 -->
+            <div class="adequate_stock">
+                <div class="box">                    
+                    <div class="con">
+                        <div class="adequate_price">
+                            <div class="nodata_area">
+                                <div class="no_data">밸류에이션 데이터부족</div>
+
+                                <div class="line">
+                                    <div class="domain">
+                                        <div class="price_line">
+                                            <span>적극매수</span>
+                                        </div>
+                                    </div>
+                                    <div class="domain">
+                                        <div class="price_line">
+                                            <span>매수</span>
+                                        </div>
+                                    </div>
+                                    <div class="domain">
+                                        <div class="price_line">
+                                            <span>보유</span>
+                                            <span class="g_action" style="left: 50%;"></span>
+                                        </div>
+                                    </div>
+                                    <div class="domain">
+                                        <div class="price_line">
+                                            <span>매도</span>
+                                        </div>
+                                    </div>
+                                    <div class="domain">
+                                        <div class="price_line">
+                                            <span>적극매도</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- //nodata_area -->
+                        </div>
+                        <!-- //adequate_price -->
+                    </div>
+                </div>
+            </div>
+            <!-- //adequate_stock -->
+
+            <div class="bandchart_more">
+                <p><i></i>‘적정주가’는 데이터히어로가 빅 데이터 분석과 알고리즘 기술을 활용해 자체 개발한 로직에 따라 계산합니다.<a href="#more" class="more">[자세히]</a></p>                
+            </div>
+            <!-- //bandchart_more -->
+
+            <div class="sub_mid chart_point">       
+                <h4 class="title">투자포인트</h4>
+                <div class="tab_content">
+                    <span>①</span>
+                    올해 3분기 매출액 36억 달러(전년비 ▲ 4.6%)
+                    영업이익 18억 달러 (전년비 ▲ 6.3%)
+                    순이익 15.4억 달러(전년비 ▲ 7.1%) 로 성장지속
+                    <a href="">순이익 15.4억 달러(전년비 ▲ 7.1%) 로 성장지속</a>
+                    <br /><br />
+                    <span>②</span>
+                    50%에 달하는 높은 영업이익률, 매출액 대비 15%의
+                    연구개발비로 향후 신약 파이프라인 투자 지속
+                    <br /><br />
+                    <span>③</span>
+                    종양학, 신경 면역학 분약에서 3개 시판 제품이 성공을
+                    거두며 높은 수익성 달성 중
+                    <br /><br />
+                    <span></span>알츠하이머 치료제 후보인 아두카누맙이 2020년 초
+                    미식품의약국(FDA)에 정식 출원 예정
+                    <br /><br />
+                    <span>⑤</span>
+                    다발성 경화증(Multiple Sclerosis)부문의 안정적인
+                    성장과 파킨슨, 유전자 치료 관련 신약 등 혁신적인
+                    파이프라인 보유
+
+                    <div class="catalyst">
+
+                        <h4 class="title">추가촉매 이벤트</h4>
+                        <div><a href="">2019-12-03 Evercore ISI HealthCONx</a></div>
+                        <div><a href="">2019-12-03 Evercore ISI HealthCONx Conferenc019-12-03 Evercore ISI
+                                HealthCONx Conference</a></div>
+                        <div><a href="">2019-12-03 Evercore ISI HealthCONx</a></div>
+                        <div><a href="">2019-12-03 Evercore ISI HealthCONx</a></div>
+                        <div><a href="">2019-12-03 Evercore ISI HealthCONx</a></div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //container -->
+
+        <div id="footer" class="f_main">
+            <div class="service_info">
+                <p class="txt">본 서비스는 투자판단에 참고용으로만 사용하실 수 있으며, 모든 투자판단은 투자자 본인의 책임으로 당사는 그 결과에 대해 법적인 일체의 책임을 지지 않습니다.
+                </p>
+                <span class="f_logo"><img src="../img/f_logo.svg" alt="데이터히어로"> </span>
+            </div>
+        </div>
+        <!-- //footer -->
+    </div>
+    <!-- //wrap -->
+</body>
+
+</html>

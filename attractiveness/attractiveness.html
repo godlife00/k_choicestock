@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no" />
+    <title>초이스스탁</title>
+    <meta name="robots" content="한경미국주식 - 미국주식 쉽고 편리하게'">
+    <meta name="description" content="투자를 쉽고 편리하게, 미국주식가이드, 종목분석, 종목토론, 데이터히어로">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="theme-color" content="#2C295D">
+    <!-- 오픈 그래프 -->
+    <meta property="og:title" content="한경미국주식 - 미국주식 쉽고 편리하게'" />
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="투자를 쉽고 편리하게, 미국주식가이드, 종목분석, 종목토론, 데이터히어로">
+    <meta property="og:image" content="http://godlife.ivyro.net/test/img/choicestockus_thumb.png">
+    <meta property="og:image:width" content="410" />
+    <meta property="og:image:height" content="210" />
+    <meta property="og:url" content="www.choicestock.co.kr">
+    <!-- 파비콘 favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="img/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <!-- jquery-1.12 -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <!-- highcharts -->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/series-label.js"></script>
+    <script src="https://code.highcharts.com/highcharts-more.js"></script>
+    <script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <script src="https://code.highcharts.com/modules/no-data-to-display.js"></script>
+    <script src="https://code.highcharts.com/modules/debugger.js"></script>
+    <script src="../js/chartjs_k.js"></script>
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+    <!-- css -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <!-- <link rel="stylesheet" type="text/css" href="css/choicestock_k.css" /> -->
+    <link rel="stylesheet" type="text/css" href="../css/choicestock_k.css" />
+    <!-- js -->
+    <script src="../js/choicestock_k.js"></script>
+</head>
+
+<body class="globalStock">
+    <div id="wrap">
+
+        <!-- 전종목 투자매력도 class = sub_attract-->
+        <div id="container" class="sub_attract schfix_inc">
+
+            <!-- 주요 콘텐츠 -->
+            <!-- 상단 따라다니는 검색바가 포함된 경우 경우 id="container" 에 class = schfix_inc 추가, 검색바 상단 고정된 경우 class = fix_sch 추가  -->
+            <div class="search_top searching">
+                <div class="searchArea">
+                    <div class="top_btn">
+                        <a href="stock/menu.html" class="btn_memu menu-trigger">
+                            <span> </span>
+                            <span> </span>
+                            <span> </span>
+                        </a>
+                    </div>
+                    <!-- 종목명 검색창 -->
+                    <div class="sch_title">발굴</div>
+                    <form action="">
+                        <fieldset>
+                            <input type="text" placeholder="종목명 또는 심볼을 입력하세요.." class="searchInput">
+                            <input type="image" src="../img/icon_search.svg" alt="검색" class="searchBtn">
+                        </fieldset>
+                    </form>
+                </div>
+                <!-- //종목명 검색창 -->
+
+                <!-- 검색어 입력시 자동완성 -->
+                <div class="sch_autocomplete">
+                    <!-- //자동완성 결과 노출 class : _show -->
+                    <!-- 검색결과 있을경우 -->
+                    <ul>
+                        <li>
+                            <a href="search_diagnosis.html" class="_on">
+                                <span class="schCode">APPLAPPLAPPLAPPL</span>
+                                <span class="schList"><strong>Ap</strong>ple Inc 애플</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="search_diagnosis.html">
+                                <span class="schCode">AP</span>
+                                <span class="schList">AmpcoPittsburgh Corporation 애플</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="search_diagnosis.html">
+                                <span class="schCode">APLT</span>
+                                <span class="schList"><strong>Ap</strong>plied Ther<strong>ap</strong>eutics, Inc.
+                                    애플</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <!-- 검색결과 없을경우 -->
+                    <div class="no_result">
+                        <p><strong>sdyfsd</strong>에 대한 검색결과가 없습니다.</p>
+                    </div>
+                    <!-- //no_result -->
+                </div>
+                <!-- //sch_autocomplete -->
+            </div>
+            <!-- //sub_top -->
+
+            <div class="tab_area">
+                <ul class="tbas_lb">
+                    <li class="active"><a href="../attractiveness/attractiveness.html">투자매력도</a></li>
+                    <li><a href="../stock/recipe.html">레시피</a></li>
+                    <!-- <li><a href="../stock/catch.html">캐치</a></li> -->
+                    <li><a href="../stock/note.html">종목노트</a></li>
+                </ul>
+            </div>
+            <!-- //tab_area -->
+
+            <div class="sub_top">
+                <div class="txt_box">
+                    <p class="txt">
+                        국내주식 2,300여개 기업에 대한 투자매력도 순위를 제공합니다. 투자매력 점수가 높을 수록 우량 기업입니다.
+                    </p>
+                </div>
+                <!-- //txt_box -->
+            </div>
+            <!-- //sub_top -->
+
+            <div class="sub_mid attract_sub">
+                <div class="set">
+                    <ul>
+                        <li class=""><strong>시가총액</strong>20억달러~100억달러 미만</li>
+                        <li class="">흑자기업</li>
+                    </ul>
+                    <a href="#setting" data-modal="modal-3" class="md-trigger btn_schSet button"><i></i>검색</a>
+                </div>
+
+                <p class="table_guide">*항목 점수/시가총액 순 정렬</p>
+                <table cellspacing="0" border="0" class="tableRanking attract_table">
+                    <tbody>
+                        <tr>
+                            <th class="">
+                                <span class="txt_guide"></span>
+                            </th>
+                            <th class="">투자매력</th>
+                            <th class="">배당매력</th>
+                            <th class="">적정주가</th>
+                        </tr>
+                        <tr>
+                            <td class="title">
+                                <a href="">카카오게임즈카카오게임즈</a>
+                                <div class="num">
+                                    <span>98,869</span>
+                                    <span class="increase">+2.99<b>%</b></span><!-- increase 증가, decrease 감소 -->
+                                </div>
+                            </td>
+                            <td>
+                                <span>100점</span>
+                            </td>
+                            <td>
+                                <span>20</span>
+                            </td>
+                            <td>
+                                <span>8869.<b>00</b></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="title">
+                                <a href="">삼성</a>
+                                <div class="num">
+                                    <span>98,869</span>
+                                    <span class="increase">+2.99<b>%</b></span><!-- increase 증가, decrease 감소 -->
+                                </div>
+                            </td>
+                            <td>
+                                <span>99점</span>
+                            </td>
+                            <td>
+                                <span>20</span>
+                            </td>
+                            <td>
+                                <span>8869.<b>00</b></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="title">
+                                <a href="">카카오게임즈카카오게임즈</a>
+                                <div class="num">
+                                    <span>98,869</span>
+                                    <span class="increase">+2.99<b>%</b></span><!-- increase 증가, decrease 감소 -->
+                                </div>
+                            </td>
+                            <td>
+                                <span>100점</span>
+                            </td>
+                            <td>
+                                <span>20</span>
+                            </td>
+                            <td>
+                                <span>8869.<b>00</b></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="title">
+                                <a href="">삼성</a>
+                                <div class="num">
+                                    <span>98,869</span>
+                                    <span class="increase">+2.99<b>%</b></span><!-- increase 증가, decrease 감소 -->
+                                </div>
+                            </td>
+                            <td>
+                                <span>99점</span>
+                            </td>
+                            <td>
+                                <span>20</span>
+                            </td>
+                            <td>
+                                <span>8869.<b>00</b></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="title">
+                                <a href="">카카오게임즈카카오게임즈</a>
+                                <div class="num">
+                                    <span>98,869</span>
+                                    <span class="increase">+2.99<b>%</b></span><!-- increase 증가, decrease 감소 -->
+                                </div>
+                            </td>
+                            <td>
+                                <span>100점</span>
+                            </td>
+                            <td>
+                                <span>20</span>
+                            </td>
+                            <td>
+                                <span>8869.<b>00</b></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="title">
+                                <a href="">삼성</a>
+                                <div class="num">
+                                    <span>98,869</span>
+                                    <span class="increase">+2.99<b>%</b></span><!-- increase 증가, decrease 감소 -->
+                                </div>
+                            </td>
+                            <td>
+                                <span>99점</span>
+                            </td>
+                            <td>
+                                <span>20</span>
+                            </td>
+                            <td>
+                                <span>8869.<b>00</b></span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- 프리미엄 서비스 부분 -->
+                <div class="prm_div weeks_free">
+                    <div class="box">
+                        <div class="left">
+                            <p class="title"><i></i>초이스스탁US 프리미엄</p>
+                            <p class="txt">모든 서비스를 제한없이 이용하실 수 있습니다.</p>
+                        </div>
+                        <div class="right">
+                            <p>
+                                <a href="/main/service_prm" class="btn_free">첫 달 3,000원!</a>
+                            </p>
+                            <p><a href="/main/service" class="go_link">[서비스 안내]</a></p>
+                        </div>
+                    </div>
+                </div>
+                <!-- //프리미엄 서비스 부분 -->
+
+                <div class="btn_more">
+                    <a href=""><i></i>더보기</a>
+                </div>
+
+            </div>
+            <!-- //sub_mid -->
+
+        </div>
+        <!-- //container -->
+
+        <div id="footer" class="f_main">
+            <div class="service_info">
+                <p class="txt">본 서비스는 투자판단에 참고용으로만 사용하실 수 있으며, 모든 투자판단은 투자자 본인의 책임으로 당사는 그 결과에 대해 법적인 일체의 책임을 지지 않습니다.
+                </p>
+                <span class="f_logo"><img src="../img/f_logo.svg" alt="데이터히어로"> </span>
+            </div>
+        </div>
+        <!-- //footer -->
+    </div>
+    <!-- //wrap -->
+
+    <!-- Modal popup -->
+    <!-- 전종목 투자매력도 -->
+    <div class="md-modal md-effect-3" id="modal-3">
+        <div class="md-content">
+            <div id="setting" class="setting_area">
+                <div class="pop_header">
+                    <a href="#setting_anchor" title="로그인 레이어 닫기" class="close"><img src="../img/clse.png"
+                            alt="팝업닫기"></a>
+                    <h1 class="pop_title">정렬</h1>
+                </div>
+                <!-- //pop_header -->
+                <div class="pop_con">
+                    <form action="" method="post">
+                        <table cellspacing="0" border="1" class="tableRanking attract_table">
+                            <tbody>
+                                <tr>
+                                    <th><span>시가총액</span></th>
+                                    <th><span>순이익(연환산)</span></th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input name="amount" type="radio" id="amount1" value="" checked="checked"
+                                            class="input_radio">
+                                        <label for="amount1">전체</label>
+                                    </td>
+                                    <td>
+                                        <input name="profit" type="radio" id="profit1" value="" checked="checked"
+                                            class="input_radio">
+                                        <label for="profit1">전체</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input name="amount" type="radio" id="amount2" value="" class="input_radio">
+                                        <label for="amount2">3억달러 미만</label>
+                                    </td>
+                                    <td>
+                                        <input name="profit" type="radio" id="profit2" value="" class="input_radio">
+                                        <label for="profit2">흑자기업</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input name="amount" type="radio" id="amount3" value="" class="input_radio">
+                                        <label for="amount3">3억달러 ~ 20억달러 미만</label>
+                                    </td>
+                                    <td>
+                                        <input name="profit" type="radio" id="profit3" value="" class="input_radio">
+                                        <label for="profit3">적자기업</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <input name="amount" type="radio" id="amount4" value="" class="input_radio">
+                                        <label for="amount4">20억달러~100억달러 미만</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <input name="amount" type="radio" id="amount5" value="" class="input_radio">
+                                        <label for="amount5">100억달러 이상</label>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="pop_footer">
+                            <span class="title">정렬</span>
+                            <ul class="sort">
+                                <li><a href="#">투자매력</a></li>
+                                <li><a href="#">배당매력</a></li>
+                                <li class="active"><a href="#">적정주가</a></li>
+                            </ul>
+                            <div class="btnArea edtBtn">
+                                <a href="#" class="btn btn_save">확인</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="md-overlay"></div><!-- the overlay element -->
+
+
+</body>
+
+</html>
