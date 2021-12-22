@@ -493,11 +493,18 @@ $(document).ready(function () {
     });
 
     // 경쟁사 투자매려도 별점 레이어 보이기, 숨기기
+    $('html').click(function (e) {
+        var etarget = $(e.target);
+        if (!etarget.is('.highcharts-root, path')) {
+            $('.globalStock .sub_search .sub_mid.diagnosis .investCharm_area .compet_chart .chart_star').hide();
+        } else {
+            console.log("test22222");                        
+        }
+    });
     $('.globalStock .sub_search .sub_mid.diagnosis .investCharm_area .compet_chart .chart_star').hide();
     $('.globalStock .sub_search .sub_mid.diagnosis .investCharm_area .compet_chart .chart_area .chartData').on("click", function () {        
         $('.globalStock .sub_search .sub_mid.diagnosis .investCharm_area .compet_chart .chart_star').hide();
-        $(this).children('.chart_star').show();
-        
+        $(this).children('.chart_star').show();        
     });
     
 });
