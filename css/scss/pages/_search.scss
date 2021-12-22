@@ -71,7 +71,7 @@
                             color: #fff;                     
                         }
                     }
-                }
+                }                
             }
         }
         
@@ -153,6 +153,13 @@
                         color: $colblue;                        
                     }
                 }
+            }
+            .day {
+                display: inline-block;                
+                margin-top: 12px;
+                float: right;
+                font-size: 10px;
+                color: #82929F;
             }
         }
 
@@ -2373,8 +2380,8 @@
                 }
             }        
             .term {
-                margin-bottom:30px;
-                padding:40px 15px 0;
+                margin-bottom:20px;
+                padding:60px 15px 0;
                 color:$colgray;
                 text-align:center;
                 font-size: $font15;
@@ -2388,9 +2395,9 @@
                 background: #f6f7fa;
                 border-radius: 10px;
                 padding: 0 20px;
-                width: calc(100% - 100px);
+                width: calc(100% - 20%);
                 box-sizing: border-box;
-                margin: 0 auto 30px;           
+                margin: 20px auto 0;           
                 .tableRanking.table_alloca {
                     margin: 0 auto;         
                     width: 100%;  
