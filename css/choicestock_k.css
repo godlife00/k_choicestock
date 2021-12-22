@@ -6666,6 +6666,20 @@ html {
   padding-bottom: 20px;
 }
 
+.globalStock .sub_search .sub_mid.alloca_area .alloca_wrap .alloca_star .charm_num {
+  margin-top: 5px;
+  font-size: 28px;
+  letter-spacing: normal;
+  text-align: center;
+  color: #82929F;
+}
+
+.globalStock .sub_search .sub_mid.alloca_area .alloca_wrap .alloca_star .charm_num strong {
+  color: #333;
+  font-size: 32px;
+  font-weight: bold;
+}
+
 .globalStock .sub_search .sub_mid.alloca_area .alloca_wrap .alloca_star .title {
   font-size: 0.9375rem;
   font-weight: bold;
@@ -6762,6 +6776,53 @@ html {
 
 .globalStock .sub_search .sub_mid.alloca_area .alloca_wrap .alloca_info .term strong {
   color: #E57828;
+}
+
+.globalStock .sub_search .sub_mid.alloca_area .alloca_wrap .alloca_info .alloca_starArea {
+  background: #f6f7fa;
+  border-radius: 10px;
+  padding: 0 20px;
+  width: calc(100% - 100px);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0 auto 30px;
+}
+
+.globalStock .sub_search .sub_mid.alloca_area .alloca_wrap .alloca_info .alloca_starArea .tableRanking.table_alloca {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.globalStock .sub_search .sub_mid.alloca_area .alloca_wrap .alloca_info .alloca_starArea .tableRanking.table_alloca tr {
+  border-bottom: 1px solid #e1e5ef;
+}
+
+.globalStock .sub_search .sub_mid.alloca_area .alloca_wrap .alloca_info .alloca_starArea .tableRanking.table_alloca tr:last-child {
+  border-bottom: none;
+}
+
+.globalStock .sub_search .sub_mid.alloca_area .alloca_wrap .alloca_info .alloca_starArea .tableRanking.table_alloca td {
+  padding: 8px 5px;
+  vertical-align: top;
+}
+
+.globalStock .sub_search .sub_mid.alloca_area .alloca_wrap .alloca_info .alloca_starArea .tableRanking.table_alloca .title span {
+  font-size: 0.8125rem;
+  color: #333;
+}
+
+.globalStock .sub_search .sub_mid.alloca_area .alloca_wrap .alloca_info .alloca_starArea .tableRanking.table_alloca .star_area {
+  padding-top: 2px;
+}
+
+.globalStock .sub_search .sub_mid.alloca_area .alloca_wrap .alloca_info .alloca_starArea .tableRanking.table_alloca .star_area .starRev {
+  text-align: right;
+}
+
+.globalStock .sub_search .sub_mid.alloca_area .alloca_wrap .alloca_info .alloca_starArea .tableRanking.table_alloca .num span {
+  font-size: 0.75rem;
+  letter-spacing: normal;
+  color: #82929F;
 }
 
 .globalStock .sub_search .sub_mid.alloca_area .alloca_wrap .alloca_info .table_area {
