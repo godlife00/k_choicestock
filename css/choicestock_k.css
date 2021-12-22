@@ -6775,7 +6775,7 @@ html {
 
 .globalStock .sub_search .sub_mid.alloca_area .alloca_wrap .alloca_info .term {
   margin-bottom: 20px;
-  padding: 30px 15px 0;
+  padding: 40px 15px 0;
   color: #82929F;
   text-align: center;
   font-size: 0.9375rem;
@@ -6786,12 +6786,12 @@ html {
   color: #E57828;
 }
 
-.globalStock .sub_search .sub_mid.alloca_area .alloca_wrap .alloca_info .alloca_starArea {  
+.globalStock .sub_search .sub_mid.alloca_area .alloca_wrap .alloca_info .alloca_starArea {
   padding: 0 20px;
   width: calc(100% - 20%);
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  margin: 40px auto 0;
+  margin: 20px auto 0;
 }
 
 .globalStock .sub_search .sub_mid.alloca_area .alloca_wrap .alloca_info .alloca_starArea .tableRanking.table_alloca {
