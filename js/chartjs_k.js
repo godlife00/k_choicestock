@@ -4776,7 +4776,7 @@ $(document).ready(function () {
                 name: '영업이익',
                 data: [42, 52, 57, 69, 97, 11]
             }, {
-                name: '이자비율',
+                name: '이자비용',
                 yAxis: 1,
                 data: [16, 64, 42, 51, 30, 82]
             }],
@@ -5319,7 +5319,7 @@ $(document).ready(function () {
                     text: null,
                 },
                 labels: {
-                    format: '{value} 배',
+                    format: '{value} 원',
                     style: {
                         color: ["#e57828"],
                     }
@@ -5329,7 +5329,7 @@ $(document).ready(function () {
                     text: null,
                 },
                 labels: {
-                    format: '{value} 배',
+                    format: '{value} 원',
                     style: {
                         color: ["#fcc983"],
                     }
@@ -5562,7 +5562,7 @@ $(document).ready(function () {
 
             yAxis: {
                 labels: {
-                    format: '{value} 원',
+                    format: '{value} 배',
                     style: {
                         color: ["#e57828"],
                     },
