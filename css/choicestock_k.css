@@ -4165,6 +4165,10 @@ html {
   color: #fff;
 }
 
+.globalStock .sub_search .search_top .data_area.fix_data .detail .day {
+  display: none;
+}
+
 .globalStock .sub_search .search_top .data_area .title {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
