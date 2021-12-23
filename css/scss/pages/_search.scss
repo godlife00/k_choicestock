@@ -71,10 +71,17 @@
                             color: #fff;                     
                         }
                     }
+<<<<<<< HEAD
                 }   
                 .day {
                     display: none;
                 }             
+=======
+                } 
+                .day {                    
+                    display: none;
+                }               
+>>>>>>> master
             }
         }
         
@@ -2292,8 +2299,8 @@
         }
     
         .alloca_star {            
-            border-bottom:1px solid #E0E4E9;
-            padding-bottom:20px;
+            // border-bottom:1px solid #E0E4E9;
+            // padding-bottom:20px;
 
             .charm_num {
                 margin-top: 5px;
@@ -2369,8 +2376,9 @@
     
         .alloca_info {
             .info {            
+                border-top:1px solid #E0E4E9;            
                 border-bottom:1px solid #E0E4E9;            
-                margin: 0 auto;
+                margin: 20px auto 0;
                 padding: 20px 10px;
                 width: calc(100% - 30px);            
                 box-sizing:border-box;

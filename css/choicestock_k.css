@@ -6673,11 +6673,6 @@ html {
   padding-left: 15px;
 }
 
-.globalStock .sub_search .sub_mid.alloca_area .alloca_wrap .alloca_star {
-  border-bottom: 1px solid #E0E4E9;
-  padding-bottom: 20px;
-}
-
 .globalStock .sub_search .sub_mid.alloca_area .alloca_wrap .alloca_star .charm_num {
   margin-top: 5px;
   font-size: 28px;
@@ -6762,8 +6757,9 @@ html {
 }
 
 .globalStock .sub_search .sub_mid.alloca_area .alloca_wrap .alloca_info .info {
+  border-top: 1px solid #E0E4E9;
   border-bottom: 1px solid #E0E4E9;
-  margin: 0 auto;
+  margin: 20px auto 0;
   padding: 20px 10px;
   width: calc(100% - 30px);
   -webkit-box-sizing: border-box;
@@ -6779,7 +6775,11 @@ html {
 
 .globalStock .sub_search .sub_mid.alloca_area .alloca_wrap .alloca_info .term {
   margin-bottom: 20px;
+<<<<<<< HEAD
   padding: 40px 15px 0;
+=======
+  padding: 60px 15px 0;
+>>>>>>> master
   color: #82929F;
   text-align: center;
   font-size: 0.9375rem;
