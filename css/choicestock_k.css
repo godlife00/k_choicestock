@@ -3957,7 +3957,7 @@ html {
 .globalStock .sub_search .latest_results .no_attdata {
   margin: 20px auto 50px;
   border-radius: 20px;
-  background: #f6f7fa url("/img/bg_nodata.png") no-repeat center 50px;
+  background: #f6f7fa url("../img/bg_nodata.png") no-repeat center 50px;
   width: calc(100% - 30px);
   height: 400px;
   text-align: center;
@@ -4011,7 +4011,7 @@ html {
   width: 30px;
   height: 40px;
   font-size: 0;
-  background: url("/img/bg_del.png") no-repeat 50% 16px;
+  background: url("../img/bg_del.png") no-repeat 50% 16px;
   vertical-align: top;
   z-index: 999;
 }
@@ -4038,7 +4038,7 @@ html {
   float: right;
   width: 38px;
   height: 38px;
-  background: url("/img/btn_handle.png") no-repeat center center;
+  background: url("../img/btn_handle.png") no-repeat center center;
   font-size: 0;
   background-size: 20px 12px;
 }
@@ -4163,6 +4163,10 @@ html {
 
 .globalStock .sub_search .search_top .data_area.fix_data .detail .per .decrease b, .globalStock .sub_search .search_top .data_area.fix_data .detail .per .decrease span {
   color: #fff;
+}
+
+.globalStock .sub_search .search_top .data_area.fix_data .detail .day {
+  display: none;
 }
 
 .globalStock .sub_search .search_top .data_area .title {
