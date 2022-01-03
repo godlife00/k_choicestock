@@ -5715,9 +5715,7 @@ $(document).ready(function () {
             colors: ["#404fc3", "#545872", "#d3d3d3"],
 
             tooltip: {
-                shared: true,
-                crosshairs: true,
-                pointFormat: '<span style="color:{series.color}">{series.name}: <b>{point.y:,.0f}</b><br/>'
+                enabled: false
             },
 
             xAxis: [{
@@ -5824,9 +5822,7 @@ $(document).ready(function () {
             colors: ["#545872"],
 
             tooltip: {
-                shared: true,
-                crosshairs: true,
-                pointFormat: '<span style="color:{series.color}">{series.name}: <b>{point.y:,.0f}</b><br/>'
+                enabled: false
             },
 
             xAxis: [{
@@ -5933,9 +5929,7 @@ $(document).ready(function () {
             // colors: ["#d3d3d3"],
 
             tooltip: {
-                shared: true,
-                crosshairs: true,
-                pointFormat: '<span style="color:{series.color}">{series.name}: <b>{point.y:,.0f}</b><br/>'
+                enabled: false
             },
 
             xAxis: [{

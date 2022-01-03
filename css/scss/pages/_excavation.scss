@@ -1895,6 +1895,30 @@
             word-break: break-all;
             word-wrap: break-word;
 
+            a {
+                color: #608bff;
+                text-decoration: underline;
+            }
+            
+            li {
+                font-size:0.875rem;
+                padding-left: 13px;
+                line-height:22px;
+                position: relative;	
+                &::before {
+                    content:"";
+                    position:absolute;
+                    left: 4px;
+                    top: 9px;
+                    display:inline-block;
+                    width: 3px;
+                    height: 3px;
+                    background: #333;
+                    border-radius: 50%;
+                }
+            }
+            
+
             p, div {
                 color: $col333;
                 font-size: $font15;

@@ -1457,7 +1457,7 @@ html {
   width: 100%;
   display: -webkit-box;
   overflow: hidden;
-  height: 4.2em;
+  max-height: 4.2em;
   line-height: 1.4em;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -9475,6 +9475,30 @@ html {
   line-height: 1.6;
   word-break: break-all;
   word-wrap: break-word;
+}
+
+.globalStock .sub_note .view_con .mid a {
+  color: #608bff;
+  text-decoration: underline;
+}
+
+.globalStock .sub_note .view_con .mid li {
+  font-size: 0.875rem;
+  padding-left: 13px;
+  line-height: 22px;
+  position: relative;
+}
+
+.globalStock .sub_note .view_con .mid li::before {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 9px;
+  display: inline-block;
+  width: 3px;
+  height: 3px;
+  background: #333;
+  border-radius: 50%;
 }
 
 .globalStock .sub_note .view_con .mid p, .globalStock .sub_note .view_con .mid div {
