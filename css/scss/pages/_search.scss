@@ -5,7 +5,7 @@
         padding: 32px 14px 0;
         box-sizing: border-box;
         position: relative;                
-        display: flex;
+        display: flex;        
         gap: 5px;
         flex-wrap: wrap;
 
@@ -14,8 +14,7 @@
             display: block;            
             padding: 10px 14px;
             margin: 0;
-            width: 100%;
-            // height: 40px;
+            width: 100%;            
             line-height: 40px;
             position: fixed;
             left: 0;
@@ -58,6 +57,12 @@
                     }
                 }
                 .per {
+                    span, b {                        
+                        color: #fff;                      
+                        a {
+                            color: #fff;                      
+                        }
+                    }
                     span {                        
                         font-size: 0;
                         span {
@@ -94,25 +99,29 @@
             line-height: normal;
             font-weight: normal;
             letter-spacing: normal;            
-            color: $col333;         
-            // flex: 1 1 40%;          
-            align-self: flex-end;                 
+            color: $col333;                                             
+            align-self: flex-end;            
         }
-        .info {        
-            align-self: flex-end;                 
+        .info {                                
+            padding-bottom: 1px;            
+            box-sizing: border-box;
+            align-self: flex-end;
             .sum .eng {
                 font-size: $font14;
                 font-weight: 300;                
                 letter-spacing: normal;                
                 color: $colgray;                
+                vertical-align: sub;                
             }
         }
-        .info_icon {            
-            align-self: flex-end;                             
-                        
+        .info_icon {                        
+            padding-bottom: 2px;            
+            box-sizing: border-box;            
+            align-self: flex-end;
             li {
+                vertical-align: bottom;
                 display: inline-block;
-                vertical-align: top;
+                vertical-align: sub;
                 border-radius: 9px;
                 background-color: #f6f7fa;
                 padding: 1px 9px;
@@ -120,7 +129,7 @@
                 line-height: 1.4;                
                 letter-spacing: normal;
                 text-align: center;
-                color: $colgray;
+                color: $colgray;                
             }            
         }
 
@@ -146,6 +155,15 @@
                 letter-spacing: normal;
                 text-align: right;     
                 padding-left: 5px;                   
+                span {
+                    color: $col333;                    
+                    b {
+                        color: $col333;                    
+                        font-weight: normal;
+                    }
+                }
+                
+                
 
                 .increase {
                     color: $colred;                        
@@ -648,7 +666,8 @@
         .line .situation {
             position: absolute;
             left: 0;
-            top: -31px;
+            bottom: 10px;
+            // top: -22px;
             width: 53px;  
             text-align: center;  
             padding-bottom: 3px;
@@ -660,7 +679,7 @@
         }
         .line .situation::after {
             content:"";
-            top: 100%;
+            top: 15px;            
             left: 50%;
             margin-left: -10px;
             border: solid transparent;
@@ -949,14 +968,7 @@
 
             .unit {                
                 font-weight: 300;                
-            }
-        }
-        tr {
-            &:nth-child(1),
-            &:nth-child(2) {                                            
-                .unit {
-                    display: block;
-                }                                
+                padding-left: 2px;                
             }
         }        
     }    

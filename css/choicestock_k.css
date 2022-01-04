@@ -3915,6 +3915,26 @@ html {
           transform: rotate(45deg);
 }
 
+.globalStock .sub_search .latest_results .tab_container .tab_content .btn_list {
+  clear: both;
+  width: 140px;
+  margin: 20px auto 0;
+}
+
+.globalStock .sub_search .latest_results .tab_container .tab_content .btn_list a {
+  width: 100%;
+  font-size: 0.8125rem;
+  color: #fff;
+  display: inline-block;
+  padding: 5px 18px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 3px;
+  background-color: #E57828;
+  text-align: center;
+  position: relative;
+}
+
 .globalStock .sub_search .latest_results .tab_container .tab_content .txt_box {
   padding: 13px 14px;
   background-color: #fcfcfc;
@@ -4138,6 +4158,14 @@ html {
   color: #fff;
 }
 
+.globalStock .sub_search .search_top .data_area.fix_data .detail .per span, .globalStock .sub_search .search_top .data_area.fix_data .detail .per b {
+  color: #fff;
+}
+
+.globalStock .sub_search .search_top .data_area.fix_data .detail .per span a, .globalStock .sub_search .search_top .data_area.fix_data .detail .per b a {
+  color: #fff;
+}
+
 .globalStock .sub_search .search_top .data_area.fix_data .detail .per span {
   font-size: 0;
 }
@@ -4186,6 +4214,9 @@ html {
 }
 
 .globalStock .sub_search .search_top .data_area .info {
+  padding-bottom: 1px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   -ms-flex-item-align: end;
       align-self: flex-end;
 }
@@ -4195,16 +4226,21 @@ html {
   font-weight: 300;
   letter-spacing: normal;
   color: #82929F;
+  vertical-align: sub;
 }
 
 .globalStock .sub_search .search_top .data_area .info_icon {
+  padding-bottom: 2px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   -ms-flex-item-align: end;
       align-self: flex-end;
 }
 
 .globalStock .sub_search .search_top .data_area .info_icon li {
+  vertical-align: bottom;
   display: inline-block;
-  vertical-align: top;
+  vertical-align: sub;
   border-radius: 9px;
   background-color: #f6f7fa;
   padding: 1px 9px;
@@ -4241,6 +4277,15 @@ html {
   letter-spacing: normal;
   text-align: right;
   padding-left: 5px;
+}
+
+.globalStock .sub_search .search_top .data_area .detail .per span {
+  color: #333;
+}
+
+.globalStock .sub_search .search_top .data_area .detail .per span b {
+  color: #333;
+  font-weight: normal;
 }
 
 .globalStock .sub_search .search_top .data_area .detail .per .increase {
@@ -4839,7 +4884,7 @@ html {
 .globalStock .sub_search .sub_mid.outline_box .box .value_chart .line .situation {
   position: absolute;
   left: 0;
-  top: -31px;
+  bottom: 10px;
   width: 53px;
   text-align: center;
   padding-bottom: 3px;
@@ -4853,7 +4898,7 @@ html {
 
 .globalStock .sub_search .sub_mid.outline_box .box .value_chart .line .situation::after {
   content: "";
-  top: 100%;
+  top: 15px;
   left: 50%;
   margin-left: -10px;
   border: solid transparent;
@@ -5175,10 +5220,7 @@ html {
 
 .globalStock .sub_search .sub_mid.outline_investCharm .tableRanking.guide_table td .unit {
   font-weight: 300;
-}
-
-.globalStock .sub_search .sub_mid.outline_investCharm .tableRanking.guide_table tr:nth-child(1) .unit, .globalStock .sub_search .sub_mid.outline_investCharm .tableRanking.guide_table tr:nth-child(2) .unit {
-  display: block;
+  padding-left: 2px;
 }
 
 .globalStock .sub_search .sub_mid.financials_chart {

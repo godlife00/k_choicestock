@@ -279,6 +279,24 @@
                 }
             }
 
+            .btn_list {
+                clear: both;
+                width: 140px;
+                margin: 20px auto 0;
+            }
+            .btn_list a {
+                width: 100%;
+                font-size: 0.8125rem;                
+                color: #fff;
+                display: inline-block;
+                padding: 5px 18px;
+                box-sizing: border-box;
+                border-radius: 3px;
+                background-color: #E57828;
+                text-align: center;
+                position: relative;                
+            }
+
             .txt_box {
                 padding: 13px 14px;
                 background-color: #fcfcfc;
