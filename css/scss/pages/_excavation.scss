@@ -1909,6 +1909,11 @@
             blockquote:before, blockquote:after, q:before, q:after {
                 content: '';                
             }
+            blockquote {                       
+                margin: 20px 0 20px 15px;         
+                padding: 5px 15px;
+                border-left: 3px solid #ccc;
+            }
 
             a {
                 color: #608bff;

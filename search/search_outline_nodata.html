@@ -1,0 +1,122 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no" />
+    <title>초이스스탁</title>
+    <meta name="robots" content="한경미국주식 - 미국주식 쉽고 편리하게'">
+    <meta name="description" content="투자를 쉽고 편리하게, 미국주식가이드, 종목분석, 종목토론, 데이터히어로">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="theme-color" content="#e57828">
+    <!-- 오픈 그래프 -->
+    <meta property="og:title" content="한경미국주식 - 미국주식 쉽고 편리하게'" />
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="투자를 쉽고 편리하게, 미국주식가이드, 종목분석, 종목토론, 데이터히어로">
+    <meta property="og:image" content="http://godlife.ivyro.net/test/img/choicestockus_thumb.png">
+    <meta property="og:image:width" content="410" />
+    <meta property="og:image:height" content="210" />
+    <meta property="og:url" content="www.choicestock.co.kr">
+    <!-- jquery-1.12 -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <!-- highcharts -->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/series-label.js"></script>
+    <script src="https://code.highcharts.com/highcharts-more.js"></script>
+    <script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <script src="https://code.highcharts.com/modules/no-data-to-display.js"></script>
+    <script src="https://code.highcharts.com/modules/debugger.js"></script>
+    <script src="../js/chartjs_k.js"></script>
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+    <!-- css -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <!-- <link rel="stylesheet" type="text/css" href="css/choicestock_k.css" /> -->
+    <link rel="stylesheet" type="text/css" href="../css/choicestock_k.css" />
+    <!-- js -->
+    <script src="../js/choicestock_k.js"></script>
+</head>
+
+<body class="globalStock">
+    <div id="wrap">
+
+        <div id="header" class="header header_sch">
+            <div class="headerTop">
+                <h1 class="headerLogo"><span>종목검색</span></h1>
+                <a href="#" class="his_back"><img src="../img/icon_back.svg" alt="뒤로가기"></a>
+                <div class="hm">
+                    <a href="../search/searching.html" class="go_sch"><img src="../img/icon_search.svg" alt="검색하기"></a>
+                </div>
+                <!-- //hm -->
+            </div>
+            <!-- //headerTop -->
+        </div>
+
+        <!-- 종목검색 class = sub_search-->
+        <div id="container" class="sub_search">
+            <!-- 주요 콘텐츠 -->
+            <div class="search_top">
+                <div class="data_area">
+                    <h2 class="title"><a href="/search/summary/005380">현대차</a></h2>
+                    <ul class="info">
+                        <li class="sum"><span class="eng">005380</span> </li>
+                    </ul>
+                    <ul class="info_icon">
+                        <li>코스피</li>
+                    </ul>
+                    <!-- //info_icon -->
+                    <ul class="detail">
+                        <li class="num">
+                            <span class="">210,000</span>
+                        </li>
+                        <li class="per">                            
+                            <span class="increase">500 <span>(+0.24<b>%</b>)</span></span>
+                        </li>
+                        <li class="day">2022. 01/04 10:55</li>
+                    </ul>                    
+
+                    <!-- 하트, 추천이 있는 경우 -->
+                    <div class="go_page">
+                        <i class="attention" id="catch_icon_one" onclick="javascript:fnMykitem('005380', 'search%2Fsummary%2F005380', 'Y', 'one');"></i>
+                        <a href="/stock/recom_view/3" class="quarter recom"><span>추천</span></a>
+                    </div>
+                </div>
+                <!-- //data_area -->
+
+                <div class="attention_box">
+                    <ul>
+                        <li class="attention"><i></i><strong>8,888</strong>명의 관심</li>
+                    </ul>
+                    <div class="lately_update">
+                        <p class="game_allo">최근 배당락일 <span>2021. 5/23</span></p>
+                    </div>
+                    <!-- //lately_update -->
+                </div>
+            </div>
+            <!-- //sub_top -->
+
+            <div class="sub_mid nondata">
+                <p class="nodata_guide">
+                    <strong>삼양홀딩스(000075)</strong>의 상세 정보는 <strong><a href="#">삼양홀딩스</a></strong> 종목에서 확인할 수 있습니다.
+                </p>
+            </div>
+
+        </div>
+        <!-- //container -->
+
+        <div id="footer" class="f_main">
+            <div class="service_info">
+                <p class="txt">본 서비스는 투자판단에 참고용으로만 사용하실 수 있으며, 모든 투자판단은 투자자 본인의 책임으로 당사는 그 결과에 대해 법적인 일체의 책임을 지지 않습니다.
+                </p>
+                <span class="f_logo"><img src="../img/f_logo.svg" alt="데이터히어로"> </span>
+            </div>
+        </div>
+        <!-- //footer -->
+    </div>
+    <!-- //wrap -->
+
+</body>

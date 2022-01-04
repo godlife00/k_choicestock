@@ -4515,6 +4515,40 @@ html {
   color: #333;
 }
 
+/* 검색결과 없음 */
+.globalStock .sub_search .sub_mid.nondata {
+  border-top: 1px solid #e0e5f0;
+  background-color: #f6f7fa;
+  padding: 20px 30px;
+  min-height: 340px;
+}
+
+.globalStock .sub_search .sub_mid.nondata .nodata_guide {
+  text-align: center;
+  color: #8380A0;
+  font-size: 0.95rem;
+  line-height: 28px;
+  display: block;
+  border: 1px solid #BABABA;
+  background: #fff;
+  width: 100%;
+  margin: 25px auto 15px;
+  border-radius: 12px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 12px 10px;
+  position: relative;
+  left: 0px;
+}
+
+.globalStock .sub_search .sub_mid.nondata .nodata_guide strong {
+  font-weight: normal;
+}
+
+.globalStock .sub_search .sub_mid.nondata .nodata_guide a {
+  text-decoration: underline;
+}
+
 .globalStock .sub_search .sub_mid.tabs_area {
   border-top: 1px solid #e0e5f0;
   padding-bottom: 8px;
@@ -4884,10 +4918,16 @@ html {
 .globalStock .sub_search .sub_mid.outline_box .box .value_chart .line .situation {
   position: absolute;
   left: 0;
-  bottom: 10px;
+  top: -22px;
   width: 53px;
   text-align: center;
   padding-bottom: 3px;
+  height: 18px;
+}
+
+.globalStock .sub_search .sub_mid.outline_box .box .value_chart .line .situation span {
+  vertical-align: top;
+  display: inline-block;
 }
 
 @media (min-width: 320px) and (max-width: 374px) {
@@ -4898,7 +4938,7 @@ html {
 
 .globalStock .sub_search .sub_mid.outline_box .box .value_chart .line .situation::after {
   content: "";
-  top: 15px;
+  top: 16px;
   left: 50%;
   margin-left: -10px;
   border: solid transparent;
@@ -5216,6 +5256,10 @@ html {
   letter-spacing: normal;
   text-align: right;
   color: #333;
+}
+
+.globalStock .sub_search .sub_mid.outline_investCharm .tableRanking.guide_table td b {
+  font-weight: normal;
 }
 
 .globalStock .sub_search .sub_mid.outline_investCharm .tableRanking.guide_table td .unit {
@@ -9543,6 +9587,12 @@ html {
 
 .globalStock .sub_note .view_con .mid blockquote:before, .globalStock .sub_note .view_con .mid blockquote:after, .globalStock .sub_note .view_con .mid q:before, .globalStock .sub_note .view_con .mid q:after {
   content: '';
+}
+
+.globalStock .sub_note .view_con .mid blockquote {
+  margin: 20px 0 20px 15px;
+  padding: 5px 15px;
+  border-left: 3px solid #ccc;
 }
 
 .globalStock .sub_note .view_con .mid a {
