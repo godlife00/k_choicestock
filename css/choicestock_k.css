@@ -10,7 +10,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -45,15 +45,6 @@ audio:not([controls]) {
 
 ul, ol, li {
   list-style: none;
-}
-
-blockquote, q {
-  quotes: 'none';
-}
-
-blockquote:before, blockquote:after, q:before, q:after {
-  content: '';
-  content: 'none';
 }
 
 fieldset, img {
@@ -751,6 +742,7 @@ html {
   text-align: center;
   display: inline-block;
   width: 61px;
+  line-height: 18px;
   height: 24px;
   padding: 3px 1px;
   -webkit-box-sizing: border-box;
@@ -4085,14 +4077,21 @@ html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 5px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .globalStock .sub_search .search_top .data_area.fix_data {
   background: #F2333A;
-  padding: 8px 14px 0;
+  display: block;
+  padding: 10px 14px;
   margin: 0;
   width: 100%;
-  height: 40px;
+  line-height: 40px;
   position: fixed;
   left: 0;
   right: 0;
@@ -4120,10 +4119,14 @@ html {
 
 .globalStock .sub_search .search_top .data_area.fix_data .detail {
   vertical-align: top;
+  padding-top: 0;
   padding-left: 10px;
   text-align: right;
   display: inline-block;
   float: right;
+  -ms-flex-preferred-size: auto;
+      flex-basis: auto;
+  width: auto;
 }
 
 .globalStock .sub_search .search_top .data_area.fix_data .detail .num {
@@ -4173,18 +4176,18 @@ html {
   white-space: nowrap;
   width: auto;
   max-width: 140px;
-  display: inline-block;
   font-size: 1.25rem;
   line-height: normal;
   font-weight: normal;
   letter-spacing: normal;
   color: #333;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
 }
 
 .globalStock .sub_search .search_top .data_area .info {
-  display: inline-block;
-  padding: 3px 2px 0;
-  vertical-align: top;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
 }
 
 .globalStock .sub_search .search_top .data_area .info .sum .eng {
@@ -4195,10 +4198,8 @@ html {
 }
 
 .globalStock .sub_search .search_top .data_area .info_icon {
-  display: inline-block;
-  padding-left: 5px;
-  padding-top: 8px;
-  vertical-align: top;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
 }
 
 .globalStock .sub_search .search_top .data_area .info_icon li {
@@ -4212,6 +4213,13 @@ html {
   letter-spacing: normal;
   text-align: center;
   color: #82929F;
+}
+
+.globalStock .sub_search .search_top .data_area .detail {
+  padding-top: 3px;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  width: 100%;
 }
 
 .globalStock .sub_search .search_top .data_area .detail .num {
@@ -9475,6 +9483,24 @@ html {
   line-height: 1.6;
   word-break: break-all;
   word-wrap: break-word;
+  /* cms 폰트 기본 스타일 적용 */
+}
+
+.globalStock .sub_note .view_con .mid address, .globalStock .sub_note .view_con .mid caption, .globalStock .sub_note .view_con .mid em, .globalStock .sub_note .view_con .mid var {
+  font-style: italic;
+}
+
+.globalStock .sub_note .view_con .mid ol {
+  list-style: decimal;
+  padding-left: 15px;
+}
+
+.globalStock .sub_note .view_con .mid ol li {
+  list-style: list-item;
+}
+
+.globalStock .sub_note .view_con .mid blockquote:before, .globalStock .sub_note .view_con .mid blockquote:after, .globalStock .sub_note .view_con .mid q:before, .globalStock .sub_note .view_con .mid q:after {
+  content: '';
 }
 
 .globalStock .sub_note .view_con .mid a {
@@ -9482,14 +9508,14 @@ html {
   text-decoration: underline;
 }
 
-.globalStock .sub_note .view_con .mid li {
+.globalStock .sub_note .view_con .mid ul li {
   font-size: 0.875rem;
   padding-left: 13px;
   line-height: 22px;
   position: relative;
 }
 
-.globalStock .sub_note .view_con .mid li::before {
+.globalStock .sub_note .view_con .mid ul li::before {
   content: "";
   position: absolute;
   left: 4px;

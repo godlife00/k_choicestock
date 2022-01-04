@@ -1895,12 +1895,27 @@
             word-break: break-all;
             word-wrap: break-word;
 
+            /* cms 폰트 기본 스타일 적용 */
+            address, caption, em, var {                
+                font-style: italic;                
+            }
+            ol {
+                list-style: decimal;
+                padding-left: 15px;
+            }
+            ol li {
+                list-style: list-item;;
+            }
+            blockquote:before, blockquote:after, q:before, q:after {
+                content: '';                
+            }
+
             a {
                 color: #608bff;
                 text-decoration: underline;
             }
             
-            li {
+            ul li {
                 font-size:0.875rem;
                 padding-left: 13px;
                 line-height:22px;

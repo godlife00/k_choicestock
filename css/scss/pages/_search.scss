@@ -4,14 +4,19 @@
     .data_area {
         padding: 32px 14px 0;
         box-sizing: border-box;
-        position: relative;
+        position: relative;                
+        display: flex;
+        gap: 5px;
+        flex-wrap: wrap;
 
         &.fix_data {                        
             background: $colred;
-            padding: 8px 14px 0;
+            display: block;            
+            padding: 10px 14px;
             margin: 0;
             width: 100%;
-            height: 40px;
+            // height: 40px;
+            line-height: 40px;
             position: fixed;
             left: 0;
             right: 0;
@@ -19,7 +24,7 @@
             box-sizing: border-box;
             z-index: 999;          
 
-            .title {
+            .title {                
                 float: left;                
                 max-width: 170px;
                 color: #fff;
@@ -35,12 +40,15 @@
                 display: none;
             }
 
-            .detail {
+            .detail {                
                 vertical-align: top;                
+                padding-top: 0;
                 padding-left: 10px;
                 text-align: right;
                 display: inline-block;                
                 float: right;
+                flex-basis: auto;
+                width: auto;
 
                 .num {                    
                     color: #fff;
@@ -79,20 +87,19 @@
         }
         
         .title {
-            @include white-space;
+            @include white-space;            
             width: auto;
-            max-width: 140px;
-            display: inline-block;
+            max-width: 140px;            
             font-size: $font20;            
             line-height: normal;
             font-weight: normal;
             letter-spacing: normal;            
-            color: $col333;
+            color: $col333;         
+            // flex: 1 1 40%;          
+            align-self: flex-end;                 
         }
-        .info {
-            display: inline-block;
-            padding: 3px 2px 0;
-            vertical-align: top;
+        .info {        
+            align-self: flex-end;                 
             .sum .eng {
                 font-size: $font14;
                 font-weight: 300;                
@@ -100,12 +107,9 @@
                 color: $colgray;                
             }
         }
-        .info_icon {
-            display: inline-block;
-            padding-left: 5px;
-            padding-top: 8px;
-            vertical-align: top;
-
+        .info_icon {            
+            align-self: flex-end;                             
+                        
             li {
                 display: inline-block;
                 vertical-align: top;
@@ -121,6 +125,10 @@
         }
 
         .detail {            
+            padding-top: 3px;            
+            flex-basis: 100%;
+	        width: 100%;
+
             .num {
                 display: inline-block;
                 font-size: $font20;
