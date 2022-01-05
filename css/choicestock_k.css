@@ -16,7 +16,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, pre, a
   border: 0;
   line-height: normal;
   letter-spacing: -0.015rem;
-  color: #444;
+  color: #333;
   vertical-align: baseline;
   word-break: keep-all;
   white-space: -moz-pre-wrap;
@@ -763,6 +763,25 @@ html {
 
 .globalStock .main_mid.event_recipe .tabsArea .tab_container table.tableRanking .num.dod span.decrease {
   background: #006BFC;
+}
+
+.globalStock .main_mid.event_recipe .tabsArea .tab_container table.tableRanking .num.score {
+  padding-bottom: 16px;
+}
+
+.globalStock .main_mid.event_recipe .tabsArea .tab_container table.tableRanking .num.score span {
+  text-align: center;
+  display: inline-block;
+  width: 61px;
+  line-height: 18px;
+  height: 24px;
+  padding: 3px 1px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.globalStock .main_mid.event_recipe .tabsArea .tab_container table.tableRanking .num.score span b {
+  opacity: 0.75;
 }
 
 .globalStock .main_mid.event_recipe .tabsArea .tab_container .tableth_box .table_btmarea {

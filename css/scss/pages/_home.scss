@@ -100,6 +100,23 @@
                 }
             }
 
+            table.tableRanking .num.score {
+                padding-bottom: 16px;
+                
+                span {
+                    text-align: center;
+                    display: inline-block;                    
+                    width: 61px;
+                    line-height: 18px;
+                    height: 24px;
+                    padding: 3px 1px;
+                    box-sizing: border-box;                                        
+                    b {
+                        opacity: 0.75;                        
+                    }
+                }
+            }
+
             .tableth_box .table_btmarea {         
                 text-align: center;       
                 margin: 0 auto;

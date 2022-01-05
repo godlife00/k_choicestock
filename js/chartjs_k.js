@@ -3768,12 +3768,12 @@ $(document).ready(function () {
                 plotShadow: false
             },
 
-            colors: ["#404fc3", "#545872", "#d3d3d3"],
+            colors: ["#e57828", "#fcc983", "#ccd1d5"],
 
             tooltip: {
                 shared: true,
                 crosshairs: true,
-                pointFormat: '<span style="color:{series.color}">{series.name}: <b>{point.y:,.0f}</b><br/>'
+                pointFormat: '<span style="color:{series.color}">{series.name}: <b>{point.y:,.3f}억원</b><br/>'
             },
 
             xAxis: [{
@@ -3835,13 +3835,13 @@ $(document).ready(function () {
 
             series: [{
                 name: '매출액',
-                data: [97, 45, 75]
+                data: [97.988, 45.988, 75.988]
             }, {
                 name: '영업이익',
-                data: [85, 24, 42]
+                data: [85.988, 24.988, 42.988]
             }, {
                 name: '순이익',
-                data: [64, 34, 24]
+                data: [64.988, 34.988, 24.988]
             }],
 
             plotOptions: {
@@ -3888,7 +3888,7 @@ $(document).ready(function () {
             tooltip: {
                 shared: true,
                 crosshairs: true,
-                pointFormat: '<span style="color:{series.color}">{series.name}: <b>{point.y:,.0f}</b><br/>'
+                pointFormat: '<span style="color:{series.color}">{series.name}: <b>{point.y:,.3f}억원</b><br/>'
             },
 
             xAxis: [{
@@ -3949,14 +3949,14 @@ $(document).ready(function () {
             },
 
             series: [{
-                name: '매출액',
-                data: [97, 45, 75]
+                name: '자산총계',
+                data: [97.88, 45.88, 75.88]
             }, {
-                name: '영업이익',
-                data: [85, 24, 42]
+                name: '부채총계',
+                data: [85.88, 24.88, 42.88]
             }, {
-                name: '순이익',
-                data: [64, 34, 24]
+                name: '자본총계',
+                data: [64.88, 34.88, 24.88]
             }],
 
             plotOptions: {
@@ -4003,7 +4003,7 @@ $(document).ready(function () {
             tooltip: {
                 shared: true,
                 crosshairs: true,
-                pointFormat: '<span style="color:{series.color}">{series.name}: <b>{point.y:,.0f}</b><br/>'
+                pointFormat: '<span style="color:{series.color}">{series.name}: <b>{point.y:,.3f}억원</b><br/>'
             },
 
             xAxis: [{
@@ -4064,14 +4064,14 @@ $(document).ready(function () {
             },
 
             series: [{
-                name: '매출액',
-                data: [97, 45, 75]
+                name: '영업활동',
+                data: [97.88, 45.88, 75.88]
             }, {
-                name: '영업이익',
-                data: [85, 24, 42]
+                name: '투자활동',
+                data: [85.88, 24.88, 42.88]
             }, {
-                name: '순이익',
-                data: [64, 34, 24]
+                name: '재무활동',
+                data: [64.88, 34.88, 24.88]
             }],
 
             plotOptions: {
