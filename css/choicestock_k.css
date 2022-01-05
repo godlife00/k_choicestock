@@ -6060,6 +6060,10 @@ html {
   position: relative;
 }
 
+.globalStock .sub_search .sub_mid.diagnosis .adequate_stock .box .con .adequate_price .line .domain.active .price_line {
+  margin-top: 23px;
+}
+
 .globalStock .sub_search .sub_mid.diagnosis .adequate_stock .box .con .adequate_price .line .domain.active .price::before {
   top: 100%;
   left: 50%;
@@ -6563,6 +6567,7 @@ html {
 .globalStock .sub_search .sub_mid.diagnosis .search_financials_area .scroll_table_wrap .scroll_table .table_search_invest th:nth-child(2),
 .globalStock .sub_search .sub_mid.diagnosis .search_financials_area .scroll_table_wrap .scroll_table .table_search_invest td:nth-child(2) {
   padding-left: 108px;
+  min-width: 158px;
   background-color: #fff;
 }
 

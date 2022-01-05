@@ -507,4 +507,5 @@ $(document).ready(function () {
         $(this).children('.chart_star').show();        
     });
     
+    
 });

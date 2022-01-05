@@ -1678,6 +1678,9 @@
                         opacity: 1;	
                         position: relative;
                     }
+                    .domain.active .price_line {                        
+                        margin-top: 23px;                        
+                    }
                     .domain.active .price::before {
                         top: 100%;
                         left: 50%;
@@ -1691,8 +1694,7 @@
                         border-top-color: #e57828;
                         border-width: 7px;
                         margin-left: -7px;
-                    }
-                
+                    }                
                     .domain.active .price_line::before {
                         background: $colorg;
                     }
@@ -2147,6 +2149,7 @@
                 th:nth-child(2),
                 td:nth-child(2) {
                     padding-left: 108px;
+                    min-width: 158px;
                     background-color: #fff;
                 }
             }       
