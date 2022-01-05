@@ -267,33 +267,35 @@
                 background: #f6f7fa url('/img/bg_recipe_jump.svg') no-repeat center 28px;    
             }            
             // TOP50
-            &.recipetop {
-                background: #f6f7fa url('/img/bg_recipe_top.svg') no-repeat center 28px;    
-            }            
+            // &.recipetop {
+            //     background: #f6f7fa url('/img/bg_recipe_top.svg') no-repeat center 28px;    
+            // }            
             // 실적발표
             &.earnings { 
                 background: #f6f7fa url('/img/bg_recipe_earnings.svg') no-repeat center 28px;    
             }  
-            // 배당매력
+            // 배당매력주
             &.dividend {
                 background: #f6f7fa url('/img/bg_recipe_dividend.svg') no-repeat center 28px;    
             }  
-            // 이익성장
+            // 이익성장주
             &.growth {
                 background: #f6f7fa url('/img/bg_recipe_growth.svg') no-repeat center 28px;    
+                background-size: 74px auto;
             } 
             // 소비자독점
             &.moat {
                 background: #f6f7fa url('/img/bg_recipe_moat.svg') no-repeat center 28px;    
+                background-size: 74px auto;
             } 
             // 슈퍼스톡
-            &.total_score {
-                background: #f6f7fa url('/img/bg_recipe_total.svg') no-repeat center 28px;    
-            }    
+            // &.total_score {
+            //     background: #f6f7fa url('/img/bg_recipe_total.svg') no-repeat center 28px;    
+            // }    
             // 세일
-            &.recipesale {
-                background: #f6f7fa url('/img/bg_recipe_sale.svg') no-repeat center 28px;    
-            }                        
+            // &.recipesale {
+            //     background: #f6f7fa url('/img/bg_recipe_sale.svg') no-repeat center 28px;    
+            // }                        
         }
     } 
 

@@ -443,7 +443,16 @@
         background-color:#f6f7fa;
         position:relative;
         overflow: hidden;
-    }
+
+        &:nth-child(2) {            
+            .title {                   
+                &::after {
+                    content: '';
+                    display: none;                        
+                }    
+            }        
+        }
+    }    
     .box .con {
         display:flex;
         flex-wrap:wrap;
@@ -1957,7 +1966,7 @@
                 th:nth-child(2),
                 td:nth-child(2) {
                     padding-left: 90px;
-                    min-width: 130px;
+                    min-width: 140px;
                     background-color: #fff;
                 }
                 

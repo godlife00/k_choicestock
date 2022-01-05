@@ -124,7 +124,7 @@
                 margin:15px auto 0;                
                 background:#656879;
                 border-radius:10px;
-                position:relative;
+                position:relative;                
 
                 .tableRanking {
                     width: 100%;
@@ -179,14 +179,46 @@
                     min-width: 120px;
                     box-sizing: border-box;                    
                 }
+
+                @media (min-width:320px) and (max-width:374px) {
+                    .attainment_box {                        
+                        bottom: -19px;                        
+                    }
+                }
+                
+                // 수익률
                 .revenue_box {
                     border: solid 1px #e1e5ef;
                     background-color: #eff0f7;
                 }
-                .attainment_box {
-                    border: solid 1px #e1e5ef;
-                    background-color: #eff0f7;
+
+                // 목표가달성
+                .attainment_box.att_cut {
+                    border: solid 1px #FFE200;
+                    background-color: #FFE200;
+                    .title, .percent, b {
+                        color: #f2333a !important;
+                    }
                 }
+
+                // 교체매도
+                .attainment_box {
+                    border: solid 1px #BDD6E8;
+                    background-color: #BDD6E8;
+                    .title, .percent, b {
+                        color: #014B8D !important;
+                    }
+                }
+
+                // 손절가매도
+                .attainment_box.loss_cut {
+                    border: solid 1px #A3A3A3;
+                    background-color: #A3A3A3;
+                    .title, .percent, b {
+                        color: #fff !important;
+                    }
+                }
+
                 .attainment_box::after {
                     display:inline-block;
                 }
@@ -833,10 +865,10 @@
         
         @media (min-width:320px) and (max-width:374px) {
             .recom_chartList .chartGoal {			
-                flex-basis: 154px;
-                max-width: 154px;
-                min-width: 154px;
-                padding: 17px 15px 10px 15px;	
+                flex-basis: 174px;
+                max-width: 174px;
+                min-width: 174px;
+                padding: 17px 10px 10px 10px;	
             }
         }
         
@@ -872,11 +904,6 @@
             display: inline-block;	
             width: calc(100% / 2);
             vertical-align: top;
-        }
-        @media (min-width:320px) and (max-width:374px) {
-            .recom_chartList .chartGoal .target {	
-                width: calc(100% / 2 - 13px);	
-            }
         }
         
         .recom_chartList .chartGoal .target .att {
