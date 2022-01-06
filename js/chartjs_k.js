@@ -4471,6 +4471,9 @@ $(document).ready(function () {
             xAxis: [{
                 categories: ['2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020'],
                 crosshair: true,
+                labels: {
+                    staggerLines: 2
+                }
             }],
 
             yAxis: [{ // 왼쪽 y축
@@ -4584,7 +4587,8 @@ $(document).ready(function () {
 
             xAxis: [{
                 categories: ['2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020'],
-                crosshair: true
+                crosshair: true,
+                offset: 10,
             }],
 
             yAxis: {
@@ -4596,7 +4600,8 @@ $(document).ready(function () {
                 },
                 title: {
                     text: null,
-                }
+                },
+                
             },
 
             credits: {
@@ -4613,7 +4618,7 @@ $(document).ready(function () {
                 name: '영업이익률',
             }, {
                 type: 'line',
-                data: [194.1, 95.6, 54.4, 29.9, 71.5, 106.4],
+                data: [0, 0, 0, 0, 0, 0, 0],
                 name: '순이익률',
             }],
 
@@ -4733,7 +4738,7 @@ $(document).ready(function () {
 
             tooltip: {
                 shared: true,
-                pointFormat: '<span style="color:{series.color}">{series.name} : <b>{point.y:,.0f} %</b><br/>'
+                pointFormat: '<span style="color:{series.color}">{series.name} : <b>{point.y:,.0f} 억원</b><br/>'
             },
 
             xAxis: [{
@@ -5239,7 +5244,7 @@ $(document).ready(function () {
 
             tooltip: {
                 shared: true,
-                pointFormat: '<span style="color:{series.color}">{series.name} : <b>{point.y:,.0f} 배</b><br/>'
+                pointFormat: '<span style="color:{series.color}">{series.name} : <b>{point.y:,.2f} 배</b><br/>'
             },
 
             xAxis: [{
@@ -6206,7 +6211,9 @@ $(document).ready(function () {
                 crosshairs: true,
                 shared: true,
                 valueDecimals: 2,
+                pointFormat: '<span>{series.name}: <b>{point.y:,.0f}</b><br/>'
             },
+            
             credits: {
                 enabled: false,
             },
