@@ -1142,7 +1142,7 @@ $(document).ready(function () {
             },
 
             xAxis: {
-                categories: ['수익성', '재무<br>안전성', '현금창출력', '경제적해자', '미래<br>성장성'],
+                categories: ['수익성', '재무<br>안전성', '현금창출력', '사업동점력', '미래<br>성장성'],
                 tickmarkPlacement: 'on',
                 lineWidth: 0,
                 labels: {

@@ -235,6 +235,12 @@ $(document).ready(function () {
         $("#" + activeTab).fadeIn();
     });
 
+    $('.tabsArea').tabs({
+        beforeActivate: function (event, ui) {
+            window.location.hash = ui.newPanel.selector;
+        }
+    });
+
     //swiper
     //메인 상단
     var swiper = new Swiper('.attentionSwiper', {

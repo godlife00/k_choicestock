@@ -464,6 +464,7 @@
     .box .title {
         display:block;
         font-size: $font12;        
+        font-weight: bold;
         color:$colgray;
         position: relative;
 
@@ -515,7 +516,7 @@
             display:inline-block;
             line-height:1.27;            
             color:$colgray;
-            font-size:11px;
+            font-size:12px;
 
             b {
                 line-height:1;                
@@ -534,8 +535,15 @@
         font-size:11px;
 
         span {
-            color:$colorg;
             font-size:11px;
+            color:$colorg;
+
+            &.increase {
+                color:$colred;
+            }
+            &.decrease {
+                color: $colblue;
+            }            
         }        
     }
     
@@ -607,6 +615,7 @@
         }
         ul li span {
             display: block;
+            padding-top: 2px;
             color: $col333;            
             font-size: $font16;
             font-weight: bold;  
@@ -674,7 +683,7 @@
         }
         .adequate span {
             display: block;
-            font-size: 11px;
+            font-size: 12px;
             font-weight: normal;
             line-height: 1.18;  
             text-align: center;
@@ -994,9 +1003,10 @@
 
         th {
             text-align: left;
-            font-weight: normal;
+            font-weight: normal;            
+            line-height: 12px;
 
-            span {
+            span {                                
                 font-weight: 300;
                 font-size: $font12;
                 letter-spacing: normal;                
@@ -1191,7 +1201,7 @@
 
     .chart_area.diagnosis {
         background: #f6f7fa;
-        width: calc(100% - 30px);
+        width: calc(100% - 30px);        
         margin: 20px auto 0;
         border-radius: 16px;
         box-sizing: border-box;
@@ -1208,6 +1218,8 @@
             vertical-align: top;            
             text-align: center;
             padding: 12px 0;            
+            min-height: 103px;
+            box-sizing: border-box;
 
             .charm {
                 font-size: $font12;
@@ -1931,14 +1943,14 @@
                 th span {
                     display:inline-block;
                     text-align:center;    
-                    font-size: 10px;
+                    font-size: 12px;
                     font-weight: normal;            
                     text-align: center;
                     color: $colgray;
                 }
                 td {	
                     box-sizing:border-box;
-                    font-size: 11px;
+                    font-size: 12px;
                     min-width: 60px;
                     text-align: center;
                     line-height: 38px;
