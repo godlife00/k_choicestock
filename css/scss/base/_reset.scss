@@ -49,3 +49,50 @@ optgroup{font-weight:bold}
 textarea{overflow:auto;border:1px solid #bcbcbc;-webkit-appearance:none}
 select{-webkit-appearance:none}
 
+.globalStock .tabsArea.taburl {
+    * {
+        box-sizing: border-box;
+        font-family: "Spoqa Han Sans Neo", "Malgun gothic", "Helvetica Neue", Helvetica, Arial, sans-serif;        
+    }    
+    background: #fff;
+    padding: 0;
+    margin: 0;
+    border: none;          
+    .ui-tabs-panel {
+        padding: 0;
+        margin: 0;
+    }
+    .tab_area {
+        margin-top: 12px;
+    }      
+    .tabs.inside_tabs,
+    .tabs.inside_tabs li {
+        margin: 0;
+        padding: 0;
+        background: #fff;
+        border: none;                                
+    }
+    .tabs.inside_tabs li {
+        padding: 0 !important;
+        border-bottom: 1px solid #e1e5ef;
+        a {            
+            float: none;
+            margin: 0;
+            padding: 0;
+            padding-bottom: 11px;
+            font-size: 1rem;
+            line-height: 1.31;
+            letter-spacing: -0.8px;
+            color: #49525C;            
+        }
+        &.ui-state-active {            
+            padding-bottom: 11px;
+            border-bottom: 3px solid #E57828;
+            a {                
+                font-weight: bold;
+                color: #E57828;                
+            }
+        }
+        
+    }
+}

@@ -1,5 +1,13 @@
 $(document).ready(function () {
     $('.globalStock .main_mid.youtube_mijumi .video_thumbnail').show(); // 페이지 로드 완료후 이미지 노출
+    // 페이지 새로고침되도 스크롤 위치 유지
+    document.addEventListener("DOMContentLoaded", function(event) { 
+        var scrollpos = localStorage.getItem('scrollpos');
+        if (scrollpos) window.scrollTo(0, scrollpos);
+    });
+    window.onbeforeunload = function(e) {
+        localStorage.setItem('scrollpos', window.scrollY);
+    };
 
     /************************/
     /****  Modal popup  *****/
@@ -234,12 +242,25 @@ $(document).ready(function () {
         var activeTab = $(this).attr("rel");
         $("#" + activeTab).fadeIn();
     });
-
-    $('.tabsArea').tabs({
-        beforeActivate: function (event, ui) {
-            window.location.hash = ui.newPanel.selector;
-        }
+    
+    $(".tabsArea.taburl .tabs.inside_tabs li:nth-child(1) a").click(function () {                
+        console.log("test11");        
+        $(".tabsArea .tab_content").fadeIn();        
     });
+    $(".tabsArea.taburl .tabs.inside_tabs li:nth-child(2) a").click(function () {                
+        console.log("test22");        
+        $(".tabsArea .tab_content").fadeIn();        
+    });
+
+    $('.tabsArea.taburl').tabs({
+        beforeActivate: function (e, ui) {
+            window.location.hash = ui.newPanel.selector;
+        }                
+    });
+    $('.globalStock .tab_area .tabs.inside_tabs li a.tabhash').on("click", function () {
+        $('html').scrollTop(0);
+    });        
+        
 
     //swiper
     //메인 상단
@@ -504,7 +525,7 @@ $(document).ready(function () {
         if (!etarget.is('.highcharts-root, path')) {
             $('.globalStock .sub_search .sub_mid.diagnosis .investCharm_area .compet_chart .chart_star').hide();
         } else {
-            console.log("test22222");                        
+            
         }
     });
     $('.globalStock .sub_search .sub_mid.diagnosis .investCharm_area .compet_chart .chart_star').hide();
@@ -515,3 +536,5 @@ $(document).ready(function () {
     
     
 });
+
+

@@ -1,9 +1,11 @@
 /* 진단 */
 .globalStock .sub_search .latest_results {
 
-    .tab_container {        
+    .tab_container {                
 
-        .tab_content {
+        .tab_content,
+        .ui-tabs-panel {
+            
             .onestep_guide {
                 display: flex;
                 justify-content: space-between;            
