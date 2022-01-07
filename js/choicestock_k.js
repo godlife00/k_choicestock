@@ -242,25 +242,17 @@ $(document).ready(function () {
         var activeTab = $(this).attr("rel");
         $("#" + activeTab).fadeIn();
     });
+    $(function () {        
+        var loc = window.location.href; // returns the full URL            
+        if (/popular/.test(loc)) {
+            console.log("test");            
+            $("ul.tabs li").removeClass("active");
+            $(".globalStock .tab_area .tabs.inside_tabs li:nth-child(2)").addClass("active");
+            $(".tabsArea .tab_content:nth-child(1)").hide();
+            $(".tabsArea .tab_content:nth-child(2)").show();
+        } 
+    });
     
-    $(".tabsArea.taburl .tabs.inside_tabs li:nth-child(1) a").click(function () {                
-        console.log("test11");        
-        $(".tabsArea .tab_content").fadeIn();        
-    });
-    $(".tabsArea.taburl .tabs.inside_tabs li:nth-child(2) a").click(function () {                
-        console.log("test22");        
-        $(".tabsArea .tab_content").fadeIn();        
-    });
-
-    $('.tabsArea.taburl').tabs({
-        beforeActivate: function (e, ui) {
-            window.location.hash = ui.newPanel.selector;
-        }                
-    });
-    $('.globalStock .tab_area .tabs.inside_tabs li a.tabhash').on("click", function () {
-        $('html').scrollTop(0);
-    });        
-        
 
     //swiper
     //메인 상단
