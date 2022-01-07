@@ -9834,6 +9834,33 @@ html {
   height: 100%;
 }
 
+.globalStock .sub_recipe .sub_top.view.earnings + .sub_mid.recipe_view .recipe_area .area ul.list li.num {
+  position: relative;
+  padding-left: 32px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.globalStock .sub_recipe .sub_top.view.earnings + .sub_mid.recipe_view .recipe_area .area ul.list li.num::after {
+  content: "[잠]";
+  display: inline-block;
+  border-radius: 3px;
+  font-size: 10px;
+  font-weight: 300;
+  letter-spacing: normal;
+  text-align: center;
+  background-color: #000;
+  color: #fff;
+  position: absolute;
+  height: 12px;
+  width: 24px;
+  padding: 1px 1px 2px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  top: 5px;
+  left: 3px;
+}
+
 /* 메뉴 */
 .globalStock .sub_menu .sub_top {
   background: #fff;
