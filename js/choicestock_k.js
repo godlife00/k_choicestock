@@ -249,7 +249,7 @@ $(document).ready(function () {
             $("ul.tabs li").removeClass("active");
             $(".globalStock .tab_area .tabs.inside_tabs li:nth-child(2)").addClass("active");
             $(".tabsArea .tab_content:nth-child(1)").hide();
-            $(".tabsArea .tab_content:nth-child(2)").show();
+            $(".tabsArea .tab_content:nth-child(2)").fadeIn();
         } 
     });
     

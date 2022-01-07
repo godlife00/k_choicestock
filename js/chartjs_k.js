@@ -1630,7 +1630,7 @@ $(document).ready(function () {
             tooltip: {
                 shared: true,
                 crosshairs: true,
-                pointFormat: '<span style="color:{series.color}">{series.name}: <b>{point.y:,.0f}</b><br/>'
+                pointFormat: '<span style="color:{series.color}">{series.name}: <b>{point.y:,.0f}억원</b><br/>'
             },
 
             xAxis: [{

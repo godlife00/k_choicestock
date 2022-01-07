@@ -389,6 +389,15 @@ html {
   display: inline-block;
 }
 
+@media (min-width: 320px) and (max-width: 374px) {
+  .globalStock .search_top.searching .searchArea .sch_title {
+    padding-top: 6px;
+  }
+  .globalStock .search_top.searching .searchArea .top_btn {
+    padding-top: 10px;
+  }
+}
+
 .globalStock .search_top.searching .searchArea form {
   width: 100%;
   margin-left: 20px;
