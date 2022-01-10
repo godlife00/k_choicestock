@@ -2060,26 +2060,47 @@
         }
     }
 }
-.globalStock .sub_recipe .sub_top.view.earnings + .sub_mid.recipe_view .recipe_area .area ul.list li.num {
+.globalStock .sub_recipe .sub_top.view.earnings + .sub_mid.recipe_view .recipe_area .area ul.list li.num {    
     position: relative;
     padding-left: 32px;
-    box-sizing: border-box;
-    &::after {
+    box-sizing: border-box;    
+
+    &.prov::before {
         content: "[잠]";
         display: inline-block;        
-        border-radius: 3px;
-        font-size: 10px;
-        font-weight: 300;
-        letter-spacing: normal;
-        text-align: center;        
-        background-color: #000;
-        color: #fff; 
-        position: absolute;
-        height: 12px;
-        width: 24px;
-        padding: 1px 1px 2px;
-        box-sizing: border-box;
-        top: 5px;
+        position: absolute;        
+        top: 0;
         left: 3px;
+        border-radius: 3px;
+        font-size: 9px;
+        font-weight: 300;        
+        text-align: center;        
+        background-color: #FFE200;        
+        text-align: center;
+        color: #F2333A;        
+        padding: 1px 2px;
+        width: 26px;
+        height: 16px;
+        line-height: 16px;
+        box-sizing: border-box;        
+    }    
+    &.confem::before {
+        content: "[확]";
+        display: inline-block;        
+        position: absolute;        
+        top: 0;
+        left: 3px;
+        border-radius: 3px;
+        font-size: 9px;
+        font-weight: 300;        
+        text-align: center;        
+        background-color: #BDD6E8;        
+        text-align: center;
+        color: #014B8D;        
+        padding: 1px 2px;
+        width: 26px;
+        height: 16px;
+        line-height: 16px;
+        box-sizing: border-box;        
     }    
 }
