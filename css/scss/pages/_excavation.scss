@@ -408,6 +408,20 @@
             letter-spacing: -0.6px;
             text-align: right;
             color: $colgray;
+            b {                
+                color: #82929F;
+                font-weight: normal;
+                font-size: 11px;
+                padding: 1px 1px;
+                &.prov {
+                    background-color: #FFE200;
+                    color: #F2333A;                    
+                }
+                &.confem {
+                    background-color: #BDD6E8;
+                    color: #014B8D;                                       
+                }
+            }
 
             .atten {
                 position: relative;
@@ -2062,45 +2076,51 @@
 }
 .globalStock .sub_recipe .sub_top.view.earnings + .sub_mid.recipe_view .recipe_area .area ul.list li.num {    
     position: relative;
-    padding-left: 32px;
-    box-sizing: border-box;    
+    padding-left: 24px;
+    box-sizing: border-box;        
 
     &.prov::before {
-        content: "[잠]";
+        content: "잠";
         display: inline-block;        
         position: absolute;        
-        top: 0;
-        left: 3px;
-        border-radius: 3px;
-        font-size: 9px;
-        font-weight: 300;        
-        text-align: center;        
+        top: 2px;
+        left: 0;
+        border-radius: 3px;                
         background-color: #FFE200;        
         text-align: center;
-        color: #F2333A;        
+        vertical-align: top;
+        font-size: 11px;
         padding: 1px 2px;
-        width: 26px;
-        height: 16px;
-        line-height: 16px;
         box-sizing: border-box;        
+        color: #F2333A;                
+        width: 20px;
+        height: 18px;                
+        line-height: 16px;
     }    
     &.confem::before {
-        content: "[확]";
+        content: "확";
         display: inline-block;        
         position: absolute;        
-        top: 0;
-        left: 3px;
-        border-radius: 3px;
-        font-size: 9px;
-        font-weight: 300;        
-        text-align: center;        
+        top: 2px;
+        left: 0;
+        border-radius: 3px;                
         background-color: #BDD6E8;        
         text-align: center;
-        color: #014B8D;        
+        vertical-align: top;
+        font-size: 11px;
         padding: 1px 2px;
-        width: 26px;
-        height: 16px;
-        line-height: 16px;
         box-sizing: border-box;        
+        color: #014B8D;        
+        width: 20px;
+        height: 18px;                
+        line-height: 16px;
     }    
+    @media (min-width:320px) and (max-width:374px) {
+        &.prov::before {              
+            top: 0;            
+        }    
+        &.confem::before {            
+            top: 0;            
+        }
+    }
 }

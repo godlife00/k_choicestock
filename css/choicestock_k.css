@@ -1489,11 +1489,11 @@ html {
   bottom: 14px;
   content: '';
   display: inline-block;
-  background: #fff5e2 url("/img/bg_noteicon.svg") no-repeat 0 0;
+  background: #fff5e2 url("../img/bg_noteicon.svg") no-repeat 0 0;
 }
 
 .globalStock .main_mid.note_area .banner ul li:last-child::after {
-  background: #fff5e2 url("/img/bg_noteicon.svg") no-repeat right 0;
+  background: #fff5e2 url("../img/bg_noteicon.svg") no-repeat right 0;
 }
 
 .globalStock .main_mid.note_area .banner ul li a {
@@ -1548,7 +1548,7 @@ html {
   display: block;
   width: 96px;
   height: 96px;
-  background: #ffb37b url("/img/icon_recipe_list.svg") no-repeat 0 12px;
+  background: #ffb37b url("../img/icon_recipe_list.svg") no-repeat 0 12px;
   background-size: auto 70px;
   border-radius: 50%;
 }
@@ -1908,7 +1908,7 @@ html {
   top: 3px;
   width: 12px;
   height: 12px;
-  background: url("/img/icon_awesome.svg") no-repeat center center;
+  background: url("../img/icon_awesome.svg") no-repeat center center;
 }
 
 .globalStock .sub_recom .sub_mid.service_info .txt .more {
@@ -2449,7 +2449,7 @@ html {
   top: 3px;
   width: 12px;
   height: 12px;
-  background: url("/img/icon_awesome.svg") no-repeat center center;
+  background: url("../img/icon_awesome.svg") no-repeat center center;
 }
 
 .globalStock .sub_recom .bandchart_more .more {
@@ -3266,7 +3266,7 @@ html {
   top: 3px;
   width: 12px;
   height: 12px;
-  background: url("/img/icon_awesome.svg") no-repeat center center;
+  background: url("../img/icon_awesome.svg") no-repeat center center;
 }
 
 .globalStock .sub_recom .sub_mid.eventPicks_area .bandchart_sume .box.info p a.more {
@@ -3627,7 +3627,7 @@ html {
   width: 18px;
   height: 18px;
   margin-bottom: 4px;
-  background: url("/img/game_trans_b.svg") no-repeat 0 -25px;
+  background: url("../img/game_trans_b.svg") no-repeat 0 -25px;
   background-size: auto 18px;
 }
 
@@ -4839,7 +4839,7 @@ html {
   vertical-align: top;
   width: 24px;
   height: 25px;
-  background: url("/img/game_trans.svg") no-repeat 0 0;
+  background: url("../img/game_trans.svg") no-repeat 0 0;
   background-size: 114px 24px;
 }
 
@@ -5038,7 +5038,7 @@ html {
   pointer-events: none;
   width: 14px;
   height: 10px;
-  background: url("/img/situation_arow.svg") no-repeat center center;
+  background: url("../img/situation_arow.svg") no-repeat center center;
   z-index: 90;
 }
 
@@ -5097,7 +5097,7 @@ html {
 
 .globalStock .sub_search .sub_mid.outline_box .box .event_attractiveness {
   width: 100%;
-  background: url("/img/bg_recipe_dividend.svg") no-repeat -7px center;
+  background: url("../img/bg_recipe_dividend.svg") no-repeat -7px center;
   background-size: auto 57px;
 }
 
@@ -5123,7 +5123,7 @@ html {
 .globalStock .sub_search .sub_mid.outline_box .box .event_attractiveness li.att_on {
   padding: 0 2px;
   color: #E57828;
-  background: url("/img/bg_bbline.svg") repeat-x 0 bottom;
+  background: url("../img/bg_bbline.svg") repeat-x 0 bottom;
 }
 
 .globalStock .sub_search .sub_mid.outline_box .box .event_attractiveness li.att_on a {
@@ -6650,7 +6650,7 @@ html {
 .globalStock .sub_search .sub_mid.research_board .news_no_data {
   margin: 20px 15px 0;
   border-radius: 20px;
-  background: #f6f7fa url("/img/bg_nodata.png") no-repeat center 70px;
+  background: #f6f7fa url("../img/bg_nodata.png") no-repeat center 70px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding-top: 240px;
@@ -6695,7 +6695,7 @@ html {
 
 .globalStock .sub_search .sub_mid.research_board .pho_list li .list.lst_lock .tit a {
   text-indent: 18px;
-  background: url("/img/icon_prm_lock.svg") no-repeat left 3px;
+  background: url("../img/icon_prm_lock.svg") no-repeat left 3px;
 }
 
 .globalStock .sub_search .sub_mid.research_board .pho_list li .list .tit {
@@ -6735,7 +6735,7 @@ html {
   min-width: 80px;
   width: 80px;
   height: 71px;
-  background: #fff url("/img/bg_noimg.svg") no-repeat center center;
+  background: #fff url("../img/bg_noimg.svg") no-repeat center center;
   background-size: cover;
   margin-right: 15px;
   border-radius: 5px;
@@ -7246,7 +7246,7 @@ html {
   display: inline-block;
   width: 22px;
   height: 22px;
-  background: url("/img/icon_purchase.svg") no-repeat center center;
+  background: url("../img/icon_purchase.svg") no-repeat center center;
   margin-right: 11px;
   vertical-align: sub;
 }
@@ -7375,7 +7375,7 @@ html {
   top: 3px;
   width: 12px;
   height: 12px;
-  background: url("/img/icon_awesome.svg") no-repeat center center;
+  background: url("../img/icon_awesome.svg") no-repeat center center;
 }
 
 .globalStock .sub_search .bandchart_more .more {
@@ -7412,7 +7412,7 @@ html {
   top: 3px;
   width: 12px;
   height: 12px;
-  background: url("/img/icon_awesome.svg") no-repeat center center;
+  background: url("../img/icon_awesome.svg") no-repeat center center;
 }
 
 .globalStock .sub_search .sub_mid .bandchart_sume .box {
@@ -7477,7 +7477,7 @@ html {
   display: inline-block;
   width: 15px;
   height: 12px;
-  background: url("/img/icon_youtube.svg") no-repeat center center;
+  background: url("../img/icon_youtube.svg") no-repeat center center;
   margin-right: 8px;
 }
 
@@ -7556,7 +7556,7 @@ html {
   display: inline-block;
   width: 20px;
   height: 16px;
-  background: url("/img/btn_schSet.svg") no-repeat 50% 50%;
+  background: url("../img/btn_schSet.svg") no-repeat 50% 50%;
   background-size: auto 100%;
   margin-right: 5px;
   vertical-align: top;
@@ -7700,7 +7700,7 @@ html {
   display: inline-block;
   width: 10px;
   height: 13px;
-  background: url("/img/Icon_lockB.png") no-repeat 0 0;
+  background: url("../img/Icon_lockB.png") no-repeat 0 0;
   background-size: 10px 13px;
   margin-right: 3px;
 }
@@ -7777,24 +7777,24 @@ html {
 }
 
 .globalStock .sub_recipe .sub_top.view.recipejump {
-  background: #f6f7fa url("/img/bg_recipe_jump.svg") no-repeat center 28px;
+  background: #f6f7fa url("../img/bg_recipe_jump.svg") no-repeat center 28px;
 }
 
 .globalStock .sub_recipe .sub_top.view.earnings {
-  background: #f6f7fa url("/img/bg_recipe_earnings.svg") no-repeat center 28px;
+  background: #f6f7fa url("../img/bg_recipe_earnings.svg") no-repeat center 28px;
 }
 
 .globalStock .sub_recipe .sub_top.view.dividend {
-  background: #f6f7fa url("/img/bg_recipe_dividend.svg") no-repeat center 28px;
+  background: #f6f7fa url("../img/bg_recipe_dividend.svg") no-repeat center 28px;
 }
 
 .globalStock .sub_recipe .sub_top.view.growth {
-  background: #f6f7fa url("/img/bg_recipe_growth.svg") no-repeat center 28px;
+  background: #f6f7fa url("../img/bg_recipe_growth.svg") no-repeat center 28px;
   background-size: 74px auto;
 }
 
 .globalStock .sub_recipe .sub_top.view.moat {
-  background: #f6f7fa url("/img/bg_recipe_moat.svg") no-repeat center 28px;
+  background: #f6f7fa url("../img/bg_recipe_moat.svg") no-repeat center 28px;
   background-size: 74px auto;
 }
 
@@ -7839,7 +7839,7 @@ html {
   display: inline-block;
   width: 22px;
   height: 22px;
-  background: #FFF5E2 url("/img/icon_prm_lock.svg") no-repeat center center;
+  background: #FFF5E2 url("../img/icon_prm_lock.svg") no-repeat center center;
   background-size: auto 10px;
   border-radius: 50%;
   position: relative;
@@ -7863,7 +7863,7 @@ html {
   margin: 0 auto;
   width: 96px;
   height: 96px;
-  background: #ffb37b url("/img/icon_recipe_list.svg") no-repeat 0 12px;
+  background: #ffb37b url("../img/icon_recipe_list.svg") no-repeat 0 12px;
   background-size: auto 70px;
   border-radius: 50%;
 }
@@ -7906,7 +7906,7 @@ html {
 }
 
 .globalStock .sub_recipe .sub_mid.recipe_tabs .box_tabs ul li.sale a::before {
-  background-image: url("/img/recipe_sale.svg");
+  background-image: url("../img/recipe_sale.svg");
   background-position: center center;
   background-size: auto 64px;
 }
@@ -7922,6 +7922,23 @@ html {
   letter-spacing: -0.6px;
   text-align: right;
   color: #82929F;
+}
+
+.globalStock .sub_recipe .sub_mid.recipe_view .update_info b {
+  color: #82929F;
+  font-weight: normal;
+  font-size: 11px;
+  padding: 1px 1px;
+}
+
+.globalStock .sub_recipe .sub_mid.recipe_view .update_info b.prov {
+  background-color: #FFE200;
+  color: #F2333A;
+}
+
+.globalStock .sub_recipe .sub_mid.recipe_view .update_info b.confem {
+  background-color: #BDD6E8;
+  color: #014B8D;
 }
 
 .globalStock .sub_recipe .sub_mid.recipe_view .update_info .atten {
@@ -7992,7 +8009,7 @@ html {
   width: 14px;
   height: 14px;
   padding: 1px 0;
-  background: url("/img/icon_transition.svg") no-repeat 0 1px;
+  background: url("../img/icon_transition.svg") no-repeat 0 1px;
   background-size: 14px 14px;
   margin-left: 2px;
   position: relative;
@@ -8130,7 +8147,7 @@ html {
   vertical-align: top;
   width: 14px;
   height: 14px;
-  background: url("/img/game_trans_b.svg") no-repeat 0 0;
+  background: url("../img/game_trans_b.svg") no-repeat 0 0;
   background-size: 60px 14px;
 }
 
@@ -8366,7 +8383,7 @@ html {
   display: inline-block;
   width: 13px;
   height: 13px;
-  background: url("/img/icon_saledeal.svg") no-repeat center center;
+  background: url("../img/icon_saledeal.svg") no-repeat center center;
   margin-right: 4px;
 }
 
@@ -8470,7 +8487,7 @@ html {
 .globalStock .sub_catch .catch_wrap .no_data {
   margin-top: 20px;
   border-radius: 20px;
-  background: #fff url("/img/bg_nodata.png") no-repeat center 70px;
+  background: #fff url("../img/bg_nodata.png") no-repeat center 70px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding-top: 220px;
@@ -8799,7 +8816,7 @@ html {
   margin-left: -29px;
   z-index: 2;
   display: inline-block;
-  background: #fff url("/img/icon_prm_lock.svg") no-repeat center center;
+  background: #fff url("../img/icon_prm_lock.svg") no-repeat center center;
   background-size: auto 12px;
   padding: 4px 30px 3px;
   height: 18px;
@@ -8829,7 +8846,7 @@ html {
   pointer-events: none;
   width: 14px;
   height: 10px;
-  background: url("/img/situation_arow.svg") no-repeat center center;
+  background: url("../img/situation_arow.svg") no-repeat center center;
   z-index: 90;
 }
 
@@ -9149,7 +9166,7 @@ html {
   content: '';
   width: 16px;
   height: 16px;
-  background: url("/img/icon_checkmark.svg") no-repeat 100% 0;
+  background: url("../img/icon_checkmark.svg") no-repeat 100% 0;
   position: absolute;
   right: 6px;
   top: 6px;
@@ -9471,7 +9488,7 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: url("/img/research_bg.png") no-repeat center center;
+  background: url("../img/research_bg.png") no-repeat center center;
   margin: 16px 15px 25px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -9562,7 +9579,7 @@ html {
 
 .globalStock .sub_note .sub_mid.research_board .pho_list li .list.lst_lock .tit a {
   text-indent: 18px;
-  background: url("/img/icon_prm_lock.svg") no-repeat left 3px;
+  background: url("../img/icon_prm_lock.svg") no-repeat left 3px;
 }
 
 .globalStock .sub_note .sub_mid.research_board .pho_list li .list .tit {
@@ -9602,7 +9619,7 @@ html {
   min-width: 80px;
   width: 80px;
   height: 71px;
-  background: #fff url("/img/bg_noimg.svg") no-repeat center center;
+  background: #fff url("../img/bg_noimg.svg") no-repeat center center;
   background-size: cover;
   margin-right: 15px;
   border-radius: 5px;
@@ -9776,7 +9793,7 @@ html {
 
 .globalStock .sub_note .popularity .pho_list li .list.lst_lock .tit a {
   text-indent: 18px;
-  background: url("/img/icon_prm_lock.svg") no-repeat left 3px;
+  background: url("../img/icon_prm_lock.svg") no-repeat left 3px;
 }
 
 .globalStock .sub_note .popularity .pho_list li .list .tit {
@@ -9814,7 +9831,7 @@ html {
   min-width: 46px;
   width: 46px;
   height: 41px;
-  background: #fff url("/img/bg_noimg.svg") no-repeat center center;
+  background: #fff url("../img/bg_noimg.svg") no-repeat center center;
   background-size: cover;
   margin-right: 15px;
   border-radius: 5px;
@@ -9836,51 +9853,58 @@ html {
 
 .globalStock .sub_recipe .sub_top.view.earnings + .sub_mid.recipe_view .recipe_area .area ul.list li.num {
   position: relative;
-  padding-left: 32px;
+  padding-left: 24px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
 .globalStock .sub_recipe .sub_top.view.earnings + .sub_mid.recipe_view .recipe_area .area ul.list li.num.prov::before {
-  content: "[잠]";
+  content: "잠";
   display: inline-block;
   position: absolute;
-  top: 0;
-  left: 3px;
+  top: 2px;
+  left: 0;
   border-radius: 3px;
-  font-size: 9px;
-  font-weight: 300;
-  text-align: center;
   background-color: #FFE200;
   text-align: center;
-  color: #F2333A;
+  vertical-align: top;
+  font-size: 11px;
   padding: 1px 2px;
-  width: 26px;
-  height: 16px;
-  line-height: 16px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  color: #F2333A;
+  width: 20px;
+  height: 18px;
+  line-height: 16px;
 }
 
 .globalStock .sub_recipe .sub_top.view.earnings + .sub_mid.recipe_view .recipe_area .area ul.list li.num.confem::before {
-  content: "[확]";
+  content: "확";
   display: inline-block;
   position: absolute;
-  top: 0;
-  left: 3px;
+  top: 2px;
+  left: 0;
   border-radius: 3px;
-  font-size: 9px;
-  font-weight: 300;
-  text-align: center;
   background-color: #BDD6E8;
   text-align: center;
-  color: #014B8D;
+  vertical-align: top;
+  font-size: 11px;
   padding: 1px 2px;
-  width: 26px;
-  height: 16px;
-  line-height: 16px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  color: #014B8D;
+  width: 20px;
+  height: 18px;
+  line-height: 16px;
+}
+
+@media (min-width: 320px) and (max-width: 374px) {
+  .globalStock .sub_recipe .sub_top.view.earnings + .sub_mid.recipe_view .recipe_area .area ul.list li.num.prov::before {
+    top: 0;
+  }
+  .globalStock .sub_recipe .sub_top.view.earnings + .sub_mid.recipe_view .recipe_area .area ul.list li.num.confem::before {
+    top: 0;
+  }
 }
 
 /* 메뉴 */
@@ -10056,7 +10080,7 @@ html {
 
 .globalStock .sub_briefing .pho_list li .list.lst_lock .tit a {
   text-indent: 18px;
-  background: url("/img/icon_prm_lock.svg") no-repeat left 3px;
+  background: url("../img/icon_prm_lock.svg") no-repeat left 3px;
 }
 
 .globalStock .sub_briefing .pho_list li .list .tit {
@@ -10095,7 +10119,7 @@ html {
   min-width: 80px;
   width: 80px;
   height: 71px;
-  background: #fff url("/img/bg_noimg.svg") no-repeat center center;
+  background: #fff url("../img/bg_noimg.svg") no-repeat center center;
   background-size: cover;
   margin-right: 15px;
   border-radius: 5px;
@@ -10303,7 +10327,7 @@ body {
   position: absolute;
   right: 15px;
   top: 15px;
-  background: url("/img/clse.png") no-repeat 0 0;
+  background: url("../img/clse.png") no-repeat 0 0;
   background-size: 100% 100%;
 }
 
@@ -10368,7 +10392,7 @@ body {
 }
 
 .star_area .starR {
-  background: url("/img/ico_review.svg") no-repeat -21px 0;
+  background: url("../img/ico_review.svg") no-repeat -21px 0;
   background-size: auto 100%;
   display: inline-block;
   text-indent: -9999px;
