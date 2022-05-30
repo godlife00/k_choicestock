@@ -1489,11 +1489,11 @@ html {
   bottom: 14px;
   content: '';
   display: inline-block;
-  background: #fff5e2 url("/img/bg_noteicon.svg") no-repeat 0 0;
+  background: #fff5e2 url("../img/bg_noteicon.svg") no-repeat 0 0;
 }
 
 .globalStock .main_mid.note_area .banner ul li:last-child::after {
-  background: #fff5e2 url("/img/bg_noteicon.svg") no-repeat right 0;
+  background: #fff5e2 url("../img/bg_noteicon.svg") no-repeat right 0;
 }
 
 .globalStock .main_mid.note_area .banner ul li a {
@@ -1548,7 +1548,7 @@ html {
   display: block;
   width: 96px;
   height: 96px;
-  background: #ffb37b url("/img/icon_recipe_list.svg") no-repeat 0 12px;
+  background: #ffb37b url("../img/icon_recipe_list.svg") no-repeat 0 12px;
   background-size: auto 70px;
   border-radius: 50%;
 }
@@ -1908,7 +1908,7 @@ html {
   top: 3px;
   width: 12px;
   height: 12px;
-  background: url("/img/icon_awesome.svg") no-repeat center center;
+  background: url("../img/icon_awesome.svg") no-repeat center center;
 }
 
 .globalStock .sub_recom .sub_mid.service_info .txt .more {
@@ -2226,53 +2226,398 @@ html {
 
 /* 추천뷰  종목진단 - 적정주가 차트 */
 .globalStock .sub_recom .adequate_stock {
-  margin: 8px auto 0;
+  margin: 20px auto 0;
   width: calc(100% - 30px);
 }
 
 .globalStock .sub_recom .adequate_stock .box {
+  padding: 16px 15px 20px;
   border-radius: 16px;
   background-color: #f6f7fa;
 }
 
+@media (min-width: 320px) and (max-width: 359px) {
+  .globalStock .sub_recom .adequate_stock {
+    width: calc(100% - 20px);
+  }
+  .globalStock .sub_recom .adequate_stock .box {
+    padding: 16px 10px 20px;
+  }
+}
+
 .globalStock .sub_recom .adequate_stock .box .title a {
-  padding: 16px 12px 0;
   display: block;
   font-size: 0.75rem;
   font-weight: bold;
-  letter-spacing: normal;
-  text-align: left;
-  color: #82929F;
-  position: relative;
+  color: #8c90ad;
 }
 
 .globalStock .sub_recom .adequate_stock .box .con {
-  padding: 30px 12px 20px;
-  /* 종목진단 - 적정주가탭 - 적정주가 노데이터 */
+  padding-top: 11px;
+  /* 종목진단 AI적정주가 벨류라인 차트 */
+  /* 매우저평가 */
+  /* 매우고평가 */
+  /* 0 미만인 경우 */
+  /* 100% 초과인 경우 */
+  /* 적극매수 */
+  /* 매우 저평가 */
+  /* 매도 */
+  /* 매우 고평가 */
+  /* 적정가 */
 }
 
-.globalStock .sub_recom .adequate_stock .box .con .adequate_price {
+.globalStock .sub_recom .adequate_stock .box .con .value_chart {
   width: 100%;
+  padding: 0;
+  overflow: initial;
 }
 
-.globalStock .sub_recom .adequate_stock .box .con .adequate_price .line {
+.globalStock .sub_recom .adequate_stock .box .con .value_chart .line {
+  position: relative;
+  width: calc(100% - 46px);
+  margin: 70px auto 0;
+  height: 2px;
+  border-radius: 20px;
+  background-color: #e0e5f0;
+}
+
+.globalStock .sub_recom .adequate_stock .box .con .value_chart .line::before,
+.globalStock .sub_recom .adequate_stock .box .con .value_chart .line::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  left: -14px;
+  bottom: 0;
+  width: 14px;
+  height: 2px;
+  border-radius: 20px;
+  background-color: #e0e5f0;
+}
+
+.globalStock .sub_recom .adequate_stock .box .con .value_chart .line::after {
+  left: auto;
+  right: -14px;
+}
+
+.globalStock .sub_recom .adequate_stock .box .con .value_chart .line .g_action {
+  position: absolute;
+  left: 0;
+  top: -6px;
+  /* margin-left:-5px; */
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 2;
+  display: inline-block;
+  background: #e57828;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  font-size: 0;
+}
+
+.globalStock .sub_recom .adequate_stock .box .con .value_chart .line .g_action::after {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  display: inline-block;
+  background: #fff;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  font-size: 0;
+}
+
+.globalStock .sub_recom .adequate_stock .box .con .value_chart .line .g_action.g_buying {
+  top: -3px;
+  left: 0;
+  right: auto;
+  width: 8px;
+  height: 8px;
+  background-color: #f8d4b5;
+  margin-left: -2px;
+}
+
+.globalStock .sub_recom .adequate_stock .box .con .value_chart .line .g_action.g_buying::after {
+  content: "매우저평가";
+  position: absolute;
+  left: 0;
+  top: 20px;
+  display: inline-block;
+  width: 60px;
+  font-size: 12px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.08;
+  letter-spacing: normal;
+  text-align: left;
+  color: #c3c3c3;
+}
+
+.globalStock .sub_recom .adequate_stock .box .con .value_chart .line .g_action.g_sell {
+  top: -3px;
+  left: auto;
+  right: -3px;
+  width: 8px;
+  height: 8px;
+  background-color: #f8d4b5;
+  margin-right: -5px;
+}
+
+.globalStock .sub_recom .adequate_stock .box .con .value_chart .line .g_action.g_sell::after {
+  content: "매우고평가";
+  position: absolute;
+  left: auto;
+  right: 0;
+  top: 20px;
+  display: inline-block;
+  width: 60px;
+  font-size: 12px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.08;
+  letter-spacing: normal;
+  text-align: left;
+  color: #c3c3c3;
+}
+
+.globalStock .sub_recom .adequate_stock .box .con .value_chart .adequate {
+  text-align: center;
+}
+
+.globalStock .sub_recom .adequate_stock .box .con .value_chart .adequate strong {
+  position: relative;
+  display: inline-block;
+  margin-top: 20px;
+  padding: 4px 14px;
+  border-radius: 3px;
+  background-color: #fff;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 0.87;
+  color: #333;
+}
+
+.globalStock .sub_recom .adequate_stock .box .con .value_chart .adequate strong::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: -14px;
+  margin-left: 1px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  pointer-events: none;
+  width: 1px;
+  height: 15px;
+  background-color: #e57828;
+  z-index: 90;
+}
+
+.globalStock .sub_recom .adequate_stock .box .con .value_chart .adequate span {
+  display: block;
+  padding-bottom: 5px;
+  font-size: 10px;
+  font-weight: 300;
+  line-height: 1.3;
+  text-align: center;
+  color: #333;
+}
+
+.globalStock .sub_recom .adequate_stock .box .con .value_chart .adequate strong b {
+  font-weight: 300;
+}
+
+.globalStock .sub_recom .adequate_stock .box .con .value_chart .adequate .remark {
+  margin-top: 3px;
+}
+
+.globalStock .sub_recom .adequate_stock .box .con .value_chart .adequate .remark .txt_filter.size_B i {
+  width: 8px;
+  height: 8px;
+  margin: 0 1px 1px;
+  opacity: 0.67;
+}
+
+.globalStock .sub_recom .adequate_stock .box .con .value_chart .line .situation {
+  position: absolute;
+  left: 0;
+  top: -60px;
+  /* margin-left: -34px; */
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  min-width: 56px;
+  text-align: center;
+  padding: 1px 8px 7px;
+  border-radius: 3px;
+  background-color: #e57828;
+  z-index: 10;
+}
+
+.globalStock .sub_recom .adequate_stock .box .con .value_chart .line .situation::after {
+  content: "";
+  display: inline-block;
+  top: 56px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  content: " ";
+  position: absolute;
+  pointer-events: none;
+  background-color: #e57828;
+  z-index: 90;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  font-size: 0;
+}
+
+.globalStock .sub_recom .adequate_stock .box .con .value_chart .line .situation::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 42px;
+  pointer-events: none;
+  width: 1px;
+  height: 20px;
+  background-color: #e57828;
+  z-index: 90;
+}
+
+@media (min-width: 320px) and (max-width: 359px) {
+  .globalStock .sub_recom .adequate_stock .box .con .value_chart .line .situation::before {
+    top: 36px;
+  }
+}
+
+.globalStock .sub_recom .adequate_stock .box .con .value_chart .line .situation.under {
+  left: auto;
+  right: auto;
+  margin-left: 12px;
+}
+
+.globalStock .sub_recom .adequate_stock .box .con .value_chart .line .situation.under:before {
+  left: calc(50% - 20px);
+}
+
+.globalStock .sub_recom .adequate_stock .box .con .value_chart .line .situation.under::after {
+  left: calc(50% - 20px);
+}
+
+.globalStock .sub_recom .adequate_stock .box .con .value_chart .line .situation.over {
+  left: auto;
+  right: auto;
+  margin-left: auto;
+  margin-right: -64px;
+}
+
+.globalStock .sub_recom .adequate_stock .box .con .value_chart .line .situation.over:before {
+  left: calc(50% + 20px);
+}
+
+.globalStock .sub_recom .adequate_stock .box .con .value_chart .line .situation.over::after {
+  left: calc(50% + 20px);
+}
+
+.globalStock .sub_recom .adequate_stock .box .con .value_chart .line .situation.St_buying {
+  left: 0;
+  text-align: left;
+}
+
+.globalStock .sub_recom .adequate_stock .box .con .value_chart .line .situation.St_buying::after {
+  margin-left: -19px;
+}
+
+.globalStock .sub_recom .adequate_stock .box .con .value_chart .line .situation.buying {
+  left: 4%;
+}
+
+.globalStock .sub_recom .adequate_stock .box .con .value_chart .line .situation.buying::after {
+  margin-left: -4px;
+}
+
+.globalStock .sub_recom .adequate_stock .box .con .value_chart .line .situation.sell {
+  left: 47%;
+}
+
+.globalStock .sub_recom .adequate_stock .box .con .value_chart .line .situation.sell::after {
+  margin-left: -10px;
+}
+
+.globalStock .sub_recom .adequate_stock .box .con .value_chart .line .situation.St_sell {
+  left: auto;
+  right: 0;
+  text-align: right;
+}
+
+.globalStock .sub_recom .adequate_stock .box .con .value_chart .line .situation.St_sell::after {
+  margin-left: 4px;
+}
+
+.globalStock .sub_recom .adequate_stock .box .con .value_chart .line .situation.propriety {
+  left: 50%;
+  margin-left: -27px;
+}
+
+.globalStock .sub_recom .adequate_stock .box .con .value_chart .line .situation.propriety::after {
+  display: none;
+  margin-left: -10px;
+  top: calc(100% - 2px);
+}
+
+.globalStock .sub_recom .adequate_stock .box .con .value_chart .line .situation span {
+  font-size: 10px;
+  font-size: 0.65rem;
+  line-height: 1.3;
+  text-align: center;
+  color: #fff;
+  opacity: 0.5;
+}
+
+.globalStock .sub_recom .adequate_stock .box .con .value_chart .line .situation .sync_price {
+  display: block;
+  padding-top: 5px;
+  font-size: 1rem;
+  line-height: 0.81;
+  color: #fff;
+  opacity: 1;
+}
+
+.globalStock .sub_recom .adequate_stock .box .con .value_chart .line .situation .sync_price b {
+  font-size: 1rem;
+  line-height: 0.81;
+  color: #fff;
+  font-weight: 300;
+  opacity: 1;
+}
+
+.globalStock .sub_recom .adequate_stock .box .adequate_price {
+  width: 100%;
+  /* 종목진단 - 적정주가탭 - 적정주가 노데이터 */
+  /* 매우저평가 */
+  /* 매우고평가 */
+  /* 프리미엄 가입자가 아닌 경우 */
+  /* 적정주가 활성화 된 영역 */
+}
+
+.globalStock .sub_recom .adequate_stock .box .adequate_price .line {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  /* 적정주가 활성화 된 영역 */
 }
 
-.globalStock .sub_recom .adequate_stock .box .con .adequate_price .line .domain {
+.globalStock .sub_recom .adequate_stock .box .adequate_price .line .domain {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
   margin: 0 2px;
 }
 
-.globalStock .sub_recom .adequate_stock .box .con .adequate_price .line .domain .price {
+.globalStock .sub_recom .adequate_stock .box .adequate_price .line .domain .price {
   opacity: 0;
   display: inline-block;
   padding: 4px 6px 6px 6px;
@@ -2280,58 +2625,58 @@ html {
   background-color: #e57828;
   color: #fff;
   width: 100%;
-  height: 40px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  height: 30px;
+  margin-left: -6px;
 }
 
-.globalStock .sub_recom .adequate_stock .box .con .adequate_price .line .domain .price span {
+.globalStock .sub_recom .adequate_stock .box .adequate_price .line .domain .price span {
   color: #fff;
   font-size: 0.6rem;
   display: block;
   opacity: 0.51;
 }
 
-.globalStock .sub_recom .adequate_stock .box .con .adequate_price .line .domain .price span:nth-child(2) {
+.globalStock .sub_recom .adequate_stock .box .adequate_price .line .domain .price span:nth-child(2) {
   font-size: 0;
   opacity: 1;
+  padding-top: 4px;
 }
 
-.globalStock .sub_recom .adequate_stock .box .con .adequate_price .line .domain.active .price span:nth-child(2) {
-  font-size: 0.9375rem;
+.globalStock .sub_recom .adequate_stock .box .adequate_price .line .domain.active .price span:nth-child(2) {
+  font-size: 1rem;
 }
 
-.globalStock .sub_recom .adequate_stock .box .con .adequate_price .line .domain .price span b {
+.globalStock .sub_recom .adequate_stock .box .adequate_price .line .domain .price span b {
   color: #fff;
   font-weight: 300;
 }
 
-.globalStock .sub_recom .adequate_stock .box .con .adequate_price .line .domain .price_line {
+.globalStock .sub_recom .adequate_stock .box .adequate_price .line .domain .price_line {
   position: relative;
   text-align: center;
   margin-top: 20px;
 }
 
-.globalStock .sub_recom .adequate_stock .box .con .adequate_price .line .domain .price_line::before {
+.globalStock .sub_recom .adequate_stock .box .adequate_price .line .domain .price_line::before {
   content: "";
   display: block;
   width: 100%;
   height: 4px;
-  background: #e0e5f0;
+  background: #c9ccf4;
   z-index: 90;
 }
 
-.globalStock .sub_recom .adequate_stock .box .con .adequate_price .line .domain:first-child .price_line::before {
+.globalStock .sub_recom .adequate_stock .box .adequate_price .line .domain:first-child .price_line::before {
   border-top-left-radius: 16px;
   border-bottom-left-radius: 16px;
 }
 
-.globalStock .sub_recom .adequate_stock .box .con .adequate_price .line .domain:last-child .price_line::before {
+.globalStock .sub_recom .adequate_stock .box .adequate_price .line .domain:last-child .price_line::before {
   border-top-right-radius: 16px;
   border-bottom-right-radius: 16px;
 }
 
-.globalStock .sub_recom .adequate_stock .box .con .adequate_price .line .domain .price_line span {
+.globalStock .sub_recom .adequate_stock .box .adequate_price .line .domain .price_line span {
   display: block;
   margin-top: 11px;
   font-size: 0.875rem;
@@ -2339,12 +2684,195 @@ html {
   color: #c3c3c3;
 }
 
-.globalStock .sub_recom .adequate_stock .box .con .adequate_price .line .domain.active .price {
+.globalStock .sub_recom .adequate_stock .box .adequate_price .nodata_area .no_data {
+  text-align: center;
+  padding: 9px 0;
+  margin-top: 10px;
+  border-radius: 2px;
+  background-color: #e0e5f0;
+  font-size: 0.875rem;
+  line-height: 1.21;
+  color: #E57828;
+}
+
+.globalStock .sub_recom .adequate_stock .box .adequate_price .nodata_area .line {
+  position: relative;
+  width: 100%;
+  height: 2px;
+  border-radius: 20px;
+  background-color: #e0e5f0;
+  margin-top: 20px;
+}
+
+.globalStock .sub_recom .adequate_stock .box .adequate_price .nodata_area .line .g_action {
+  position: absolute;
+  left: 0;
+  top: -6px;
+  margin-left: -5px;
+  z-index: 2;
+  display: inline-block;
+  background: #f8d4b5;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  font-size: 0;
+}
+
+.globalStock .sub_recom .adequate_stock .box .adequate_price .nodata_area .line .g_action::after {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  display: inline-block;
+  background: #fff;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  font-size: 0;
+}
+
+.globalStock .sub_recom .adequate_stock .box .adequate_price .nodata_area .line .g_action.g_buying {
+  top: -3px;
+  left: 4%;
+  right: auto;
+  width: 8px;
+  height: 8px;
+  background-color: #f8d4b5;
+}
+
+.globalStock .sub_recom .adequate_stock .box .adequate_price .nodata_area .line .g_action.g_buying::after {
+  content: "매우저평가";
+  position: absolute;
+  left: 0;
+  top: 20px;
+  display: inline-block;
+  width: 60px;
+  font-size: 12px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.08;
+  letter-spacing: normal;
+  text-align: left;
+  color: #c3c3c3;
+}
+
+.globalStock .sub_recom .adequate_stock .box .adequate_price .nodata_area .line .g_action.g_sell {
+  top: -3px;
+  left: auto;
+  right: 4%;
+  width: 8px;
+  height: 8px;
+  background-color: #f8d4b5;
+}
+
+.globalStock .sub_recom .adequate_stock .box .adequate_price .nodata_area .line .g_action.g_sell::after {
+  content: "매우고평가";
+  position: absolute;
+  left: auto;
+  right: 0;
+  top: 20px;
+  display: inline-block;
+  width: 60px;
+  font-size: 12px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.08;
+  letter-spacing: normal;
+  text-align: left;
+  color: #c3c3c3;
+}
+
+.globalStock .sub_recom .adequate_stock .box .adequate_price .nodata_area .line .domain .price_line::before {
+  background: #ebebeb;
+}
+
+.globalStock .sub_recom .adequate_stock .box .adequate_price .nodata_area .g_action {
+  background: #a7a7a7;
+}
+
+.globalStock .sub_recom .adequate_stock .box .adequate_price .nodata_area .adequate .remark {
+  margin-top: 3px;
+}
+
+.globalStock .sub_recom .adequate_stock .box .adequate_price .nodata_area .adequate .remark .txt_filter.size_B i {
+  width: 8px;
+  height: 8px;
+  margin: 0 1px 1px;
+  opacity: 0.67;
+}
+
+.globalStock .sub_recom .adequate_stock .box .adequate_price .nodata_area .banner_prm {
+  background: #e57828;
+  border-radius: 2px;
+  margin-top: 10px;
+  padding: 8px 0 10px;
+  text-align: center;
+}
+
+.globalStock .sub_recom .adequate_stock .box .adequate_price .nodata_area .banner_prm .cho_prm {
+  color: #fff;
+  font-size: 0.75rem;
+}
+
+.globalStock .sub_recom .adequate_stock .box .adequate_price .nodata_area .banner_prm .cho_prm i {
+  display: inline-block;
+  background: url("../img/Icon_lock.svg") no-repeat;
+  width: 10px;
+  height: 13px;
+  background-size: 10px 13px;
+  margin-right: 4px;
+  position: relative;
+  top: 2px;
+}
+
+.globalStock .sub_recom .adequate_stock .box .adequate_price .nodata_area .banner_prm .weeks_free {
+  color: #FFDA0D;
+  text-decoration: underline;
+  font-size: 0.75rem;
+  font-weight: 500;
+  margin-left: 5px;
+}
+
+.globalStock .sub_recom .adequate_stock .box .adequate_price .nodata_area .banner_prm.prm_service .weeks_free {
+  color: #1EE8BE;
+}
+
+.globalStock .sub_recom .adequate_stock .box .adequate_price .adequate {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.globalStock .sub_recom .adequate_stock .box .adequate_price .adequate strong span {
+  display: block;
+  color: #333;
+  font-size: 0.6rem;
+  text-align: left;
+  padding-bottom: 2px;
+}
+
+.globalStock .sub_recom .adequate_stock .box .adequate_price .adequate strong {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 3px;
+  background-color: #f5f6ff;
+  font-size: 0.9375rem;
+  font-weight: normal;
+  line-height: 0.87;
+  color: #333;
+}
+
+.globalStock .sub_recom .adequate_stock .box .adequate_price .adequate strong b {
+  font-weight: 300;
+}
+
+.globalStock .sub_recom .adequate_stock .box .adequate_price .line .domain.active .price {
   opacity: 1;
   position: relative;
 }
 
-.globalStock .sub_recom .adequate_stock .box .con .adequate_price .line .domain.active .price::before {
+.globalStock .sub_recom .adequate_stock .box .adequate_price .line .domain.active .price::before {
   top: 100%;
   left: 50%;
   border: solid transparent;
@@ -2359,71 +2887,499 @@ html {
   margin-left: -7px;
 }
 
-.globalStock .sub_recom .adequate_stock .box .con .adequate_price .line .domain.active .price_line::before {
-  background: #E57828;
+.globalStock .sub_recom .adequate_stock .box .adequate_price .line .domain.active .price_line::before {
+  background: #e57828;
 }
 
-.globalStock .sub_recom .adequate_stock .box .con .adequate_price .line .domain.active .price_line span {
+.globalStock .sub_recom .adequate_stock .box .adequate_price .line .domain.active .price_line span {
   color: #E57828;
   font-weight: bold;
 }
 
-.globalStock .sub_recom .adequate_stock .box .con .adequate_price .g_action {
+.globalStock .sub_recom .adequate_stock .evaluation_data {
+  position: relative;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-top: 25px;
+  padding: 0;
+  border-top: 1px solid #eaedf5;
+  margin-bottom: 0;
+}
+
+.globalStock .sub_recom .adequate_stock .evaluation_data::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  margin-left: -6px;
+  top: 27px;
+  width: 1px;
+  height: 45px;
+  background: #e0e4e9;
+}
+
+.globalStock .sub_recom .adequate_stock .evaluation_data .txt_guide {
+  right: 0;
+  top: 8px;
+}
+
+.globalStock .sub_recom .adequate_stock .evaluation_data .guide_box {
+  left: auto;
+  right: -15px;
+}
+
+.globalStock .sub_recom .adequate_stock .evaluation_data .evaluation_table th {
+  padding: 0;
+  text-align: left;
+  color: #333;
+  width: 40%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.globalStock .sub_recom .adequate_stock .evaluation_data .evaluation_table td {
+  width: 60%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-align: right;
+}
+
+.globalStock .sub_recom .adequate_stock .evaluation_data .evaluation_table th span {
+  color: #333;
+}
+
+.globalStock .sub_recom .adequate_stock .evaluation_data .evaluation_table td span b {
+  font-weight: 300;
+  opacity: 1;
+}
+
+.globalStock .sub_recom .evaluation_data .evaluation_table {
+  display: inline-block;
+  width: calc(100% / 2 - 4px);
+  margin-top: 20px;
+}
+
+.globalStock .sub_recom .evaluation_data:first-child {
+  border-right: 1px solid #C3C3C3;
+}
+
+.globalStock .sub_recom .evaluation_data th {
+  color: #333;
+  font-size: 0.75rem;
+  padding: 6px 8px 6px 15px;
+  height: 28px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.globalStock .sub_recom .evaluation_data td {
+  padding: 6px 4px;
+}
+
+.globalStock .sub_recom .evaluation_data td.prm_lock {
+  background: #E6E7F4;
+  border-radius: 10px;
+  padding: 2px 10px 5px;
+  margin-bottom: 3px;
+  display: inline-block;
+  position: relative;
+  top: 2px;
+}
+
+.globalStock .sub_recom .evaluation_data td.prm_lock span {
+  font-size: 0.84rem;
+}
+
+.globalStock .sub_recom .evaluation_data td span {
+  color: #333;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.globalStock .sub_recom .evaluation_data td span b {
+  color: #333;
+  font-size: 1rem;
+  font-weight: normal;
+  opacity: 0.7;
+}
+
+.globalStock .sub_recom .evaluation_data .txt_guide {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  right: 15px;
+  top: 0;
+}
+
+.globalStock .sub_recom .evaluation_data .txt_guide img {
+  display: inline-block;
+  width: 100%;
+}
+
+.globalStock .sub_recom .evaluation_data .guide_box {
+  -webkit-box-shadow: 0px 0px 7px 2px #dfdfdf;
+          box-shadow: 0px 0px 7px 2px #dfdfdf;
+  border-radius: 8px;
+  position: absolute;
+  left: 15px;
+  top: 26px;
+  z-index: 80;
+  padding: 35px 15px 15px;
+  background: #fff;
+  width: 340px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  z-index: 9998;
+  display: none;
+}
+
+.globalStock .sub_recom .evaluation_data .guide_box .clse {
+  display: inline-block;
+  font-size: 0;
+  width: 24px;
+  height: 24px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: absolute;
+  right: -7px;
+  top: -8px;
+  background-color: #d3d3d3;
+  padding: 2px;
+  border-radius: 50%;
+}
+
+.globalStock .sub_recom .evaluation_data .guide_box .clse::after {
+  content: '';
+  height: 14px;
+  border-left: 1px solid #fff;
+  position: absolute;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  top: 5px;
+  left: 12px;
+}
+
+.globalStock .sub_recom .evaluation_data .guide_box .clse::before {
+  content: '';
+  height: 14px;
+  border-left: 1px solid #fff;
+  position: absolute;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  top: 5px;
+  left: 12px;
+}
+
+.globalStock .sub_recom .evaluation_data .guide_box.show {
+  display: block;
+}
+
+.globalStock .sub_recom .evaluation_data .guide_box.hide {
+  display: none;
+}
+
+.globalStock .sub_recom .evaluation_data .guide_box .title {
+  font-weight: bold;
+  display: block;
+  color: #333;
+  font-size: 1rem;
+  line-height: 22px;
+  text-align: left;
+}
+
+.globalStock .sub_recom .evaluation_data .guide_box ul {
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+.globalStock .sub_recom .evaluation_data .guide_box ul li {
+  color: #8380A0;
+  margin-bottom: 5px;
+  text-align: left;
+  line-height: 22px;
+  font-size: 0.8rem;
+  vertical-align: top;
+  font-weight: normal;
+}
+
+.globalStock .sub_recom .evaluation_data .guide_box ul li strong {
+  font-weight: bold;
+  color: #444;
+  vertical-align: middle;
+  font-size: 0.9rem;
+}
+
+.globalStock .sub_recom .sub_mid.outline_box .box .value_chart {
+  width: 100%;
+  padding: 0;
+  overflow: initial;
+}
+
+.globalStock .sub_recom .sub_mid.outline_box .box .value_chart .prm_lock {
+  width: 100%;
+}
+
+.globalStock .sub_recom .sub_mid.outline_box .box .value_chart .no_data {
+  padding: 6px 14px;
+  border-radius: 2px;
+  background-color: #e6e7f4;
+  font-size: 0.7rem;
+  font-weight: normal;
+  line-height: 1.18;
+  color: #E57828;
+  text-align: center;
+}
+
+.globalStock .sub_recom .sub_mid.outline_box .box .value_chart .no_data + .line {
+  margin-top: 11px;
+}
+
+.globalStock .sub_recom .sub_mid.outline_box .box .value_chart .prm_lock span {
+  position: relative;
+  display: block;
+  padding: 6px 14px;
+  border-radius: 2px;
+  font-size: 0.7rem;
+  font-weight: normal;
+  line-height: 1.18;
+  color: #E57828;
+  text-align: center;
+  background: #e0e5f0 url("../img/icon_prm_lock.svg") no-repeat 10px center;
+  background-size: auto 12px;
+}
+
+.globalStock .sub_recom .sub_mid.outline_box .box .value_chart .prm_lock span i {
+  position: absolute;
+  left: 10px;
+  top: 6px;
+  display: inline-block;
+  vertical-align: middle;
+  width: 10px;
+  height: 13px;
+  margin-right: 4px;
+  background: url("../img/Icon_lock.svg") no-repeat 0 0;
+  background-size: 10px 13px;
+}
+
+.globalStock .sub_recom .sub_mid.outline_box .box .value_chart .prm_lock + .line {
+  margin-top: 11px;
+}
+
+.globalStock .sub_recom .sub_mid.outline_box .box .value_chart .line {
+  position: relative;
+  width: calc(100% - 20px);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 2px;
+  border-radius: 20px;
+  background-color: #e6e7f4;
+  margin: 35px auto 0;
+}
+
+/* .globalStock .sub_recom .sub_mid.outline_box .box .value_chart .line::before,
+.globalStock .sub_recom .sub_mid.outline_box .box .value_chart .line::after {
+	content: '';
+	display: inline-block;
+	position: absolute;
+	left: -15px;
+	bottom: 0;
+	width: 15px;
+	height: 2px;  
+	border-radius: 20px;
+	background-color: #e6e7f4;
+} */
+.globalStock .sub_recom .sub_mid.outline_box .box .value_chart .line::after {
+  left: auto;
+  right: -15px;
+}
+
+.globalStock .sub_recom .sub_mid.outline_box .box .value_chart .line .g_action {
   position: absolute;
   left: 0;
-  top: -13px;
+  top: -6px;
   margin-left: -5px;
   z-index: 2;
   display: inline-block;
-  background: #404FC3;
-  width: 10px;
-  height: 10px;
+  background: #E57828;
+  width: 14px;
+  height: 14px;
   border-radius: 50%;
   font-size: 0;
-  display: none !important;
 }
 
-.globalStock .sub_recom .adequate_stock .box .con .adequate_price .g_action::after {
+.globalStock .sub_recom .sub_mid.outline_box .box .value_chart .line .g_action::after {
   content: "";
   position: absolute;
   left: 2px;
   top: 2px;
   display: inline-block;
   background: #fff;
-  width: 6px;
-  height: 6px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
   font-size: 0;
 }
 
-.globalStock .sub_recom .adequate_stock .box .con .adequate_price .nodata_area .no_data {
+.globalStock .sub_recom .sub_mid.outline_box .box .value_chart .no_data + .line .g_action,
+.globalStock .sub_recom .sub_mid.outline_box .box .value_chart .prm_lock + .line .g_action {
+  background-color: #f8d4b5;
+}
+
+.globalStock .sub_recom .sub_mid.outline_box .box .value_chart .adequate {
+  margin-top: 13px;
+}
+
+.globalStock .sub_recom .sub_mid.outline_box .box .value_chart .adequate span {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 300;
+  line-height: 1.3;
   text-align: center;
-  padding: 9px 0;
-  margin-top: 10px;
-  border-radius: 2px;
-  background-color: #e6e7f4;
-  font-size: 0.875rem;
-  line-height: 1.21;
-  color: #E57828;
+  color: #333;
 }
 
-.globalStock .sub_recom .adequate_stock .box .con .adequate_price .nodata_area .line .domain .price_line::before {
-  background: #ebebeb;
+.globalStock .sub_recom .sub_mid.outline_box .box .value_chart .adequate strong {
+  display: block;
+  padding-top: 3px;
+  font-size: 0.8125rem;
+  font-weight: normal;
+  line-height: 1;
+  text-align: center;
+  color: #333;
 }
 
-.globalStock .sub_recom .adequate_stock .box .con .adequate_price .nodata_area .g_action {
-  background: #a7a7a7;
+.globalStock .sub_recom .sub_mid.outline_box .box .value_chart .adequate strong b {
+  font-weight: 300;
 }
 
-.globalStock .sub_recom .adequate_stock .box .con .adequate_price .nodata_area .adequate .remark {
+.globalStock .sub_recom .sub_mid.outline_box .box .value_chart .adequate .remark {
   margin-top: 3px;
 }
 
-.globalStock .sub_recom .adequate_stock .box .con .adequate_price .nodata_area .adequate .remark .txt_filter.size_B i {
+.globalStock .sub_recom .sub_mid.outline_box .box .value_chart .adequate .remark .txt_filter.size_B i {
   width: 8px;
   height: 8px;
   margin: 0 1px 1px;
   opacity: 0.67;
+}
+
+.globalStock .sub_recom .sub_mid.outline_box .box .value_chart .line .situation {
+  position: absolute;
+  left: 0;
+  top: -30px;
+  width: 56px;
+  text-align: center;
+  padding-bottom: 15px;
+  margin-left: calc(-54px / 2);
+}
+
+@media (min-width: 320px) and (max-width: 359px) {
+  .globalStock .sub_recom .sub_mid.outline_box .box .value_chart .line .situation {
+    padding-bottom: 12px;
+    width: 42px;
+    margin-left: calc(-41px / 2);
+  }
+}
+
+.globalStock .sub_recom .sub_mid.outline_box .box .value_chart .line .situation::after {
+  content: "";
+  top: 100%;
+  left: 50%;
+  margin-left: -4px;
+  /* border: solid transparent; */
+  content: " ";
+  position: absolute;
+  pointer-events: none;
+  width: 10px;
+  height: 10px;
+  /* background: url('../img/situation_arow.svg') no-repeat center center; */
+  border-radius: 50%;
+  background-color: #E57828;
+  z-index: 90;
+}
+
+/* 0 미만인 경우 */
+.globalStock .sub_recom .sub_mid.outline_box .box .value_chart .line .situation.under {
+  margin-left: calc(-24px / 2);
+  width: auto;
+}
+
+.globalStock .sub_recom .sub_mid.outline_box .box .value_chart .line .situation.under::after {
+  left: calc(50% - 10px);
+}
+
+/* 100% 초과인 경우 */
+.globalStock .sub_recom .sub_mid.outline_box .box .value_chart .line .situation.over {
+  left: auto;
+  right: auto;
+  margin-left: auto;
+  margin-right: calc(-18px / 2);
+  width: auto;
+}
+
+.globalStock .sub_recom .sub_mid.outline_box .box .value_chart .line .situation.over::after {
+  left: calc(50% + 10px);
+}
+
+/* 적극매수 */
+.globalStock .sub_recom .sub_mid.outline_box .box .value_chart .line .situation.St_buying {
+  left: 0;
+  text-align: left;
+}
+
+.globalStock .sub_recom .sub_mid.outline_box .box .value_chart .line .situation.St_buying::after {
+  margin-left: -19px;
+}
+
+/* 매우 저평가 */
+.globalStock .sub_recom .sub_mid.outline_box .box .value_chart .line .situation.buying {
+  left: 4%;
+}
+
+.globalStock .sub_recom .sub_mid.outline_box .box .value_chart .line .situation.buying::after {
+  margin-left: -4px;
+}
+
+/* 매도 */
+.globalStock .sub_recom .sub_mid.outline_box .box .value_chart .line .situation.sell {
+  left: 47%;
+}
+
+.globalStock .sub_recom .sub_mid.outline_box .box .value_chart .line .situation.sell::after {
+  margin-left: -10px;
+}
+
+/* 매우 고평가 */
+.globalStock .sub_recom .sub_mid.outline_box .box .value_chart .line .situation.St_sell {
+  left: auto;
+  right: 0;
+  text-align: right;
+}
+
+.globalStock .sub_recom .sub_mid.outline_box .box .value_chart .line .situation.St_sell::after {
+  margin-left: 4px;
+}
+
+/* 적정가 */
+.globalStock .sub_recom .sub_mid.outline_box .box .value_chart .line .situation.propriety {
+  left: 50%;
+  margin-left: -27px;
+}
+
+.globalStock .sub_recom .sub_mid.outline_box .box .value_chart .line .situation.propriety::after {
+  display: none;
+  margin-left: -10px;
+  top: calc(100% - 2px);
+}
+
+.globalStock .sub_recom .sub_mid.outline_box .box .value_chart .line .situation span {
+  position: relative;
+  font-size: 0.875rem;
+  font-weight: bold;
+  line-height: 0.93;
+  color: #E57828;
 }
 
 .globalStock .sub_recom .bandchart_more {
@@ -2449,7 +3405,7 @@ html {
   top: 3px;
   width: 12px;
   height: 12px;
-  background: url("/img/icon_awesome.svg") no-repeat center center;
+  background: url("../img/icon_awesome.svg") no-repeat center center;
 }
 
 .globalStock .sub_recom .bandchart_more .more {
@@ -3266,7 +4222,7 @@ html {
   top: 3px;
   width: 12px;
   height: 12px;
-  background: url("/img/icon_awesome.svg") no-repeat center center;
+  background: url("../img/icon_awesome.svg") no-repeat center center;
 }
 
 .globalStock .sub_recom .sub_mid.eventPicks_area .bandchart_sume .box.info p a.more {
@@ -3627,7 +4583,7 @@ html {
   width: 18px;
   height: 18px;
   margin-bottom: 4px;
-  background: url("/img/game_trans_b.svg") no-repeat 0 -25px;
+  background: url("../img/game_trans_b.svg") no-repeat 0 -25px;
   background-size: auto 18px;
 }
 
@@ -4209,7 +5165,9 @@ html {
   color: #fff;
 }
 
-.globalStock .sub_search .search_top .data_area.fix_data .info, .globalStock .sub_search .search_top .data_area.fix_data .info_icon, .globalStock .sub_search .search_top .data_area.fix_data .go_page {
+.globalStock .sub_search .search_top .data_area.fix_data .info,
+.globalStock .sub_search .search_top .data_area.fix_data .info_icon,
+.globalStock .sub_search .search_top .data_area.fix_data .go_page {
   display: none;
 }
 
@@ -4230,15 +5188,18 @@ html {
   font-size: 1rem;
 }
 
-.globalStock .sub_search .search_top .data_area.fix_data .detail .num span, .globalStock .sub_search .search_top .data_area.fix_data .detail .num b {
+.globalStock .sub_search .search_top .data_area.fix_data .detail .num span,
+.globalStock .sub_search .search_top .data_area.fix_data .detail .num b {
   color: #fff;
 }
 
-.globalStock .sub_search .search_top .data_area.fix_data .detail .per span, .globalStock .sub_search .search_top .data_area.fix_data .detail .per b {
+.globalStock .sub_search .search_top .data_area.fix_data .detail .per span,
+.globalStock .sub_search .search_top .data_area.fix_data .detail .per b {
   color: #fff;
 }
 
-.globalStock .sub_search .search_top .data_area.fix_data .detail .per span a, .globalStock .sub_search .search_top .data_area.fix_data .detail .per b a {
+.globalStock .sub_search .search_top .data_area.fix_data .detail .per span a,
+.globalStock .sub_search .search_top .data_area.fix_data .detail .per b a {
   color: #fff;
 }
 
@@ -4254,7 +5215,8 @@ html {
   color: #fff;
 }
 
-.globalStock .sub_search .search_top .data_area.fix_data .detail .per .increase b, .globalStock .sub_search .search_top .data_area.fix_data .detail .per .increase span {
+.globalStock .sub_search .search_top .data_area.fix_data .detail .per .increase b,
+.globalStock .sub_search .search_top .data_area.fix_data .detail .per .increase span {
   color: #fff;
 }
 
@@ -4262,7 +5224,8 @@ html {
   color: #fff;
 }
 
-.globalStock .sub_search .search_top .data_area.fix_data .detail .per .decrease b, .globalStock .sub_search .search_top .data_area.fix_data .detail .per .decrease span {
+.globalStock .sub_search .search_top .data_area.fix_data .detail .per .decrease b,
+.globalStock .sub_search .search_top .data_area.fix_data .detail .per .decrease span {
   color: #fff;
 }
 
@@ -4368,7 +5331,8 @@ html {
   color: #F2333A;
 }
 
-.globalStock .sub_search .search_top .data_area .detail .per .increase b, .globalStock .sub_search .search_top .data_area .detail .per .increase span {
+.globalStock .sub_search .search_top .data_area .detail .per .increase b,
+.globalStock .sub_search .search_top .data_area .detail .per .increase span {
   display: inline-block;
   font-weight: normal;
   color: #F2333A;
@@ -4378,7 +5342,8 @@ html {
   color: #006BFC;
 }
 
-.globalStock .sub_search .search_top .data_area .detail .per .decrease b, .globalStock .sub_search .search_top .data_area .detail .per .decrease span {
+.globalStock .sub_search .search_top .data_area .detail .per .decrease b,
+.globalStock .sub_search .search_top .data_area .detail .per .decrease span {
   display: inline-block;
   font-weight: normal;
   color: #006BFC;
@@ -4562,7 +5527,9 @@ html {
   left: 0px;
 }
 
-.globalStock .sub_search .search_top .attention_box .attention.on i, .globalStock .sub_search .search_top .attention_box .attention.on i:after, .globalStock .sub_search .search_top .attention_box .attention.on i:before {
+.globalStock .sub_search .search_top .attention_box .attention.on i,
+.globalStock .sub_search .search_top .attention_box .attention.on i:after,
+.globalStock .sub_search .search_top .attention_box .attention.on i:before {
   background-color: #F2333A;
 }
 
@@ -4625,13 +5592,12 @@ html {
   text-decoration: underline;
 }
 
-.globalStock .sub_search .sub_mid.tabs_area {
-  border-top: 1px solid #e0e5f0;
-  padding-bottom: 8px;
-  background-color: #f6f7fa;
+.globalStock .sub_search .sub_mid {
+  background-color: #fff;
+  padding-top: 8px;
 }
 
-.globalStock .sub_search .sub_mid.tabs_area .tabs_5 {
+.globalStock .sub_search .sub_mid .tabs_5 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4641,7 +5607,7 @@ html {
   background-color: #fff;
 }
 
-.globalStock .sub_search .sub_mid.tabs_area .tabs_5 li {
+.globalStock .sub_search .sub_mid .tabs_5 li {
   display: inline-block;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
@@ -4653,16 +5619,16 @@ html {
   border-bottom: 1px solid #b4bac6;
 }
 
-.globalStock .sub_search .sub_mid.tabs_area .tabs_5 li a {
+.globalStock .sub_search .sub_mid .tabs_5 li a {
   font-size: 0.9375rem;
   color: #49525C;
 }
 
-.globalStock .sub_search .sub_mid.tabs_area .tabs_5 li.active {
+.globalStock .sub_search .sub_mid .tabs_5 li.active {
   border-bottom: 3px solid #e57828;
 }
 
-.globalStock .sub_search .sub_mid.tabs_area .tabs_5 li.active a {
+.globalStock .sub_search .sub_mid .tabs_5 li.active a {
   color: #e57828;
   font-weight: bold;
 }
@@ -4690,7 +5656,6 @@ html {
 
 .globalStock .sub_search .sub_mid.outline_box .box:nth-child(2) .title::after {
   content: '';
-  display: none;
 }
 
 .globalStock .sub_search .sub_mid.outline_box .box .con {
@@ -4738,7 +5703,8 @@ html {
           transform: rotate(45deg);
 }
 
-.globalStock .sub_search .sub_mid.outline_box .box .title a, .globalStock .sub_search .sub_mid.outline_box .box .title span {
+.globalStock .sub_search .sub_mid.outline_box .box .title a,
+.globalStock .sub_search .sub_mid.outline_box .box .title span {
   display: block;
   font-size: 0.75rem;
   color: #82929F;
@@ -4839,7 +5805,7 @@ html {
   vertical-align: top;
   width: 24px;
   height: 25px;
-  background: url("/img/game_trans.svg") no-repeat 0 0;
+  background: url("../img/game_trans.svg") no-repeat 0 0;
   background-size: 114px 24px;
 }
 
@@ -4906,198 +5872,9 @@ html {
   font-weight: 300;
 }
 
-.globalStock .sub_search .sub_mid.outline_box .box .value_chart {
-  width: 100%;
-  padding: 0;
-  overflow: initial;
-  /* 적극매수 */
-  /* 매수 */
-  /* 매도 */
-  /* 적극매도 */
-  /* 적정가 */
-}
-
-.globalStock .sub_search .sub_mid.outline_box .box .value_chart .no_data {
-  padding: 6px 14px;
-  border-radius: 2px;
-  background-color: #e6e7f4;
-  font-size: 11px;
-  font-weight: normal;
-  line-height: 1.18;
-  color: #404fc3;
-  text-align: center;
-}
-
-.globalStock .sub_search .sub_mid.outline_box .box .value_chart .no_data + .line {
-  margin-top: 11px;
-}
-
-.globalStock .sub_search .sub_mid.outline_box .box .value_chart .line {
-  position: relative;
-  width: 100%;
-  height: 4px;
-  border-radius: 20px;
-  background-color: #e6e7f4;
-  margin-top: 25px;
-}
-
-.globalStock .sub_search .sub_mid.outline_box .box .value_chart .line .g_action {
-  position: absolute;
-  left: 0;
-  top: -3px;
-  margin-left: -5px;
-  z-index: 2;
-  display: inline-block;
-  background: #d77e3d;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  font-size: 0;
-}
-
-.globalStock .sub_search .sub_mid.outline_box .box .value_chart .line .g_action::after {
-  content: "";
-  position: absolute;
-  left: 2px;
-  top: 2px;
-  display: inline-block;
-  background: #fff;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  font-size: 0;
-}
-
-.globalStock .sub_search .sub_mid.outline_box .box .value_chart .adequate {
-  margin-top: 13px;
-}
-
-.globalStock .sub_search .sub_mid.outline_box .box .value_chart .adequate span {
-  display: block;
-  font-size: 12px;
-  font-weight: normal;
-  line-height: 1.18;
-  text-align: center;
-  color: #82929F;
-}
-
-.globalStock .sub_search .sub_mid.outline_box .box .value_chart .adequate strong {
-  display: block;
-  padding-top: 3px;
-  font-size: 0.8125rem;
-  font-weight: normal;
-  line-height: 1;
-  text-align: center;
-  color: #333;
-}
-
-.globalStock .sub_search .sub_mid.outline_box .box .value_chart .adequate strong b {
-  font-weight: 300;
-}
-
-.globalStock .sub_search .sub_mid.outline_box .box .value_chart .adequate .remark {
-  margin-top: 3px;
-}
-
-.globalStock .sub_search .sub_mid.outline_box .box .value_chart .adequate .remark .txt_filter.size_B i {
-  width: 8px;
-  height: 8px;
-  margin: 0 1px 1px;
-  opacity: 0.67;
-}
-
-.globalStock .sub_search .sub_mid.outline_box .box .value_chart .line .situation {
-  position: absolute;
-  left: 0;
-  top: -22px;
-  width: 53px;
-  text-align: center;
-  padding-bottom: 3px;
-  height: 18px;
-}
-
-.globalStock .sub_search .sub_mid.outline_box .box .value_chart .line .situation span {
-  vertical-align: top;
-  display: inline-block;
-}
-
-@media (min-width: 320px) and (max-width: 374px) {
-  .globalStock .sub_search .sub_mid.outline_box .box .value_chart .line .situation {
-    padding-bottom: 5px;
-  }
-}
-
-.globalStock .sub_search .sub_mid.outline_box .box .value_chart .line .situation::after {
-  content: "";
-  top: 16px;
-  left: 50%;
-  margin-left: -10px;
-  border: solid transparent;
-  content: " ";
-  position: absolute;
-  pointer-events: none;
-  width: 14px;
-  height: 10px;
-  background: url("/img/situation_arow.svg") no-repeat center center;
-  z-index: 90;
-}
-
-.globalStock .sub_search .sub_mid.outline_box .box .value_chart .line .situation.St_buying {
-  left: 0;
-  text-align: left;
-}
-
-.globalStock .sub_search .sub_mid.outline_box .box .value_chart .line .situation.St_buying::after {
-  margin-left: -19px;
-}
-
-.globalStock .sub_search .sub_mid.outline_box .box .value_chart .line .situation.buying {
-  left: 17%;
-}
-
-.globalStock .sub_search .sub_mid.outline_box .box .value_chart .line .situation.buying::after {
-  margin-left: -10px;
-}
-
-.globalStock .sub_search .sub_mid.outline_box .box .value_chart .line .situation.sell {
-  left: 47%;
-}
-
-.globalStock .sub_search .sub_mid.outline_box .box .value_chart .line .situation.sell::after {
-  margin-left: -10px;
-}
-
-.globalStock .sub_search .sub_mid.outline_box .box .value_chart .line .situation.St_sell {
-  left: auto;
-  right: 0;
-  text-align: right;
-}
-
-.globalStock .sub_search .sub_mid.outline_box .box .value_chart .line .situation.St_sell::after {
-  margin-left: 0;
-}
-
-.globalStock .sub_search .sub_mid.outline_box .box .value_chart .line .situation.propriety {
-  left: 50%;
-  margin-left: -27px;
-}
-
-.globalStock .sub_search .sub_mid.outline_box .box .value_chart .line .situation.propriety::after {
-  display: none;
-  margin-left: -10px;
-  top: calc(100% - 2px);
-}
-
-.globalStock .sub_search .sub_mid.outline_box .box .value_chart .line .situation span {
-  font-size: 0.875rem;
-  font-weight: bold;
-  line-height: 0.93;
-  color: #E57828;
-}
-
 .globalStock .sub_search .sub_mid.outline_box .box .event_attractiveness {
   width: 100%;
-  background: url("/img/bg_recipe_dividend.svg") no-repeat -7px center;
+  background: url("../img/bg_recipe_dividend.svg") no-repeat -7px center;
   background-size: auto 57px;
 }
 
@@ -5123,7 +5900,7 @@ html {
 .globalStock .sub_search .sub_mid.outline_box .box .event_attractiveness li.att_on {
   padding: 0 2px;
   color: #E57828;
-  background: url("/img/bg_bbline.svg") repeat-x 0 bottom;
+  background: url("../img/bg_bbline.svg") repeat-x 0 bottom;
 }
 
 .globalStock .sub_search .sub_mid.outline_box .box .event_attractiveness li.att_on a {
@@ -5329,7 +6106,8 @@ html {
   margin-left: 10px;
 }
 
-.globalStock .sub_search .sub_mid.outline_investCharm .tableRanking.guide_table th, .globalStock .sub_search .sub_mid.outline_investCharm .tableRanking.guide_table td {
+.globalStock .sub_search .sub_mid.outline_investCharm .tableRanking.guide_table th,
+.globalStock .sub_search .sub_mid.outline_investCharm .tableRanking.guide_table td {
   padding: 7px 2px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -6015,285 +6793,6 @@ html {
   color: #E57828;
 }
 
-.globalStock .sub_search .sub_mid.diagnosis .adequate_stock {
-  margin: 20px auto 0;
-  width: calc(100% - 30px);
-}
-
-.globalStock .sub_search .sub_mid.diagnosis .adequate_stock .box {
-  border-radius: 16px;
-  background-color: #f6f7fa;
-}
-
-.globalStock .sub_search .sub_mid.diagnosis .adequate_stock .box .title a {
-  padding: 16px 12px 0;
-  display: block;
-  font-size: 0.75rem;
-  font-weight: bold;
-  letter-spacing: normal;
-  text-align: left;
-  color: #82929F;
-  position: relative;
-}
-
-.globalStock .sub_search .sub_mid.diagnosis .adequate_stock .box .con {
-  padding: 16px 12px 20px;
-  /* 종목진단 - 적정주가탭 - 적정주가 노데이터 */
-}
-
-.globalStock .sub_search .sub_mid.diagnosis .adequate_stock .box .con .adequate_price {
-  width: 100%;
-}
-
-.globalStock .sub_search .sub_mid.diagnosis .adequate_stock .box .con .adequate_price .line {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  /* 적정주가 활성화 된 영역 */
-}
-
-.globalStock .sub_search .sub_mid.diagnosis .adequate_stock .box .con .adequate_price .line .domain {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  margin: 0 2px;
-}
-
-.globalStock .sub_search .sub_mid.diagnosis .adequate_stock .box .con .adequate_price .line .domain .price {
-  opacity: 0;
-  display: inline-block;
-  padding: 4px 6px 6px 6px;
-  border-radius: 3px;
-  background-color: #e57828;
-  color: #fff;
-  width: 100%;
-  height: 40px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-.globalStock .sub_search .sub_mid.diagnosis .adequate_stock .box .con .adequate_price .line .domain .price span {
-  color: #fff;
-  font-size: 0.6rem;
-  display: block;
-  opacity: 0.51;
-}
-
-.globalStock .sub_search .sub_mid.diagnosis .adequate_stock .box .con .adequate_price .line .domain .price span:nth-child(2) {
-  font-size: 0;
-  opacity: 1;
-}
-
-.globalStock .sub_search .sub_mid.diagnosis .adequate_stock .box .con .adequate_price .line .domain.active .price span:nth-child(2) {
-  font-size: 0.9375rem;
-}
-
-.globalStock .sub_search .sub_mid.diagnosis .adequate_stock .box .con .adequate_price .line .domain .price span b {
-  color: #fff;
-  font-weight: 300;
-}
-
-.globalStock .sub_search .sub_mid.diagnosis .adequate_stock .box .con .adequate_price .line .domain .price_line {
-  position: relative;
-  text-align: center;
-  margin-top: 20px;
-}
-
-.globalStock .sub_search .sub_mid.diagnosis .adequate_stock .box .con .adequate_price .line .domain .price_line::before {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 4px;
-  background: #e0e5f0;
-  z-index: 90;
-}
-
-.globalStock .sub_search .sub_mid.diagnosis .adequate_stock .box .con .adequate_price .line .domain:first-child .price_line::before {
-  border-top-left-radius: 16px;
-  border-bottom-left-radius: 16px;
-}
-
-.globalStock .sub_search .sub_mid.diagnosis .adequate_stock .box .con .adequate_price .line .domain:last-child .price_line::before {
-  border-top-right-radius: 16px;
-  border-bottom-right-radius: 16px;
-}
-
-.globalStock .sub_search .sub_mid.diagnosis .adequate_stock .box .con .adequate_price .line .domain .price_line span {
-  display: block;
-  margin-top: 11px;
-  font-size: 0.875rem;
-  line-height: 0.93;
-  color: #c3c3c3;
-}
-
-.globalStock .sub_search .sub_mid.diagnosis .adequate_stock .box .con .adequate_price .line .domain.active .price {
-  opacity: 1;
-  position: relative;
-}
-
-.globalStock .sub_search .sub_mid.diagnosis .adequate_stock .box .con .adequate_price .line .domain.active .price_line {
-  margin-top: 23px;
-}
-
-.globalStock .sub_search .sub_mid.diagnosis .adequate_stock .box .con .adequate_price .line .domain.active .price::before {
-  top: 100%;
-  left: 50%;
-  border: solid transparent;
-  content: " ";
-  height: 0;
-  width: 0;
-  position: absolute;
-  pointer-events: none;
-  border-color: rgba(64, 79, 195, 0);
-  border-top-color: #e57828;
-  border-width: 7px;
-  margin-left: -7px;
-}
-
-.globalStock .sub_search .sub_mid.diagnosis .adequate_stock .box .con .adequate_price .line .domain.active .price_line::before {
-  background: #E57828;
-}
-
-.globalStock .sub_search .sub_mid.diagnosis .adequate_stock .box .con .adequate_price .line .domain.active .price_line span {
-  color: #E57828;
-  font-weight: bold;
-}
-
-.globalStock .sub_search .sub_mid.diagnosis .adequate_stock .box .con .adequate_price .g_action {
-  position: absolute;
-  left: 0;
-  top: -13px;
-  margin-left: -5px;
-  z-index: 2;
-  display: inline-block;
-  background: #404FC3;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  font-size: 0;
-  display: none !important;
-}
-
-.globalStock .sub_search .sub_mid.diagnosis .adequate_stock .box .con .adequate_price .g_action::after {
-  content: "";
-  position: absolute;
-  left: 2px;
-  top: 2px;
-  display: inline-block;
-  background: #fff;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  font-size: 0;
-}
-
-.globalStock .sub_search .sub_mid.diagnosis .adequate_stock .box .con .adequate_price .adequate {
-  text-align: center;
-  margin-top: 10px;
-  margin-left: 12px;
-}
-
-.globalStock .sub_search .sub_mid.diagnosis .adequate_stock .box .con .adequate_price .adequate strong span {
-  display: block;
-  color: #333;
-  font-size: 10px;
-  text-align: left;
-  padding-bottom: 2px;
-}
-
-.globalStock .sub_search .sub_mid.diagnosis .adequate_stock .box .con .adequate_price .adequate strong {
-  display: inline-block;
-  padding: 4px 10px;
-  border-radius: 3px;
-  background-color: #fff;
-  font-size: 0.875rem;
-  font-weight: normal;
-  line-height: 0.87;
-  color: #333;
-}
-
-.globalStock .sub_search .sub_mid.diagnosis .adequate_stock .box .con .adequate_price .adequate strong b {
-  font-weight: 300;
-}
-
-.globalStock .sub_search .sub_mid.diagnosis .adequate_stock .box .con .adequate_price .nodata_area .no_data {
-  text-align: center;
-  padding: 9px 0;
-  margin-top: 10px;
-  border-radius: 2px;
-  background-color: #e6e7f4;
-  font-size: 0.875rem;
-  line-height: 1.21;
-  color: #E57828;
-}
-
-.globalStock .sub_search .sub_mid.diagnosis .adequate_stock .box .con .adequate_price .nodata_area .line .domain .price_line::before {
-  background: #ebebeb;
-}
-
-.globalStock .sub_search .sub_mid.diagnosis .adequate_stock .box .con .adequate_price .nodata_area .g_action {
-  background: #a7a7a7;
-}
-
-.globalStock .sub_search .sub_mid.diagnosis .adequate_stock .box .con .adequate_price .nodata_area .adequate .remark {
-  margin-top: 3px;
-}
-
-.globalStock .sub_search .sub_mid.diagnosis .adequate_stock .box .con .adequate_price .nodata_area .adequate .remark .txt_filter.size_B i {
-  width: 8px;
-  height: 8px;
-  margin: 0 1px 1px;
-  opacity: 0.67;
-}
-
-.globalStock .sub_search .sub_mid.diagnosis .adequate_stock .box .evaluation_data {
-  position: relative;
-  width: 100%;
-  border-bottom-left-radius: 16px;
-  border-bottom-right-radius: 16px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  padding: 16px 15px 20px;
-  margin-bottom: 0;
-  background: #eaedf5;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.globalStock .sub_search .sub_mid.diagnosis .adequate_stock .box .evaluation_data table.evaluation_table {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-}
-
-.globalStock .sub_search .sub_mid.diagnosis .adequate_stock .box .evaluation_data table.evaluation_table th, .globalStock .sub_search .sub_mid.diagnosis .adequate_stock .box .evaluation_data table.evaluation_table td {
-  text-align: left;
-}
-
-.globalStock .sub_search .sub_mid.diagnosis .adequate_stock .box .evaluation_data table.evaluation_table .title {
-  font-size: 0.75rem;
-  letter-spacing: normal;
-  color: #333;
-  font-weight: normal;
-}
-
-.globalStock .sub_search .sub_mid.diagnosis .adequate_stock .box .evaluation_data table.evaluation_table td span {
-  color: #333;
-  font-size: 1rem;
-  font-weight: normal;
-}
-
-.globalStock .sub_search .sub_mid.diagnosis .adequate_stock .box .evaluation_data table.evaluation_table td span b {
-  font-weight: 300;
-}
-
 .globalStock .sub_search .sub_mid.diagnosis .eventsum_area {
   margin-top: 40px;
 }
@@ -6655,7 +7154,7 @@ html {
 .globalStock .sub_search .sub_mid.research_board .news_no_data {
   margin: 20px 15px 0;
   border-radius: 20px;
-  background: #f6f7fa url("/img/bg_nodata.png") no-repeat center 70px;
+  background: #f6f7fa url("../img/bg_nodata.png") no-repeat center 70px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding-top: 240px;
@@ -6700,7 +7199,7 @@ html {
 
 .globalStock .sub_search .sub_mid.research_board .pho_list li .list.lst_lock .tit a {
   text-indent: 18px;
-  background: url("/img/icon_prm_lock.svg") no-repeat left 3px;
+  background: url("../img/icon_prm_lock.svg") no-repeat left 3px;
 }
 
 .globalStock .sub_search .sub_mid.research_board .pho_list li .list .tit {
@@ -6740,7 +7239,7 @@ html {
   min-width: 80px;
   width: 80px;
   height: 71px;
-  background: #fff url("/img/bg_noimg.svg") no-repeat center center;
+  background: #fff url("../img/bg_noimg.svg") no-repeat center center;
   background-size: cover;
   margin-right: 15px;
   border-radius: 5px;
@@ -6778,7 +7277,9 @@ html {
   margin-top: 15px;
 }
 
-.globalStock .sub_research .view_con .top .se_group .writer, .globalStock .sub_research .view_con .top .se_group .day, .globalStock .sub_research .view_con .top .se_group .go_list {
+.globalStock .sub_research .view_con .top .se_group .writer,
+.globalStock .sub_research .view_con .top .se_group .day,
+.globalStock .sub_research .view_con .top .se_group .go_list {
   color: #82929F;
   font-size: 0.75rem;
 }
@@ -6818,7 +7319,8 @@ html {
   margin-bottom: 15px;
 }
 
-.globalStock .sub_research .view_con .mid p, .globalStock .sub_research .view_con .mid a {
+.globalStock .sub_research .view_con .mid p,
+.globalStock .sub_research .view_con .mid a {
   color: #333;
   font-size: 1rem;
 }
@@ -7144,7 +7646,8 @@ html {
   border-bottom: 1px solid #e1e5ef;
 }
 
-.globalStock .sub_search .sub_mid.competitors_table .tableRanking.sum_table th, .globalStock .sub_search .sub_mid.competitors_table .tableRanking.sum_table td {
+.globalStock .sub_search .sub_mid.competitors_table .tableRanking.sum_table th,
+.globalStock .sub_search .sub_mid.competitors_table .tableRanking.sum_table td {
   text-align: center;
   vertical-align: middle;
 }
@@ -7253,7 +7756,7 @@ html {
   display: inline-block;
   width: 22px;
   height: 22px;
-  background: url("/img/icon_purchase.svg") no-repeat center center;
+  background: url("../img/icon_purchase.svg") no-repeat center center;
   margin-right: 11px;
   vertical-align: sub;
 }
@@ -7382,7 +7885,7 @@ html {
   top: 3px;
   width: 12px;
   height: 12px;
-  background: url("/img/icon_awesome.svg") no-repeat center center;
+  background: url("../img/icon_awesome.svg") no-repeat center center;
 }
 
 .globalStock .sub_search .bandchart_more .more {
@@ -7419,14 +7922,14 @@ html {
   top: 3px;
   width: 12px;
   height: 12px;
-  background: url("/img/icon_awesome.svg") no-repeat center center;
+  background: url("../img/icon_awesome.svg") no-repeat center center;
 }
 
 .globalStock .sub_search .sub_mid .bandchart_sume .box {
   margin-top: 15px;
   padding: 16px 14px;
   border-radius: 5px;
-  border: 1px  solid #f0f5ff;
+  border: 1px solid #f0f5ff;
   background-color: #fff5e2;
 }
 
@@ -7484,8 +7987,1165 @@ html {
   display: inline-block;
   width: 15px;
   height: 12px;
-  background: url("/img/icon_youtube.svg") no-repeat center center;
+  background: url("../img/icon_youtube.svg") no-repeat center center;
   margin-right: 8px;
+}
+
+.globalStock .sub_search .sub_mid .adequate_stock {
+  margin: 20px auto 0;
+  width: calc(100% - 30px);
+}
+
+.globalStock .sub_search .sub_mid .adequate_stock .box {
+  padding: 16px 15px 20px;
+  border-radius: 16px;
+  background-color: #f6f7fa;
+}
+
+@media (min-width: 320px) and (max-width: 359px) {
+  .globalStock .sub_search .sub_mid .adequate_stock {
+    width: calc(100% - 20px);
+  }
+  .globalStock .sub_search .sub_mid .adequate_stock .box {
+    padding: 16px 10px 20px;
+  }
+}
+
+.globalStock .sub_search .sub_mid .adequate_stock .box .title a {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: #8c90ad;
+}
+
+.globalStock .sub_search .sub_mid .adequate_stock .box .con {
+  padding-top: 11px;
+  /* 종목진단 AI적정주가 벨류라인 차트 */
+  /* 매우저평가 */
+  /* 매우고평가 */
+  /* 0 미만인 경우 */
+  /* 100% 초과인 경우 */
+  /* 적극매수 */
+  /* 매우 저평가 */
+  /* 매도 */
+  /* 매우 고평가 */
+  /* 적정가 */
+}
+
+.globalStock .sub_search .sub_mid .adequate_stock .box .con .value_chart {
+  width: 100%;
+  padding: 0;
+  overflow: initial;
+}
+
+.globalStock .sub_search .sub_mid .adequate_stock .box .con .value_chart .line {
+  position: relative;
+  width: calc(100% - 46px);
+  margin: 70px auto 0;
+  height: 2px;
+  border-radius: 20px;
+  background-color: #e0e5f0;
+}
+
+.globalStock .sub_search .sub_mid .adequate_stock .box .con .value_chart .line::before,
+.globalStock .sub_search .sub_mid .adequate_stock .box .con .value_chart .line::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  left: -14px;
+  bottom: 0;
+  width: 14px;
+  height: 2px;
+  border-radius: 20px;
+  background-color: #e0e5f0;
+}
+
+.globalStock .sub_search .sub_mid .adequate_stock .box .con .value_chart .line::after {
+  left: auto;
+  right: -14px;
+}
+
+.globalStock .sub_search .sub_mid .adequate_stock .box .con .value_chart .line .g_action {
+  position: absolute;
+  left: 0;
+  top: -6px;
+  /* margin-left:-5px; */
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 2;
+  display: inline-block;
+  background: #e57828;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  font-size: 0;
+}
+
+.globalStock .sub_search .sub_mid .adequate_stock .box .con .value_chart .line .g_action::after {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  display: inline-block;
+  background: #fff;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  font-size: 0;
+}
+
+.globalStock .sub_search .sub_mid .adequate_stock .box .con .value_chart .line .g_action.g_buying {
+  top: -3px;
+  left: 0;
+  right: auto;
+  width: 8px;
+  height: 8px;
+  background-color: #f8d4b5;
+  margin-left: -2px;
+}
+
+.globalStock .sub_search .sub_mid .adequate_stock .box .con .value_chart .line .g_action.g_buying::after {
+  content: "매우저평가";
+  position: absolute;
+  left: 0;
+  top: 20px;
+  display: inline-block;
+  width: 60px;
+  font-size: 12px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.08;
+  letter-spacing: normal;
+  text-align: left;
+  color: #c3c3c3;
+}
+
+.globalStock .sub_search .sub_mid .adequate_stock .box .con .value_chart .line .g_action.g_sell {
+  top: -3px;
+  left: auto;
+  right: -3px;
+  width: 8px;
+  height: 8px;
+  background-color: #f8d4b5;
+  margin-right: -5px;
+}
+
+.globalStock .sub_search .sub_mid .adequate_stock .box .con .value_chart .line .g_action.g_sell::after {
+  content: "매우고평가";
+  position: absolute;
+  left: auto;
+  right: 0;
+  top: 20px;
+  display: inline-block;
+  width: 60px;
+  font-size: 12px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.08;
+  letter-spacing: normal;
+  text-align: left;
+  color: #c3c3c3;
+}
+
+.globalStock .sub_search .sub_mid .adequate_stock .box .con .value_chart .adequate {
+  text-align: center;
+}
+
+.globalStock .sub_search .sub_mid .adequate_stock .box .con .value_chart .adequate strong {
+  position: relative;
+  display: inline-block;
+  margin-top: 20px;
+  padding: 4px 14px;
+  border-radius: 3px;
+  background-color: #fff;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 0.87;
+  color: #333;
+}
+
+.globalStock .sub_search .sub_mid .adequate_stock .box .con .value_chart .adequate strong::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: -14px;
+  margin-left: 1px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  pointer-events: none;
+  width: 1px;
+  height: 15px;
+  background-color: #e57828;
+  z-index: 90;
+}
+
+.globalStock .sub_search .sub_mid .adequate_stock .box .con .value_chart .adequate span {
+  display: block;
+  padding-bottom: 5px;
+  font-size: 10px;
+  font-weight: 300;
+  line-height: 1.3;
+  text-align: center;
+  color: #333;
+}
+
+.globalStock .sub_search .sub_mid .adequate_stock .box .con .value_chart .adequate strong b {
+  font-weight: 300;
+}
+
+.globalStock .sub_search .sub_mid .adequate_stock .box .con .value_chart .adequate .remark {
+  margin-top: 3px;
+}
+
+.globalStock .sub_search .sub_mid .adequate_stock .box .con .value_chart .adequate .remark .txt_filter.size_B i {
+  width: 8px;
+  height: 8px;
+  margin: 0 1px 1px;
+  opacity: 0.67;
+}
+
+.globalStock .sub_search .sub_mid .adequate_stock .box .con .value_chart .line .situation {
+  position: absolute;
+  left: 0;
+  top: -60px;
+  /* margin-left: -34px; */
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  min-width: 56px;
+  text-align: center;
+  padding: 1px 8px 7px;
+  border-radius: 3px;
+  background-color: #e57828;
+  z-index: 10;
+}
+
+.globalStock .sub_search .sub_mid .adequate_stock .box .con .value_chart .line .situation::after {
+  content: "";
+  display: inline-block;
+  top: 56px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  content: " ";
+  position: absolute;
+  pointer-events: none;
+  background-color: #e57828;
+  z-index: 90;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  font-size: 0;
+}
+
+.globalStock .sub_search .sub_mid .adequate_stock .box .con .value_chart .line .situation::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 42px;
+  pointer-events: none;
+  width: 1px;
+  height: 20px;
+  background-color: #e57828;
+  z-index: 90;
+}
+
+@media (min-width: 320px) and (max-width: 359px) {
+  .globalStock .sub_search .sub_mid .adequate_stock .box .con .value_chart .line .situation::before {
+    top: 36px;
+  }
+}
+
+.globalStock .sub_search .sub_mid .adequate_stock .box .con .value_chart .line .situation.under {
+  left: auto;
+  right: auto;
+  margin-left: 12px;
+}
+
+.globalStock .sub_search .sub_mid .adequate_stock .box .con .value_chart .line .situation.under:before {
+  left: calc(50% - 20px);
+}
+
+.globalStock .sub_search .sub_mid .adequate_stock .box .con .value_chart .line .situation.under::after {
+  left: calc(50% - 20px);
+}
+
+.globalStock .sub_search .sub_mid .adequate_stock .box .con .value_chart .line .situation.over {
+  left: auto;
+  right: auto;
+  margin-left: auto;
+  margin-right: -64px;
+}
+
+.globalStock .sub_search .sub_mid .adequate_stock .box .con .value_chart .line .situation.over:before {
+  left: calc(50% + 20px);
+}
+
+.globalStock .sub_search .sub_mid .adequate_stock .box .con .value_chart .line .situation.over::after {
+  left: calc(50% + 20px);
+}
+
+.globalStock .sub_search .sub_mid .adequate_stock .box .con .value_chart .line .situation.St_buying {
+  left: 0;
+  text-align: left;
+}
+
+.globalStock .sub_search .sub_mid .adequate_stock .box .con .value_chart .line .situation.St_buying::after {
+  margin-left: -19px;
+}
+
+.globalStock .sub_search .sub_mid .adequate_stock .box .con .value_chart .line .situation.buying {
+  left: 4%;
+}
+
+.globalStock .sub_search .sub_mid .adequate_stock .box .con .value_chart .line .situation.buying::after {
+  margin-left: -4px;
+}
+
+.globalStock .sub_search .sub_mid .adequate_stock .box .con .value_chart .line .situation.sell {
+  left: 47%;
+}
+
+.globalStock .sub_search .sub_mid .adequate_stock .box .con .value_chart .line .situation.sell::after {
+  margin-left: -10px;
+}
+
+.globalStock .sub_search .sub_mid .adequate_stock .box .con .value_chart .line .situation.St_sell {
+  left: auto;
+  right: 0;
+  text-align: right;
+}
+
+.globalStock .sub_search .sub_mid .adequate_stock .box .con .value_chart .line .situation.St_sell::after {
+  margin-left: 4px;
+}
+
+.globalStock .sub_search .sub_mid .adequate_stock .box .con .value_chart .line .situation.propriety {
+  left: 50%;
+  margin-left: -27px;
+}
+
+.globalStock .sub_search .sub_mid .adequate_stock .box .con .value_chart .line .situation.propriety::after {
+  display: none;
+  margin-left: -10px;
+  top: calc(100% - 2px);
+}
+
+.globalStock .sub_search .sub_mid .adequate_stock .box .con .value_chart .line .situation span {
+  font-size: 10px;
+  font-size: 0.65rem;
+  line-height: 1.3;
+  text-align: center;
+  color: #fff;
+  opacity: 0.5;
+}
+
+.globalStock .sub_search .sub_mid .adequate_stock .box .con .value_chart .line .situation .sync_price {
+  display: block;
+  padding-top: 5px;
+  font-size: 1rem;
+  line-height: 0.81;
+  color: #fff;
+  opacity: 1;
+}
+
+.globalStock .sub_search .sub_mid .adequate_stock .box .con .value_chart .line .situation .sync_price b {
+  font-size: 1rem;
+  line-height: 0.81;
+  color: #fff;
+  font-weight: 300;
+  opacity: 1;
+}
+
+.globalStock .sub_search .sub_mid .adequate_stock .box .adequate_price {
+  width: 100%;
+  /* 종목진단 - 적정주가탭 - 적정주가 노데이터 */
+  /* 매우저평가 */
+  /* 매우고평가 */
+  /* 프리미엄 가입자가 아닌 경우 */
+  /* 적정주가 활성화 된 영역 */
+}
+
+.globalStock .sub_search .sub_mid .adequate_stock .box .adequate_price .line {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.globalStock .sub_search .sub_mid .adequate_stock .box .adequate_price .line .domain {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin: 0 2px;
+}
+
+.globalStock .sub_search .sub_mid .adequate_stock .box .adequate_price .line .domain .price {
+  opacity: 0;
+  display: inline-block;
+  padding: 4px 6px 6px 6px;
+  border-radius: 3px;
+  background-color: #e57828;
+  color: #fff;
+  width: 100%;
+  height: 30px;
+  margin-left: -6px;
+}
+
+.globalStock .sub_search .sub_mid .adequate_stock .box .adequate_price .line .domain .price span {
+  color: #fff;
+  font-size: 0.6rem;
+  display: block;
+  opacity: 0.51;
+}
+
+.globalStock .sub_search .sub_mid .adequate_stock .box .adequate_price .line .domain .price span:nth-child(2) {
+  font-size: 0;
+  opacity: 1;
+  padding-top: 4px;
+}
+
+.globalStock .sub_search .sub_mid .adequate_stock .box .adequate_price .line .domain.active .price span:nth-child(2) {
+  font-size: 1rem;
+}
+
+.globalStock .sub_search .sub_mid .adequate_stock .box .adequate_price .line .domain .price span b {
+  color: #fff;
+  font-weight: 300;
+}
+
+.globalStock .sub_search .sub_mid .adequate_stock .box .adequate_price .line .domain .price_line {
+  position: relative;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.globalStock .sub_search .sub_mid .adequate_stock .box .adequate_price .line .domain .price_line::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+  background: #c9ccf4;
+  z-index: 90;
+}
+
+.globalStock .sub_search .sub_mid .adequate_stock .box .adequate_price .line .domain:first-child .price_line::before {
+  border-top-left-radius: 16px;
+  border-bottom-left-radius: 16px;
+}
+
+.globalStock .sub_search .sub_mid .adequate_stock .box .adequate_price .line .domain:last-child .price_line::before {
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
+}
+
+.globalStock .sub_search .sub_mid .adequate_stock .box .adequate_price .line .domain .price_line span {
+  display: block;
+  margin-top: 11px;
+  font-size: 0.875rem;
+  line-height: 0.93;
+  color: #c3c3c3;
+}
+
+.globalStock .sub_search .sub_mid .adequate_stock .box .adequate_price .nodata_area .no_data {
+  text-align: center;
+  padding: 9px 0;
+  margin-top: 10px;
+  border-radius: 2px;
+  background-color: #e0e5f0;
+  font-size: 0.875rem;
+  line-height: 1.21;
+  color: #E57828;
+}
+
+.globalStock .sub_search .sub_mid .adequate_stock .box .adequate_price .nodata_area .line {
+  position: relative;
+  width: 100%;
+  height: 2px;
+  border-radius: 20px;
+  background-color: #e0e5f0;
+  margin-top: 20px;
+}
+
+.globalStock .sub_search .sub_mid .adequate_stock .box .adequate_price .nodata_area .line .g_action {
+  position: absolute;
+  left: 0;
+  top: -6px;
+  margin-left: -5px;
+  z-index: 2;
+  display: inline-block;
+  background: #f8d4b5;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  font-size: 0;
+}
+
+.globalStock .sub_search .sub_mid .adequate_stock .box .adequate_price .nodata_area .line .g_action::after {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  display: inline-block;
+  background: #fff;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  font-size: 0;
+}
+
+.globalStock .sub_search .sub_mid .adequate_stock .box .adequate_price .nodata_area .line .g_action.g_buying {
+  top: -3px;
+  left: 4%;
+  right: auto;
+  width: 8px;
+  height: 8px;
+  background-color: #f8d4b5;
+}
+
+.globalStock .sub_search .sub_mid .adequate_stock .box .adequate_price .nodata_area .line .g_action.g_buying::after {
+  content: "매우저평가";
+  position: absolute;
+  left: 0;
+  top: 20px;
+  display: inline-block;
+  width: 60px;
+  font-size: 12px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.08;
+  letter-spacing: normal;
+  text-align: left;
+  color: #c3c3c3;
+}
+
+.globalStock .sub_search .sub_mid .adequate_stock .box .adequate_price .nodata_area .line .g_action.g_sell {
+  top: -3px;
+  left: auto;
+  right: 4%;
+  width: 8px;
+  height: 8px;
+  background-color: #f8d4b5;
+}
+
+.globalStock .sub_search .sub_mid .adequate_stock .box .adequate_price .nodata_area .line .g_action.g_sell::after {
+  content: "매우고평가";
+  position: absolute;
+  left: auto;
+  right: 0;
+  top: 20px;
+  display: inline-block;
+  width: 60px;
+  font-size: 12px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.08;
+  letter-spacing: normal;
+  text-align: left;
+  color: #c3c3c3;
+}
+
+.globalStock .sub_search .sub_mid .adequate_stock .box .adequate_price .nodata_area .line .domain .price_line::before {
+  background: #ebebeb;
+}
+
+.globalStock .sub_search .sub_mid .adequate_stock .box .adequate_price .nodata_area .g_action {
+  background: #a7a7a7;
+}
+
+.globalStock .sub_search .sub_mid .adequate_stock .box .adequate_price .nodata_area .adequate .remark {
+  margin-top: 3px;
+}
+
+.globalStock .sub_search .sub_mid .adequate_stock .box .adequate_price .nodata_area .adequate .remark .txt_filter.size_B i {
+  width: 8px;
+  height: 8px;
+  margin: 0 1px 1px;
+  opacity: 0.67;
+}
+
+.globalStock .sub_search .sub_mid .adequate_stock .box .adequate_price .nodata_area .banner_prm {
+  background: #e57828;
+  border-radius: 2px;
+  margin-top: 10px;
+  padding: 8px 0 10px;
+  text-align: center;
+}
+
+.globalStock .sub_search .sub_mid .adequate_stock .box .adequate_price .nodata_area .banner_prm .cho_prm {
+  color: #fff;
+  font-size: 0.75rem;
+}
+
+.globalStock .sub_search .sub_mid .adequate_stock .box .adequate_price .nodata_area .banner_prm .cho_prm i {
+  display: inline-block;
+  background: url("../img/Icon_lock.svg") no-repeat;
+  width: 10px;
+  height: 13px;
+  background-size: 10px 13px;
+  margin-right: 4px;
+  position: relative;
+  top: 2px;
+}
+
+.globalStock .sub_search .sub_mid .adequate_stock .box .adequate_price .nodata_area .banner_prm .weeks_free {
+  color: #FFDA0D;
+  text-decoration: underline;
+  font-size: 0.75rem;
+  font-weight: 500;
+  margin-left: 5px;
+}
+
+.globalStock .sub_search .sub_mid .adequate_stock .box .adequate_price .nodata_area .banner_prm.prm_service .weeks_free {
+  color: #1EE8BE;
+}
+
+.globalStock .sub_search .sub_mid .adequate_stock .box .adequate_price .adequate {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.globalStock .sub_search .sub_mid .adequate_stock .box .adequate_price .adequate strong span {
+  display: block;
+  color: #333;
+  font-size: 0.6rem;
+  text-align: left;
+  padding-bottom: 2px;
+}
+
+.globalStock .sub_search .sub_mid .adequate_stock .box .adequate_price .adequate strong {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 3px;
+  background-color: #f5f6ff;
+  font-size: 0.9375rem;
+  font-weight: normal;
+  line-height: 0.87;
+  color: #333;
+}
+
+.globalStock .sub_search .sub_mid .adequate_stock .box .adequate_price .adequate strong b {
+  font-weight: 300;
+}
+
+.globalStock .sub_search .sub_mid .adequate_stock .box .adequate_price .line .domain.active .price {
+  opacity: 1;
+  position: relative;
+}
+
+.globalStock .sub_search .sub_mid .adequate_stock .box .adequate_price .line .domain.active .price::before {
+  top: 100%;
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(64, 79, 195, 0);
+  border-top-color: #E57828;
+  border-width: 7px;
+  margin-left: -7px;
+}
+
+.globalStock .sub_search .sub_mid .adequate_stock .box .adequate_price .line .domain.active .price_line::before {
+  background: #e57828;
+}
+
+.globalStock .sub_search .sub_mid .adequate_stock .box .adequate_price .line .domain.active .price_line span {
+  color: #E57828;
+  font-weight: bold;
+}
+
+.globalStock .sub_search .sub_mid .adequate_stock .evaluation_data {
+  position: relative;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-top: 25px;
+  padding: 0;
+  border-top: 1px solid #eaedf5;
+  margin-bottom: 0;
+}
+
+.globalStock .sub_search .sub_mid .adequate_stock .evaluation_data::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  margin-left: -6px;
+  top: 27px;
+  width: 1px;
+  height: 45px;
+  background: #e0e4e9;
+}
+
+.globalStock .sub_search .sub_mid .adequate_stock .evaluation_data .txt_guide {
+  right: 0;
+  top: 8px;
+}
+
+.globalStock .sub_search .sub_mid .adequate_stock .evaluation_data .guide_box {
+  left: auto;
+  right: -15px;
+}
+
+.globalStock .sub_search .sub_mid .adequate_stock .evaluation_data .evaluation_table th {
+  padding: 0;
+  text-align: left;
+  color: #333;
+  width: 40%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.globalStock .sub_search .sub_mid .adequate_stock .evaluation_data .evaluation_table td {
+  width: 60%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-align: right;
+}
+
+.globalStock .sub_search .sub_mid .adequate_stock .evaluation_data .evaluation_table th span {
+  color: #333;
+}
+
+.globalStock .sub_search .sub_mid .adequate_stock .evaluation_data .evaluation_table td span b {
+  font-weight: 300;
+  opacity: 1;
+}
+
+.globalStock .sub_search .sub_mid .evaluation_data .evaluation_table {
+  display: inline-block;
+  width: calc(100% / 2 - 4px);
+  margin-top: 20px;
+}
+
+.globalStock .sub_search .sub_mid .evaluation_data:first-child {
+  border-right: 1px solid #C3C3C3;
+}
+
+.globalStock .sub_search .sub_mid .evaluation_data th {
+  color: #333;
+  font-size: 0.75rem;
+  padding: 6px 8px 6px 15px;
+  height: 28px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.globalStock .sub_search .sub_mid .evaluation_data td {
+  padding: 6px 4px;
+}
+
+.globalStock .sub_search .sub_mid .evaluation_data td.prm_lock {
+  background: #E6E7F4;
+  border-radius: 10px;
+  padding: 2px 10px 5px;
+  margin-bottom: 3px;
+  display: inline-block;
+  position: relative;
+  top: 2px;
+}
+
+.globalStock .sub_search .sub_mid .evaluation_data td.prm_lock span {
+  font-size: 0.84rem;
+}
+
+.globalStock .sub_search .sub_mid .evaluation_data td span {
+  color: #333;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.globalStock .sub_search .sub_mid .evaluation_data td span b {
+  color: #333;
+  font-size: 1rem;
+  font-weight: normal;
+  opacity: 0.7;
+}
+
+.globalStock .sub_search .sub_mid .evaluation_data .txt_guide {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  right: 15px;
+  top: 0;
+}
+
+.globalStock .sub_search .sub_mid .evaluation_data .txt_guide img {
+  display: inline-block;
+  width: 100%;
+}
+
+.globalStock .sub_search .sub_mid .evaluation_data .guide_box {
+  -webkit-box-shadow: 0px 0px 7px 2px #dfdfdf;
+          box-shadow: 0px 0px 7px 2px #dfdfdf;
+  border-radius: 8px;
+  position: absolute;
+  left: 15px;
+  top: 26px;
+  z-index: 80;
+  padding: 35px 15px 15px;
+  background: #fff;
+  width: 340px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  z-index: 9998;
+  display: none;
+}
+
+.globalStock .sub_search .sub_mid .evaluation_data .guide_box .clse {
+  display: inline-block;
+  font-size: 0;
+  width: 24px;
+  height: 24px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: absolute;
+  right: -7px;
+  top: -8px;
+  background-color: #d3d3d3;
+  padding: 2px;
+  border-radius: 50%;
+}
+
+.globalStock .sub_search .sub_mid .evaluation_data .guide_box .clse::after {
+  content: '';
+  height: 14px;
+  border-left: 1px solid #fff;
+  position: absolute;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  top: 5px;
+  left: 12px;
+}
+
+.globalStock .sub_search .sub_mid .evaluation_data .guide_box .clse::before {
+  content: '';
+  height: 14px;
+  border-left: 1px solid #fff;
+  position: absolute;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  top: 5px;
+  left: 12px;
+}
+
+.globalStock .sub_search .sub_mid .evaluation_data .guide_box.show {
+  display: block;
+}
+
+.globalStock .sub_search .sub_mid .evaluation_data .guide_box.hide {
+  display: none;
+}
+
+.globalStock .sub_search .sub_mid .evaluation_data .guide_box .title {
+  font-weight: bold;
+  display: block;
+  color: #333;
+  font-size: 1rem;
+  line-height: 22px;
+  text-align: left;
+}
+
+.globalStock .sub_search .sub_mid .evaluation_data .guide_box ul {
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+.globalStock .sub_search .sub_mid .evaluation_data .guide_box ul li {
+  color: #8380A0;
+  margin-bottom: 5px;
+  text-align: left;
+  line-height: 22px;
+  font-size: 0.8rem;
+  vertical-align: top;
+  font-weight: normal;
+}
+
+.globalStock .sub_search .sub_mid .evaluation_data .guide_box ul li strong {
+  font-weight: bold;
+  color: #444;
+  vertical-align: middle;
+  font-size: 0.9rem;
+}
+
+.globalStock .sub_search .sub_mid.outline_box .box .value_chart {
+  width: 100%;
+  padding: 0;
+  overflow: initial;
+}
+
+.globalStock .sub_search .sub_mid.outline_box .box .value_chart .prm_lock {
+  width: 100%;
+}
+
+.globalStock .sub_search .sub_mid.outline_box .box .value_chart .no_data {
+  padding: 6px 14px;
+  border-radius: 2px;
+  background-color: #e6e7f4;
+  font-size: 0.7rem;
+  font-weight: normal;
+  line-height: 1.18;
+  color: #E57828;
+  text-align: center;
+}
+
+.globalStock .sub_search .sub_mid.outline_box .box .value_chart .no_data + .line {
+  margin-top: 11px;
+}
+
+.globalStock .sub_search .sub_mid.outline_box .box .value_chart .prm_lock span {
+  position: relative;
+  display: block;
+  padding: 6px 14px;
+  border-radius: 2px;
+  font-size: 0.7rem;
+  font-weight: normal;
+  line-height: 1.18;
+  color: #E57828;
+  text-align: center;
+  background: #e0e5f0 url("../img/icon_prm_lock.svg") no-repeat 10px center;
+  background-size: auto 12px;
+}
+
+.globalStock .sub_search .sub_mid.outline_box .box .value_chart .prm_lock span i {
+  position: absolute;
+  left: 10px;
+  top: 6px;
+  display: inline-block;
+  vertical-align: middle;
+  width: 10px;
+  height: 13px;
+  margin-right: 4px;
+  background: url("../img/Icon_lock.svg") no-repeat 0 0;
+  background-size: 10px 13px;
+}
+
+.globalStock .sub_search .sub_mid.outline_box .box .value_chart .prm_lock + .line {
+  margin-top: 11px;
+}
+
+.globalStock .sub_search .sub_mid.outline_box .box .value_chart .line {
+  position: relative;
+  width: calc(100% - 20px);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 2px;
+  border-radius: 20px;
+  background-color: #e6e7f4;
+  margin: 35px auto 0;
+}
+
+/* .globalStock .sub_search .sub_mid.outline_box .box .value_chart .line::before,
+.globalStock .sub_search .sub_mid.outline_box .box .value_chart .line::after {
+	content: '';
+	display: inline-block;
+	position: absolute;
+	left: -15px;
+	bottom: 0;
+	width: 15px;
+	height: 2px;  
+	border-radius: 20px;
+	background-color: #e6e7f4;
+} */
+.globalStock .sub_search .sub_mid.outline_box .box .value_chart .line::after {
+  left: auto;
+  right: -15px;
+}
+
+.globalStock .sub_search .sub_mid.outline_box .box .value_chart .line .g_action {
+  position: absolute;
+  left: 0;
+  top: -6px;
+  margin-left: -5px;
+  z-index: 2;
+  display: inline-block;
+  background: #E57828;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  font-size: 0;
+}
+
+.globalStock .sub_search .sub_mid.outline_box .box .value_chart .line .g_action::after {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  display: inline-block;
+  background: #fff;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  font-size: 0;
+}
+
+.globalStock .sub_search .sub_mid.outline_box .box .value_chart .no_data + .line .g_action,
+.globalStock .sub_search .sub_mid.outline_box .box .value_chart .prm_lock + .line .g_action {
+  background-color: #f8d4b5;
+}
+
+.globalStock .sub_search .sub_mid.outline_box .box .value_chart .adequate {
+  margin-top: 13px;
+}
+
+.globalStock .sub_search .sub_mid.outline_box .box .value_chart .adequate span {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 300;
+  line-height: 1.3;
+  text-align: center;
+  color: #333;
+}
+
+.globalStock .sub_search .sub_mid.outline_box .box .value_chart .adequate strong {
+  display: block;
+  padding-top: 3px;
+  font-size: 0.8125rem;
+  font-weight: normal;
+  line-height: 1;
+  text-align: center;
+  color: #333;
+}
+
+.globalStock .sub_search .sub_mid.outline_box .box .value_chart .adequate strong b {
+  font-weight: 300;
+}
+
+.globalStock .sub_search .sub_mid.outline_box .box .value_chart .adequate .remark {
+  margin-top: 3px;
+}
+
+.globalStock .sub_search .sub_mid.outline_box .box .value_chart .adequate .remark .txt_filter.size_B i {
+  width: 8px;
+  height: 8px;
+  margin: 0 1px 1px;
+  opacity: 0.67;
+}
+
+.globalStock .sub_search .sub_mid.outline_box .box .value_chart .line .situation {
+  position: absolute;
+  left: 0;
+  top: -30px;
+  width: 56px;
+  text-align: center;
+  padding-bottom: 15px;
+  margin-left: calc(-54px / 2);
+}
+
+@media (min-width: 320px) and (max-width: 359px) {
+  .globalStock .sub_search .sub_mid.outline_box .box .value_chart .line .situation {
+    padding-bottom: 12px;
+    width: 42px;
+    margin-left: calc(-41px / 2);
+  }
+}
+
+.globalStock .sub_search .sub_mid.outline_box .box .value_chart .line .situation::after {
+  content: "";
+  top: 100%;
+  left: 50%;
+  margin-left: -4px;
+  /* border: solid transparent; */
+  content: " ";
+  position: absolute;
+  pointer-events: none;
+  width: 10px;
+  height: 10px;
+  /* background: url('../img/situation_arow.svg') no-repeat center center; */
+  border-radius: 50%;
+  background-color: #E57828;
+  z-index: 90;
+}
+
+/* 0 미만인 경우 */
+.globalStock .sub_search .sub_mid.outline_box .box .value_chart .line .situation.under {
+  margin-left: calc(-24px / 2);
+  width: auto;
+}
+
+.globalStock .sub_search .sub_mid.outline_box .box .value_chart .line .situation.under::after {
+  left: calc(50% - 10px);
+}
+
+/* 100% 초과인 경우 */
+.globalStock .sub_search .sub_mid.outline_box .box .value_chart .line .situation.over {
+  left: auto;
+  right: auto;
+  margin-left: auto;
+  margin-right: calc(-18px / 2);
+  width: auto;
+}
+
+.globalStock .sub_search .sub_mid.outline_box .box .value_chart .line .situation.over::after {
+  left: calc(50% + 10px);
+}
+
+/* 적극매수 */
+.globalStock .sub_search .sub_mid.outline_box .box .value_chart .line .situation.St_buying {
+  left: 0;
+  text-align: left;
+}
+
+.globalStock .sub_search .sub_mid.outline_box .box .value_chart .line .situation.St_buying::after {
+  margin-left: -19px;
+}
+
+/* 매우 저평가 */
+.globalStock .sub_search .sub_mid.outline_box .box .value_chart .line .situation.buying {
+  left: 4%;
+}
+
+.globalStock .sub_search .sub_mid.outline_box .box .value_chart .line .situation.buying::after {
+  margin-left: -4px;
+}
+
+/* 매도 */
+.globalStock .sub_search .sub_mid.outline_box .box .value_chart .line .situation.sell {
+  left: 47%;
+}
+
+.globalStock .sub_search .sub_mid.outline_box .box .value_chart .line .situation.sell::after {
+  margin-left: -10px;
+}
+
+/* 매우 고평가 */
+.globalStock .sub_search .sub_mid.outline_box .box .value_chart .line .situation.St_sell {
+  left: auto;
+  right: 0;
+  text-align: right;
+}
+
+.globalStock .sub_search .sub_mid.outline_box .box .value_chart .line .situation.St_sell::after {
+  margin-left: 4px;
+}
+
+/* 적정가 */
+.globalStock .sub_search .sub_mid.outline_box .box .value_chart .line .situation.propriety {
+  left: 50%;
+  margin-left: -27px;
+}
+
+.globalStock .sub_search .sub_mid.outline_box .box .value_chart .line .situation.propriety::after {
+  display: none;
+  margin-left: -10px;
+  top: calc(100% - 2px);
+}
+
+.globalStock .sub_search .sub_mid.outline_box .box .value_chart .line .situation span {
+  position: relative;
+  font-size: 0.875rem;
+  font-weight: bold;
+  line-height: 0.93;
+  color: #E57828;
 }
 
 /* 발굴 */
@@ -7563,7 +9223,7 @@ html {
   display: inline-block;
   width: 20px;
   height: 16px;
-  background: url("/img/btn_schSet.svg") no-repeat 50% 50%;
+  background: url("../img/btn_schSet.svg") no-repeat 50% 50%;
   background-size: auto 100%;
   margin-right: 5px;
   vertical-align: top;
@@ -7707,7 +9367,7 @@ html {
   display: inline-block;
   width: 10px;
   height: 13px;
-  background: url("/img/Icon_lockB.png") no-repeat 0 0;
+  background: url("../img/Icon_lockB.png") no-repeat 0 0;
   background-size: 10px 13px;
   margin-right: 3px;
 }
@@ -7784,24 +9444,24 @@ html {
 }
 
 .globalStock .sub_recipe .sub_top.view.recipejump {
-  background: #f6f7fa url("/img/bg_recipe_jump.svg") no-repeat center 28px;
+  background: #f6f7fa url("../img/bg_recipe_jump.svg") no-repeat center 28px;
 }
 
 .globalStock .sub_recipe .sub_top.view.earnings {
-  background: #f6f7fa url("/img/bg_recipe_earnings.svg") no-repeat center 28px;
+  background: #f6f7fa url("../img/bg_recipe_earnings.svg") no-repeat center 28px;
 }
 
 .globalStock .sub_recipe .sub_top.view.dividend {
-  background: #f6f7fa url("/img/bg_recipe_dividend.svg") no-repeat center 28px;
+  background: #f6f7fa url("../img/bg_recipe_dividend.svg") no-repeat center 28px;
 }
 
 .globalStock .sub_recipe .sub_top.view.growth {
-  background: #f6f7fa url("/img/bg_recipe_growth.svg") no-repeat center 28px;
+  background: #f6f7fa url("../img/bg_recipe_growth.svg") no-repeat center 28px;
   background-size: 74px auto;
 }
 
 .globalStock .sub_recipe .sub_top.view.moat {
-  background: #f6f7fa url("/img/bg_recipe_moat.svg") no-repeat center 28px;
+  background: #f6f7fa url("../img/bg_recipe_moat.svg") no-repeat center 28px;
   background-size: 74px auto;
 }
 
@@ -7846,7 +9506,7 @@ html {
   display: inline-block;
   width: 22px;
   height: 22px;
-  background: #FFF5E2 url("/img/icon_prm_lock.svg") no-repeat center center;
+  background: #FFF5E2 url("../img/icon_prm_lock.svg") no-repeat center center;
   background-size: auto 10px;
   border-radius: 50%;
   position: relative;
@@ -7870,7 +9530,7 @@ html {
   margin: 0 auto;
   width: 96px;
   height: 96px;
-  background: #ffb37b url("/img/icon_recipe_list.svg") no-repeat 0 12px;
+  background: #ffb37b url("../img/icon_recipe_list.svg") no-repeat 0 12px;
   background-size: auto 70px;
   border-radius: 50%;
 }
@@ -7913,7 +9573,7 @@ html {
 }
 
 .globalStock .sub_recipe .sub_mid.recipe_tabs .box_tabs ul li.sale a::before {
-  background-image: url("/img/recipe_sale.svg");
+  background-image: url("../img/recipe_sale.svg");
   background-position: center center;
   background-size: auto 64px;
 }
@@ -8016,7 +9676,7 @@ html {
   width: 14px;
   height: 14px;
   padding: 1px 0;
-  background: url("/img/icon_transition.svg") no-repeat 0 1px;
+  background: url("../img/icon_transition.svg") no-repeat 0 1px;
   background-size: 14px 14px;
   margin-left: 2px;
   position: relative;
@@ -8154,7 +9814,7 @@ html {
   vertical-align: top;
   width: 14px;
   height: 14px;
-  background: url("/img/game_trans_b.svg") no-repeat 0 0;
+  background: url("../img/game_trans_b.svg") no-repeat 0 0;
   background-size: 60px 14px;
 }
 
@@ -8390,7 +10050,7 @@ html {
   display: inline-block;
   width: 13px;
   height: 13px;
-  background: url("/img/icon_saledeal.svg") no-repeat center center;
+  background: url("../img/icon_saledeal.svg") no-repeat center center;
   margin-right: 4px;
 }
 
@@ -8494,7 +10154,7 @@ html {
 .globalStock .sub_catch .catch_wrap .no_data {
   margin-top: 20px;
   border-radius: 20px;
-  background: #fff url("/img/bg_nodata.png") no-repeat center 70px;
+  background: #fff url("../img/bg_nodata.png") no-repeat center 70px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding-top: 220px;
@@ -8823,7 +10483,7 @@ html {
   margin-left: -29px;
   z-index: 2;
   display: inline-block;
-  background: #fff url("/img/icon_prm_lock.svg") no-repeat center center;
+  background: #fff url("../img/icon_prm_lock.svg") no-repeat center center;
   background-size: auto 12px;
   padding: 4px 30px 3px;
   height: 18px;
@@ -8853,7 +10513,7 @@ html {
   pointer-events: none;
   width: 14px;
   height: 10px;
-  background: url("/img/situation_arow.svg") no-repeat center center;
+  background: url("../img/situation_arow.svg") no-repeat center center;
   z-index: 90;
 }
 
@@ -9173,7 +10833,7 @@ html {
   content: '';
   width: 16px;
   height: 16px;
-  background: url("/img/icon_checkmark.svg") no-repeat 100% 0;
+  background: url("../img/icon_checkmark.svg") no-repeat 100% 0;
   position: absolute;
   right: 6px;
   top: 6px;
@@ -9495,7 +11155,7 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: url("/img/research_bg.png") no-repeat center center;
+  background: url("../img/research_bg.png") no-repeat center center;
   margin: 16px 15px 25px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -9586,7 +11246,7 @@ html {
 
 .globalStock .sub_note .sub_mid.research_board .pho_list li .list.lst_lock .tit a {
   text-indent: 18px;
-  background: url("/img/icon_prm_lock.svg") no-repeat left 3px;
+  background: url("../img/icon_prm_lock.svg") no-repeat left 3px;
 }
 
 .globalStock .sub_note .sub_mid.research_board .pho_list li .list .tit {
@@ -9626,7 +11286,7 @@ html {
   min-width: 80px;
   width: 80px;
   height: 71px;
-  background: #fff url("/img/bg_noimg.svg") no-repeat center center;
+  background: #fff url("../img/bg_noimg.svg") no-repeat center center;
   background-size: cover;
   margin-right: 15px;
   border-radius: 5px;
@@ -9800,7 +11460,7 @@ html {
 
 .globalStock .sub_note .popularity .pho_list li .list.lst_lock .tit a {
   text-indent: 18px;
-  background: url("/img/icon_prm_lock.svg") no-repeat left 3px;
+  background: url("../img/icon_prm_lock.svg") no-repeat left 3px;
 }
 
 .globalStock .sub_note .popularity .pho_list li .list .tit {
@@ -9838,7 +11498,7 @@ html {
   min-width: 46px;
   width: 46px;
   height: 41px;
-  background: #fff url("/img/bg_noimg.svg") no-repeat center center;
+  background: #fff url("../img/bg_noimg.svg") no-repeat center center;
   background-size: cover;
   margin-right: 15px;
   border-radius: 5px;
@@ -10087,7 +11747,7 @@ html {
 
 .globalStock .sub_briefing .pho_list li .list.lst_lock .tit a {
   text-indent: 18px;
-  background: url("/img/icon_prm_lock.svg") no-repeat left 3px;
+  background: url("../img/icon_prm_lock.svg") no-repeat left 3px;
 }
 
 .globalStock .sub_briefing .pho_list li .list .tit {
@@ -10126,7 +11786,7 @@ html {
   min-width: 80px;
   width: 80px;
   height: 71px;
-  background: #fff url("/img/bg_noimg.svg") no-repeat center center;
+  background: #fff url("../img/bg_noimg.svg") no-repeat center center;
   background-size: cover;
   margin-right: 15px;
   border-radius: 5px;
@@ -10334,7 +11994,7 @@ body {
   position: absolute;
   right: 15px;
   top: 15px;
-  background: url("/img/clse.png") no-repeat 0 0;
+  background: url("../img/clse.png") no-repeat 0 0;
   background-size: 100% 100%;
 }
 
@@ -10399,7 +12059,7 @@ body {
 }
 
 .star_area .starR {
-  background: url("/img/ico_review.svg") no-repeat -21px 0;
+  background: url("../img/ico_review.svg") no-repeat -21px 0;
   background-size: auto 100%;
   display: inline-block;
   text-indent: -9999px;

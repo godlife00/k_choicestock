@@ -558,182 +558,1142 @@
 }
 
 /* 추천뷰  종목진단 - 적정주가 차트 */
-.globalStock .sub_recom .adequate_stock {        
-    margin: 8px auto 0;
-    width: calc(100% - 30px);	
 
-    .box {	            
+.globalStock .sub_recom .adequate_stock {
+    margin: 20px auto 0;
+    width: calc(100% - 30px);
+
+    .box {
+        padding: 16px 15px 20px;
         border-radius: 16px;
         background-color: #f6f7fa;
+    }
 
-        .title a {
-            padding: 16px 12px 0;
-            display: block;
-            font-size: $font12;
-            font-weight: bold;                
+    @media (min-width:320px) and (max-width:359px) {
+        width: calc(100% - 20px);
+        .box {
+            padding: 16px 10px 20px;
+        }
+    }
+
+    .box .title a {
+        display: block;
+        font-size: 0.75rem;
+        font-weight: bold;
+        color: #8c90ad;
+    }
+
+    .box .con {
+        padding-top: 11px;
+
+        /* 종목진단 AI적정주가 벨류라인 차트 */
+        .value_chart {
+            width: 100%;
+            padding: 0;
+            overflow: initial;
+        }
+
+        .value_chart .line {
+            position: relative;
+            width: calc(100% - 46px);
+            margin: 70px auto 0;
+            height: 2px;
+            border-radius: 20px;
+            background-color: #e0e5f0;
+        }
+
+        .value_chart .line::before,
+        .value_chart .line::after {
+            content: '';
+            display: inline-block;
+            position: absolute;
+            left: -14px;
+            bottom: 0;
+            width: 14px;
+            height: 2px;
+            border-radius: 20px;
+            background-color: #e0e5f0;
+        }
+
+        .value_chart .line::after {
+            left: auto;
+            right: -14px;
+        }
+
+        .value_chart .line .g_action {
+            position: absolute;
+            left: 0;
+            top: -6px;
+            /* margin-left:-5px; */
+            transform: translateX(-50%);
+            z-index: 2;
+            display: inline-block;
+            background: #e57828;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            font-size: 0;
+        }
+
+        .value_chart .line .g_action::after {
+            content: "";
+            position: absolute;
+            left: 2px;
+            top: 2px;
+            display: inline-block;
+            background: #fff;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            font-size: 0;
+        }
+
+        /* 매우저평가 */
+        .value_chart .line .g_action.g_buying {
+            top: -3px;
+            left: 0;
+            right: auto;
+            width: 8px;
+            height: 8px;
+            background-color: #f8d4b5;
+            margin-left: -2px;
+        }
+
+        .value_chart .line .g_action.g_buying::after {
+            content: "매우저평가";
+            position: absolute;
+            left: 0;
+            top: 20px;
+            display: inline-block;
+            width: 60px;
+            font-size: 12px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.08;
             letter-spacing: normal;
             text-align: left;
-            color: $colgray;
-            position: relative;        
+            color: #c3c3c3;
         }
-        .con {                
-            padding: 30px 12px 20px;
 
-            .adequate_price {
-                width:100%;
-            }
-
-            .adequate_price .line {        
-                display: flex;
-                justify-content: space-between;	
-
-                .domain {	                        
-                    flex: 1;
-                    margin: 0 2px;
-                }
-                .domain .price {
-                    opacity: 0;
-                    display: inline-block;
-                    padding: 4px 6px 6px 6px;
-                    border-radius: 3px;
-                    background-color: #e57828;
-                    color: #fff;
-                    width: 100%;
-                    height: 40px;
-                    box-sizing: border-box;	                        
-                }
-                .domain .price span {	
-                    color: #fff;
-                    font-size: 0.6rem;
-                    display: block;
-                    opacity: 0.51;                                                
-                }
-                .domain .price span:nth-child(2) {		
-                    font-size: 0;
-                    opacity: 1;                        
-                }
-                .domain.active .price span:nth-child(2) {		
-                    font-size: $font15;
-                }
-                .domain .price span b {	
-                    color: #fff;	
-                    font-weight: 300;
-                }
-                .domain .price_line {
-                    position: relative;			
-                    text-align: center;
-                    margin-top: 20px;                        
-                }
-                .domain .price_line::before {
-                    content:""; 
-                    display: block;   
-                    width: 100%;
-                    height: 4px;
-                    background: #e0e5f0;
-                    z-index: 90;			
-                }
-                .domain:first-child .price_line::before {	
-                    border-top-left-radius: 16px;
-                    border-bottom-left-radius: 16px;
-                }
-                .domain:last-child .price_line::before {	
-                    border-top-right-radius: 16px;
-                    border-bottom-right-radius: 16px;
-                }
-                .domain .price_line span {
-                    display: block;
-                    margin-top: 11px;
-                    font-size: $font14;
-                    line-height: 0.93;		
-                    color: #c3c3c3;
-                }
-
-                /* 적정주가 활성화 된 영역 */    
-                .domain.active .price {
-                    opacity: 1;	
-                    position: relative;
-                }
-                .domain.active .price::before {
-                    top: 100%;
-                    left: 50%;
-                    border: solid transparent;
-                    content: " ";
-                    height: 0;
-                    width: 0;
-                    position: absolute;
-                    pointer-events: none;
-                    border-color: rgba(64, 79, 195, 0);
-                    border-top-color: $colorg;
-                    border-width: 7px;
-                    margin-left: -7px;
-                }
-            
-                .domain.active .price_line::before {
-                    background: $colorg;
-                }
-                .domain.active .price_line span {
-                    color: $colorg;
-                    font-weight: bold;
-                }
-            }
-
-            .adequate_price .g_action {
-                position:absolute;
-                left:0;
-                top:-13px;
-                margin-left:-5px;
-                z-index:2;
-                display:inline-block;
-                background:#404FC3;
-                width:10px;
-                height:10px;
-                border-radius:50%;
-                font-size:0;
-                display: none !important;
-            }
-            .adequate_price .g_action::after {
-                content:"";
-                position:absolute;
-                left:2px;
-                top:2px;
-                display:inline-block;
-                background:#fff;
-                width:6px;
-                height:6px;
-                border-radius:50%;
-                font-size:0;
-            }             
-
-            /* 종목진단 - 적정주가탭 - 적정주가 노데이터 */
-            .adequate_price .nodata_area {
-                .no_data {
-                    text-align: center;
-                    padding: 9px 0;
-                    margin-top:10px;
-                    border-radius: 2px;		
-                    background-color: #e6e7f4;	
-                    font-size: $font14;
-                    line-height: 1.21;		
-                    color: $colorg;
-                }
-                .line .domain .price_line::before {
-                    background: #ebebeb;
-                }
-                .g_action {
-                    background: #a7a7a7;
-                }
-                .adequate .remark {
-                    margin-top: 3px;
-                }
-                .adequate .remark .txt_filter.size_B i {
-                    width: 8px;
-                    height: 8px;
-                    margin: 0 1px 1px;	
-                    opacity: 0.67;
-                }               
-            }                
+        /* 매우고평가 */
+        .value_chart .line .g_action.g_sell {
+            top: -3px;
+            left: auto;
+            right: -3px;
+            width: 8px;
+            height: 8px;
+            background-color: #f8d4b5;
+            margin-right: -5px;
         }
-    } 
+
+        .value_chart .line .g_action.g_sell::after {
+            content: "매우고평가";
+            position: absolute;
+            left: auto;
+            right: 0;
+            top: 20px;
+            display: inline-block;
+            width: 60px;
+            font-size: 12px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.08;
+            letter-spacing: normal;
+            text-align: left;
+            color: #c3c3c3;
+        }
+
+        .value_chart .adequate {
+            text-align: center;
+        }
+
+        .value_chart .adequate strong {
+            position: relative;
+            display: inline-block;
+            margin-top: 20px;
+            padding: 4px 14px;
+            border-radius: 3px;
+            background-color: #fff;
+            font-size: 1rem;
+            font-weight: normal;
+            line-height: 0.87;
+            color: #333;
+        }
+
+        .value_chart .adequate strong::before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: -14px;
+            margin-left: 1px;
+            transform: translateX(-50%);
+            pointer-events: none;
+            width: 1px;
+            height: 15px;
+            background-color: #e57828;
+            z-index: 90;
+        }
+
+        .value_chart .adequate span {
+            display: block;
+            padding-bottom: 5px;
+            font-size: 10px;
+            font-weight: 300;
+            line-height: 1.3;
+            text-align: center;
+            color: #333;
+        }
+
+        .value_chart .adequate strong b {
+            font-weight: 300;
+        }
+
+        .value_chart .adequate .remark {
+            margin-top: 3px;
+        }
+
+        .value_chart .adequate .remark .txt_filter.size_B i {
+            width: 8px;
+            height: 8px;
+            margin: 0 1px 1px;
+            opacity: 0.67;
+        }
+
+        .value_chart .line .situation {
+            position: absolute;
+            left: 0;
+            top: -60px;
+            /* margin-left: -34px; */
+            transform: translateX(-50%);
+            min-width: 56px;
+            text-align: center;
+            padding: 1px 8px 7px;
+            border-radius: 3px;
+            background-color: #e57828;
+            z-index: 10;
+        }
+
+        .value_chart .line .situation::after {
+            content: "";
+            display: inline-block;
+            top: 56px;
+            left: 50%;
+            transform: translateX(-50%);            
+            content: " ";
+            position: absolute;
+            pointer-events: none;
+            background-color: #e57828;
+            z-index: 90;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            font-size: 0;
+        }
+
+        .value_chart .line .situation::before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 42px;
+            pointer-events: none;
+            width: 1px;
+            height: 20px;
+            background-color: #e57828;
+            z-index: 90;
+        }
+
+        @media (min-width:320px) and (max-width:359px) {
+            .value_chart .line .situation::before {
+                top: 36px;
+            }
+        }
+
+        /* 0 미만인 경우 */
+        .value_chart .line .situation.under {
+            left: auto;
+            right: auto;
+            margin-left: 12px;
+        }
+
+        .value_chart .line .situation.under:before {
+            left: calc(50% - 20px);
+        }
+
+        .value_chart .line .situation.under::after {
+            left: calc(50% - 20px)
+        }
+
+        /* 100% 초과인 경우 */
+        .value_chart .line .situation.over {
+            left: auto;
+            right: auto;
+            margin-left: auto;
+            margin-right: -64px;
+        }
+
+        .value_chart .line .situation.over:before {
+            left: calc(50% + 20px);
+        }
+
+        .value_chart .line .situation.over::after {
+            left: calc(50% + 20px)
+        }
+
+        /* 적극매수 */
+        .value_chart .line .situation.St_buying {
+            left: 0;
+            text-align: left;
+        }
+
+        .value_chart .line .situation.St_buying::after {
+            margin-left: -19px;
+        }
+
+        /* 매우 저평가 */
+        .value_chart .line .situation.buying {
+            left: 4%;
+        }
+
+        .value_chart .line .situation.buying::after {
+            margin-left: -4px;
+        }
+
+        /* 매도 */
+        .value_chart .line .situation.sell {
+            left: 47%;
+        }
+
+        .value_chart .line .situation.sell::after {
+            margin-left: -10px;
+        }
+
+        /* 매우 고평가 */
+        .value_chart .line .situation.St_sell {
+            left: auto;
+            right: 0;
+            text-align: right;
+        }
+
+        .value_chart .line .situation.St_sell::after {
+            margin-left: 4px;
+        }
+
+        /* 적정가 */
+        .value_chart .line .situation.propriety {
+            left: 50%;
+            margin-left: -27px;
+        }
+
+        .value_chart .line .situation.propriety::after {
+            display: none;
+            margin-left: -10px;
+            top: calc(100% - 2px);
+        }
+
+        .value_chart .line .situation span {
+            font-size: 10px;
+            font-size: 0.65rem;
+            line-height: 1.3;
+            text-align: center;
+            color: #fff;
+            opacity: 0.5;
+        }
+
+        .value_chart .line .situation .sync_price {
+            display: block;
+            padding-top: 5px;
+            font-size: 1rem;
+            line-height: 0.81;
+            color: #fff;
+            opacity: 1;
+        }
+
+        .value_chart .line .situation .sync_price b {
+            font-size: 1rem;
+            line-height: 0.81;
+            color: #fff;
+            font-weight: 300;
+            opacity: 1;
+        }
+    }
+
+    .box .adequate_price {
+        width: 100%;
+
+        .line {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .line .domain {
+            flex: 1;
+            margin: 0 2px;
+        }
+
+        .line .domain .price {
+            opacity: 0;
+            display: inline-block;
+            padding: 4px 6px 6px 6px;
+            border-radius: 3px;
+            background-color: #e57828;
+            color: #fff;
+            width: 100%;
+            height: 30px;
+            margin-left: -6px;
+        }
+
+        .line .domain .price span {
+            color: #fff;
+            font-size: 0.6rem;
+            display: block;
+            opacity: 0.51;
+        }
+
+        .line .domain .price span:nth-child(2) {
+            font-size: 0;
+            opacity: 1;
+            padding-top: 4px;
+        }
+
+        .line .domain.active .price span:nth-child(2) {
+            font-size: 1rem;
+        }
+
+        .line .domain .price span b {
+            color: #fff;
+            font-weight: 300;
+        }
+
+        .line .domain .price_line {
+            position: relative;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .line .domain .price_line::before {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 4px;
+            background: #c9ccf4;
+            z-index: 90;
+        }
+
+        .line .domain:first-child .price_line::before {
+            border-top-left-radius: 16px;
+            border-bottom-left-radius: 16px;
+        }
+
+        .line .domain:last-child .price_line::before {
+            border-top-right-radius: 16px;
+            border-bottom-right-radius: 16px;
+        }
+
+        .line .domain .price_line span {
+            display: block;
+            margin-top: 11px;
+            font-size: 0.875rem;
+            line-height: 0.93;
+            color: #c3c3c3;
+        }
+
+        /* 종목진단 - 적정주가탭 - 적정주가 노데이터 */
+        .nodata_area .no_data {
+            text-align: center;
+            padding: 9px 0;
+            margin-top: 10px;
+            border-radius: 2px;
+            background-color: #e0e5f0;
+            font-size: 0.875rem;
+            line-height: 1.21;
+            color: #E57828;
+        }
+
+        .nodata_area .line {
+            position: relative;
+            width: 100%;
+            height: 2px;
+            border-radius: 20px;
+            background-color: #e0e5f0;
+            margin-top: 20px;
+        }
+
+        .nodata_area .line .g_action {
+            position: absolute;
+            left: 0;
+            top: -6px;
+            margin-left: -5px;
+            z-index: 2;
+            display: inline-block;
+            background: #f8d4b5;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            font-size: 0;
+        }
+
+        .nodata_area .line .g_action::after {
+            content: "";
+            position: absolute;
+            left: 2px;
+            top: 2px;
+            display: inline-block;
+            background: #fff;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            font-size: 0;
+        }
+
+        /* 매우저평가 */
+        .nodata_area .line .g_action.g_buying {
+            top: -3px;
+            left: 4%;
+            right: auto;
+            width: 8px;
+            height: 8px;
+            background-color: #f8d4b5;
+        }
+
+        .nodata_area .line .g_action.g_buying::after {
+            content: "매우저평가";
+            position: absolute;
+            left: 0;
+            top: 20px;
+            display: inline-block;
+            width: 60px;
+            font-size: 12px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.08;
+            letter-spacing: normal;
+            text-align: left;
+            color: #c3c3c3;
+        }
+
+        /* 매우고평가 */
+        .nodata_area .line .g_action.g_sell {
+            top: -3px;
+            left: auto;
+            right: 4%;
+            width: 8px;
+            height: 8px;
+            background-color: #f8d4b5;
+        }
+
+        .nodata_area .line .g_action.g_sell::after {
+            content: "매우고평가";
+            position: absolute;
+            left: auto;
+            right: 0;
+            top: 20px;
+            display: inline-block;
+            width: 60px;
+            font-size: 12px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.08;
+            letter-spacing: normal;
+            text-align: left;
+            color: #c3c3c3;
+        }
+
+        .nodata_area .line .domain .price_line::before {
+            background: #ebebeb;
+        }
+
+        .nodata_area .g_action {
+            background: #a7a7a7;
+        }
+
+        .nodata_area .adequate .remark {
+            margin-top: 3px;
+        }
+
+        .nodata_area .adequate .remark .txt_filter.size_B i {
+            width: 8px;
+            height: 8px;
+            margin: 0 1px 1px;
+            opacity: 0.67;
+        }
+
+        /* 프리미엄 가입자가 아닌 경우 */
+        .nodata_area .banner_prm {
+            background: #e57828;
+            border-radius: 2px;
+            margin-top: 10px;
+            padding: 8px 0 10px;
+            text-align: center;
+        }
+
+        .nodata_area .banner_prm .cho_prm {
+            color: #fff;
+            font-size: 0.75rem;
+        }
+
+        .nodata_area .banner_prm .cho_prm i {
+            display: inline-block;
+            background: url('../img/Icon_lock.svg') no-repeat;
+            width: 10px;
+            height: 13px;
+            background-size: 10px 13px;
+            margin-right: 4px;
+            position: relative;
+            top: 2px;
+        }
+
+        .nodata_area .banner_prm .weeks_free {
+            color: #FFDA0D;
+            text-decoration: underline;
+            font-size: 0.75rem;
+            font-weight: 500;
+            margin-left: 5px;
+        }
+
+        .nodata_area .banner_prm.prm_service .weeks_free {
+            color: #1EE8BE;
+        }
+
+        .adequate {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .adequate strong span {
+            display: block;
+            color: #333;
+            font-size: 0.6rem;
+            text-align: left;
+            padding-bottom: 2px;
+        }
+
+        .adequate strong {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 3px;
+            background-color: #f5f6ff;
+            font-size: 0.9375rem;
+            font-weight: normal;
+            line-height: 0.87;
+            color: #333;
+        }
+
+        .adequate strong b {
+            font-weight: 300;
+        }
+
+        /* 적정주가 활성화 된 영역 */
+        .line .domain.active .price {
+            opacity: 1;
+            position: relative;
+        }
+
+        .line .domain.active .price::before {
+            top: 100%;
+            left: 50%;
+            border: solid transparent;
+            content: " ";
+            height: 0;
+            width: 0;
+            position: absolute;
+            pointer-events: none;
+            border-color: rgba(64, 79, 195, 0);
+            border-top-color: #E57828;
+            border-width: 7px;
+            margin-left: -7px;
+        }
+
+        .line .domain.active .price_line::before {
+            background: #e57828;
+        }
+
+        .line .domain.active .price_line span {
+            color: #E57828;
+            font-weight: bold;
+        }
+    }
+
+    .evaluation_data {
+        position: relative;
+        width: 100%;
+        box-sizing: border-box;
+        margin-top: 25px;
+        padding: 0;
+        border-top: 1px solid #eaedf5;
+        margin-bottom: 0;
+
+        &::before {
+            content: "";
+            display: inline-block;
+            position: absolute;
+            left: 50%;
+            margin-left: -6px;
+            top: 27px;
+            width: 1px;
+            height: 45px;
+            background: #e0e4e9;
+        }
+
+        .txt_guide {
+            right: 0;
+            top: 8px;
+        }
+
+        .guide_box {
+            left: auto;
+            right: -15px;
+        }
+
+        .evaluation_table th {
+            padding: 0;
+            text-align: left;
+            color: #333;
+            width: 40%;
+            box-sizing: border-box;
+        }
+
+        .evaluation_table td {
+            width: 60%;
+            box-sizing: border-box;
+            text-align: right;
+        }
+
+        .evaluation_table th span {
+            color: #333;
+        }
+
+        .evaluation_table td span b {
+            font-weight: 300;
+            opacity: 1;
+        }
+    }
+}
+
+
+.globalStock .sub_recom .evaluation_data {
+    .evaluation_table {
+        display: inline-block;
+        width: calc(100% / 2 - 4px);
+        margin-top: 20px;
+    }
+
+    &:first-child {
+        border-right: 1px solid #C3C3C3;
+    }
+
+    th {
+        color: #333;
+        font-size: 0.75rem;
+        padding: 6px 8px 6px 15px;
+        height: 28px;
+        box-sizing: border-box;
+    }
+
+    td {
+        padding: 6px 4px;
+    }
+
+    td.prm_lock {
+        background: #E6E7F4;
+        border-radius: 10px;
+        padding: 2px 10px 5px;
+        margin-bottom: 3px;
+        display: inline-block;
+        position: relative;
+        top: 2px;
+    }
+
+    td.prm_lock span {
+        font-size: 0.84rem;
+    }
+
+    td span {
+        color: #333;
+        font-size: 1rem;
+        font-weight: 500;
+    }
+
+    td span b {
+        color: #333;
+        font-size: 1rem;
+        font-weight: normal;
+        opacity: 0.7;
+    }
+
+
+    .txt_guide {
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        position: absolute;
+        right: 15px;
+        top: 0;
+    }
+
+    .txt_guide img {
+        display: inline-block;
+        width: 100%;
+    }
+
+    .guide_box {
+        box-shadow: 0px 0px 7px 2px #dfdfdf;
+        border-radius: 8px;
+        position: absolute;
+        left: 15px;
+        top: 26px;
+        z-index: 80;
+        padding: 35px 15px 15px;
+        background: #fff;
+        width: 340px;
+        box-sizing: border-box;
+        z-index: 9998;
+        display: none;
+    }
+
+    .guide_box .clse {
+        display: inline-block;
+        font-size: 0;
+        width: 24px;
+        height: 24px;
+        box-sizing: border-box;
+        position: absolute;
+        right: -7px;
+        top: -8px;
+        background-color: #d3d3d3;
+        padding: 2px;
+        border-radius: 50%;
+    }
+
+    .guide_box .clse::after {
+        content: '';
+        height: 14px;
+        border-left: 1px solid #fff;
+        position: absolute;
+        transform: rotate(45deg);
+        top: 5px;
+        left: 12px;
+    }
+
+    .guide_box .clse::before {
+        content: '';
+        height: 14px;
+        border-left: 1px solid #fff;
+        position: absolute;
+        transform: rotate(-45deg);
+        top: 5px;
+        left: 12px;
+    }
+
+    .guide_box.show {
+        display: block;
+    }
+
+    .guide_box.hide {
+        display: none;
+    }
+
+    .guide_box .title {
+        font-weight: bold;
+        display: block;
+        color: #333;
+        font-size: 1rem;
+        line-height: 22px;
+        text-align: left;
+    }
+
+    .guide_box ul {
+        margin-top: 15px;
+        margin-bottom: 20px;
+    }
+
+    .guide_box ul li {
+        color: #8380A0;
+        margin-bottom: 5px;
+        text-align: left;
+        line-height: 22px;
+        font-size: 0.8rem;
+        vertical-align: top;
+        font-weight: normal;
+    }
+
+    .guide_box ul li strong {
+        font-weight: bold;
+        color: #444;
+        vertical-align: middle;
+        font-size: 0.9rem;
+    }
+}
+
+.globalStock .sub_recom .sub_mid.outline_box .box .value_chart {
+	width: 100%;
+	padding: 0;
+	overflow: initial;
+}
+.globalStock .sub_recom .sub_mid.outline_box .box .value_chart .prm_lock {
+    width: 100%;
+}
+.globalStock .sub_recom .sub_mid.outline_box .box .value_chart .no_data {
+	padding: 6px 14px;
+	border-radius: 2px;
+	background-color: #e6e7f4;
+	font-size: 0.7rem;
+	font-weight: normal;
+	line-height: 1.18;
+	color: #E57828;
+	text-align: center;
+}
+
+.globalStock .sub_recom .sub_mid.outline_box .box .value_chart .no_data+.line {
+	margin-top: 11px;
+}
+
+.globalStock .sub_recom .sub_mid.outline_box .box .value_chart .prm_lock span {
+	position: relative;    
+	display: block;
+	padding: 6px 14px;
+	border-radius: 2px;
+	font-size: 0.7rem;
+	font-weight: normal;
+	line-height: 1.18;
+	color: #E57828;
+	text-align: center;
+	background: #e0e5f0 url('../img/icon_prm_lock.svg') no-repeat 10px center;
+	background-size: auto 12px;
+}
+
+.globalStock .sub_recom .sub_mid.outline_box .box .value_chart .prm_lock span i {
+	position: absolute;
+	left: 10px;
+	top: 6px;
+	display: inline-block;
+	vertical-align: middle;
+	width: 10px;
+	height: 13px;
+	margin-right: 4px;
+	background: url('../img/Icon_lock.svg') no-repeat 0 0;
+	background-size: 10px 13px;
+}
+
+.globalStock .sub_recom .sub_mid.outline_box .box .value_chart .prm_lock+.line {
+	margin-top: 11px;
+}
+
+.globalStock .sub_recom .sub_mid.outline_box .box .value_chart .line {
+	position: relative;
+	width: calc(100% - 20px);
+	box-sizing: border-box;
+	height: 2px;
+	border-radius: 20px;
+	background-color: #e6e7f4;
+	margin: 35px auto 0;
+}
+
+/* .globalStock .sub_recom .sub_mid.outline_box .box .value_chart .line::before,
+.globalStock .sub_recom .sub_mid.outline_box .box .value_chart .line::after {
+	content: '';
+	display: inline-block;
+	position: absolute;
+	left: -15px;
+	bottom: 0;
+	width: 15px;
+	height: 2px;  
+	border-radius: 20px;
+	background-color: #e6e7f4;
+} */
+.globalStock .sub_recom .sub_mid.outline_box .box .value_chart .line::after {
+	left: auto;
+	right: -15px;
+}
+
+.globalStock .sub_recom .sub_mid.outline_box .box .value_chart .line .g_action {
+	position: absolute;
+	left: 0;
+	top: -6px;
+	margin-left: -5px;
+	z-index: 2;
+	display: inline-block;
+	background: #E57828;
+	width: 14px;
+	height: 14px;
+	border-radius: 50%;
+	font-size: 0;
+}
+
+.globalStock .sub_recom .sub_mid.outline_box .box .value_chart .line .g_action::after {
+	content: "";
+	position: absolute;
+	left: 2px;
+	top: 2px;
+	display: inline-block;
+	background: #fff;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	font-size: 0;
+}
+
+.globalStock .sub_recom .sub_mid.outline_box .box .value_chart .no_data+.line .g_action,
+.globalStock .sub_recom .sub_mid.outline_box .box .value_chart .prm_lock+.line .g_action {
+	background-color: #f8d4b5;
+}
+
+.globalStock .sub_recom .sub_mid.outline_box .box .value_chart .adequate {
+	margin-top: 13px;
+}
+
+.globalStock .sub_recom .sub_mid.outline_box .box .value_chart .adequate span {
+	display: block;
+	font-size: 0.7rem;
+	font-weight: 300;
+	line-height: 1.3;
+	text-align: center;
+	color: #333;
+}
+
+.globalStock .sub_recom .sub_mid.outline_box .box .value_chart .adequate strong {
+	display: block;
+	padding-top: 3px;
+	font-size: 0.8125rem;
+	font-weight: normal;
+	line-height: 1;
+	text-align: center;
+	color: #333;
+}
+
+.globalStock .sub_recom .sub_mid.outline_box .box .value_chart .adequate strong b {
+	font-weight: 300;
+}
+
+.globalStock .sub_recom .sub_mid.outline_box .box .value_chart .adequate .remark {
+	margin-top: 3px;
+}
+
+.globalStock .sub_recom .sub_mid.outline_box .box .value_chart .adequate .remark .txt_filter.size_B i {
+	width: 8px;
+	height: 8px;
+	margin: 0 1px 1px;
+	opacity: 0.67;
+}
+
+.globalStock .sub_recom .sub_mid.outline_box .box .value_chart .line .situation {
+	position: absolute;
+	left: 0;
+	top: -30px;
+	width: 56px;
+	text-align: center;
+	padding-bottom: 15px;
+	margin-left: calc(-54px / 2);
+}
+
+@media (min-width:320px) and (max-width:359px) {
+	.globalStock .sub_recom .sub_mid.outline_box .box .value_chart .line .situation {
+		padding-bottom: 12px;
+		width: 42px;
+		margin-left: calc(-41px / 2);
+	}
+}
+
+.globalStock .sub_recom .sub_mid.outline_box .box .value_chart .line .situation::after {
+	content: "";
+	top: 100%;
+	left: 50%;
+	margin-left: -4px;
+	/* border: solid transparent; */
+	content: " ";
+	position: absolute;
+	pointer-events: none;
+	width: 10px;
+	height: 10px;
+	/* background: url('../img/situation_arow.svg') no-repeat center center; */
+	border-radius: 50%;
+	background-color: #E57828;
+	z-index: 90;
+}
+
+/* 0 미만인 경우 */
+.globalStock .sub_recom .sub_mid.outline_box .box .value_chart .line .situation.under {
+	margin-left: calc(-24px / 2);
+	width: auto;
+}
+
+.globalStock .sub_recom .sub_mid.outline_box .box .value_chart .line .situation.under::after {
+	left: calc(50% - 10px);
+}
+
+/* 100% 초과인 경우 */
+.globalStock .sub_recom .sub_mid.outline_box .box .value_chart .line .situation.over {
+	left: auto;
+	right: auto;
+	margin-left: auto;
+	margin-right: calc(-18px / 2);
+	width: auto;
+}
+
+.globalStock .sub_recom .sub_mid.outline_box .box .value_chart .line .situation.over::after {
+	left: calc(50% + 10px);
+}
+
+/* 적극매수 */
+.globalStock .sub_recom .sub_mid.outline_box .box .value_chart .line .situation.St_buying {
+	left: 0;
+	text-align: left;
+}
+
+.globalStock .sub_recom .sub_mid.outline_box .box .value_chart .line .situation.St_buying::after {
+	margin-left: -19px;
+}
+
+/* 매우 저평가 */
+.globalStock .sub_recom .sub_mid.outline_box .box .value_chart .line .situation.buying {
+	left: 4%;
+}
+
+.globalStock .sub_recom .sub_mid.outline_box .box .value_chart .line .situation.buying::after {
+	margin-left: -4px;
+}
+
+/* 매도 */
+.globalStock .sub_recom .sub_mid.outline_box .box .value_chart .line .situation.sell {
+	left: 47%;
+}
+
+.globalStock .sub_recom .sub_mid.outline_box .box .value_chart .line .situation.sell::after {
+	margin-left: -10px;
+}
+
+/* 매우 고평가 */
+.globalStock .sub_recom .sub_mid.outline_box .box .value_chart .line .situation.St_sell {
+	left: auto;
+	right: 0;
+	text-align: right;
+}
+
+.globalStock .sub_recom .sub_mid.outline_box .box .value_chart .line .situation.St_sell::after {
+	margin-left: 4px;
+}
+
+/* 적정가 */
+.globalStock .sub_recom .sub_mid.outline_box .box .value_chart .line .situation.propriety {
+	left: 50%;
+	margin-left: -27px;
+}
+
+.globalStock .sub_recom .sub_mid.outline_box .box .value_chart .line .situation.propriety::after {
+	display: none;
+	margin-left: -10px;
+	top: calc(100% - 2px);
+}
+
+.globalStock .sub_recom .sub_mid.outline_box .box .value_chart .line .situation span {
+	position: relative;
+	font-size: 0.875rem;
+	font-weight: bold;
+	line-height: 0.93;
+	color: #E57828;
 }
 
 .globalStock .sub_recom .bandchart_more {	

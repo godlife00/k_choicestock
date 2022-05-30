@@ -401,6 +401,13 @@ $(document).ready(function () {
         $('.tabletabs_content.tabs_03').fadeIn();
     });
 
+    $('.globalStock .sub_search .sub_mid .adequate_stock .evaluation_data .txt_guide').on('click', function () {
+        $('.globalStock .sub_search .sub_mid .adequate_stock .evaluation_data .guide_box').show();
+    });
+    $('.globalStock .sub_search .sub_mid .evaluation_data .guide_box .clse').on('click', function () {
+        $('.globalStock .sub_search .sub_mid .evaluation_data .guide_box').hide();
+    });
+
     // 상단 검색 GNB 고정
     if ($('.schfix_inc').length) {        
         $(window).scroll(function () {

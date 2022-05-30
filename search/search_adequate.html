@@ -137,65 +137,68 @@
 
                 <div class="adequate_stock">
                     <div class="box">
-                        <p class="title"><a href="">적정주가</a></p>
+                        <p class="title"><a href="">AI적정주가</a></p>
                         <div class="con">
-                            <div class="adequate_price">
+
+                            <div class="value_chart">
                                 <div class="line">
-                                    <!-- 활성화된 적정주가 domain active -->
-                                    <div class="domain active">
-                                        <div class="price">
-                                            <span>현재가</span>
-                                            <span class="sync_price">2333.<b>00</b></span>
-                                        </div>
-                                        <div class="price_line">
-                                            <span>적극매수</span>
-                                        </div>
+                                    <!-- 0 미만인 경우 클래스 under 추가 -->
+                                    <div class="situation under" style="left: -10px;">
+                                        <span>현재가</span>
+                                        <span class="sync_price">-823.<b>00</b></span>
                                     </div>
-                                    <div class="domain">
-                                        <div class="price">
-                                            <span>현재가</span>                                            
-                                        </div>
-                                        <div class="price_line">
-                                            <span>매수</span>
-                                        </div>
+                                    <!-- <div class="situation" style="left: 0%;">
+                                        <span>현재가</span>
+                                        <span class="sync_price">23.<b>00</b></span>
+                                    </div> -->
+                                    <div class="situation" style="left: 46%;">
+                                        <span>현재가</span>
+                                        <span class="sync_price">823,823.<b>00</b></span>
                                     </div>
-                                    <div class="domain">
-                                        <div class="price">
-                                            <span>현재가</span>                                            
-                                        </div>
-                                        <div class="price_line">
-                                            <span>보유</span>
-                                            <span class="g_action" style="left: 50%;"></span>
-                                        </div>
+                                    <!-- <div class="situation" style="left: 100%;">
+                                        <span>현재가</span>
+                                        <span class="sync_price">23.<b>00</b></span>
+                                    </div> -->
+                                    <!-- 100% 벗어난 경우 클래스 over 추가 -->
+                                    <div class="situation over" style="right: -10px">
+                                        <span>현재가</span>
+                                        <span class="sync_price">23.<b>00</b></span>
                                     </div>
-                                    <div class="domain">
-                                        <div class="price">
-                                            <span>현재가</span>                                            
-                                        </div>
-                                        <div class="price_line">
-                                            <span>매도</span>
-                                        </div>
-                                    </div>
-                                    <div class="domain">
-                                        <div class="price">
-                                            <span>현재가</span>                                            
-                                        </div>
-                                        <div class="price_line">
-                                            <span>적극매도</span>
-                                        </div>
-                                    </div>
+
+                                    <span class="g_action g_buying"></span><!-- 매우저평가 -->
+                                    <span class="g_action" style="left: 50%;"></span><!-- 적정가 -->
+                                    <span class="g_action g_sell"></span><!-- 매우고평가 -->
                                 </div>
                                 <div class="adequate">
                                     <strong>
-                                        <span>적정가</span>18808.<b>88</b>
+                                        <span>적정가</span>
+                                        108.<b>88</b>
                                     </strong>
                                 </div>
                             </div>
-                            <!-- //adequate_price -->
                         </div>
 
-                        <div class="evaluation_data">                            
-                            <table cellspacing="0" border="1" class="tableRanking evaluation_table">                                
+                        <div class="evaluation_data">
+                            <span class="txt_guide"><img src="../img/txt_guide.svg" alt="가이드보기"></span>
+                            <div class="guide_box">
+                                <span class="clse">닫기</span>
+                                <ul>
+                                    <li>적정주가는 기업의 과거 실적과 이익 성장 유지 가능성 및 향후 전망을 반영해 계산합니다. 투자매력 점수가 우량 기업 이상이고, 현재가가 저평가
+                                        상태에 있는 기업에 투자하는 것이 좋습니다.<br>
+                                        <br>
+                                        적극매수 : 현재가 &lt; 저평가<br>
+                                        매수 : 저평가 &lt;= 현재가 &lt; 적정가<br>
+                                        보유 : 적정가 &lt;= 현재가 &lt; 고평가<br>
+                                        매도 : 고평가 &lt;= 현재가 &lt; 매우고평가<br>
+                                        적극매도 : 매우고평가 &lt;= 현재가
+                                    </li>
+                                </ul>
+                            </div>
+                            <table cellspacing="0" border="1" class="tableRanking evaluation_table">
+                                <colgroup>
+                                    <col width="">
+                                    <col width="">
+                                </colgroup>
                                 <tbody>
                                     <tr>
                                         <th class="title">
@@ -248,39 +251,16 @@
                 <!-- 벨류라인 데이터가 없는 경우 -->
                 <div class="adequate_stock">
                     <div class="box">
-                        <p class="title"><a href="">적정주가</a></p>
+                        <p class="title"><a href="">AI적정주가</a></p>
                         <div class="con">
                             <div class="adequate_price">
                                 <div class="nodata_area">
                                     <div class="no_data">밸류에이션 데이터부족</div>
 
-                                    <div class="line">
-                                        <div class="domain">
-                                            <div class="price_line">
-                                                <span>적극매수</span>
-                                            </div>
-                                        </div>
-                                        <div class="domain">
-                                            <div class="price_line">
-                                                <span>매수</span>
-                                            </div>
-                                        </div>
-                                        <div class="domain">
-                                            <div class="price_line">
-                                                <span>보유</span>
-                                                <span class="g_action" style="left: 50%;"></span>
-                                            </div>
-                                        </div>
-                                        <div class="domain">
-                                            <div class="price_line">
-                                                <span>매도</span>
-                                            </div>
-                                        </div>
-                                        <div class="domain">
-                                            <div class="price_line">
-                                                <span>적극매도</span>
-                                            </div>
-                                        </div>
+                                    <div class="line">                                        
+                                        <span class="g_action g_buying"></span><!-- 매우저평가 -->
+                                        <span class="g_action" style="left: 50%;"></span><!-- 적정가 -->
+                                        <span class="g_action g_sell"></span><!-- 매우고평가 -->
                                     </div>
                                     <div class="adequate">
                                         <span class="remark">
