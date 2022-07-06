@@ -1087,6 +1087,10 @@
                 fill: rgb(204, 209, 213);
                 background: #ccd1d5;
             }
+
+            .highcharts-text-outline {                
+                stroke-width: 0px;
+            }
         }
     }
 }
@@ -1371,6 +1375,9 @@
                         rect.highcharts-color-2 {
                             fill: rgb(204, 209, 213);
                             background: #ccd1d5;
+                        }
+                        .highcharts-text-outline {
+                            stroke-width: 0px;                            
                         }
                     }
 
