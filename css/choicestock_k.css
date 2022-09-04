@@ -5978,7 +5978,20 @@ html {
 
 .globalStock .sub_search .sub_mid.outline_investCharm .summary .view_box {
   overflow: hidden;
-  height: 62px;
+  max-height: 62px;
+  -webkit-transition: max-height 0s ease-out;
+  transition: max-height 0s ease-out;
+}
+
+.globalStock .sub_search .sub_mid.outline_investCharm .summary.big {
+  display: inline-block;
+}
+
+.globalStock .sub_search .sub_mid.outline_investCharm .summary.big .view_box {
+  height: auto;
+  max-height: 100%;
+  -webkit-transition: max-height 0.25s ease-in;
+  transition: max-height 0.25s ease-in;
 }
 
 .globalStock .sub_search .sub_mid.outline_investCharm .summary.big::before {

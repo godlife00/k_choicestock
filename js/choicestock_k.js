@@ -367,12 +367,12 @@ $(document).ready(function () {
         // div 사이즈는 big, small        
         if ($(this).hasClass("big")) {
             $(this).children('div').animate({
-                height: '62px'
+                // height: '62px'
             }, 300);
             $(this).removeClass('big').addClass('small');
         } else {
             $(this).children('div').animate({
-                height: '100%'
+                // height: 'auto'
             }, 300);
             $(this).removeClass('small').addClass('big');            
         }
