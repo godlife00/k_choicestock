@@ -1762,10 +1762,7 @@
             box-sizing: border-box;    
             vertical-align: top;
             position: relative;    
-        }
-        .recom_chartList .chartData .left {
-            
-        }
+        }        
         .recom_chartList .chartData .left .event_name {
             color: #333;
             font-size: 0.9375rem;            
@@ -1788,10 +1785,7 @@
         }
         .recom_chartList .chartData .left .info {
             margin-top: 8px;
-        }
-        .recom_chartList .chartData .left .info .sum {
-            
-        }
+        }        
         .recom_chartList .chartData .left .info .sum .eng,
         .recom_chartList .chartData .left .info .sum .eng a {            
             color: #82929f;
@@ -1856,10 +1850,7 @@
             font-weight: 300;
             opacity: 1;
             color: #333;
-        }
-        .recom_chartList .chartGoal .decrease.dod {
-            
-        }
+        }        
         .recom_chartList .chartGoal .target {
             display: inline-block;	
             width: calc(100% / 2);
@@ -2274,7 +2265,7 @@
                     padding: 0;
                     margin-top: 10px;           
                     display: inline-block;
-                    float: right;                             
+                    // float: right;                             
                 }
             }        
             

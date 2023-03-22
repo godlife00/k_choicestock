@@ -3500,7 +3500,6 @@ html {
   padding: 0;
   margin-top: 10px;
   display: inline-block;
-  float: right;
 }
 .globalStock .sub_recom .sub_mid.eventPicks_area .ptfo_area .tabsArea .tab_container {
   margin-top: 15px;
@@ -4021,6 +4020,7 @@ html {
   vertical-align: top;
   left: 8px;
   position: absolute;
+  transform: rotate(-90deg);
   -webkit-transform: rotate(-90deg);
   -moz-transform: rotate(-90deg);
 }
@@ -4338,7 +4338,6 @@ html {
   right: 5px;
   top: 4px;
   display: inline-block;
-  float: right;
   width: 38px;
   height: 38px;
   background: url("../img/btn_handle.png") no-repeat center center;
@@ -8384,7 +8383,6 @@ html {
   font-size: 10px;
   letter-spacing: normal;
   text-align: right;
-  float: right;
   color: #d3d3d3;
 }
 .globalStock .sub_recipe .sub_mid.recipe_view .recipe_area .area .attention_box {
@@ -8548,7 +8546,6 @@ html {
   padding: 0 10px;
 }
 .globalStock .sub_catch .catch_wrap .catch_guide .terms_btn {
-  float: right;
   display: inline-block;
   width: 76px;
   background: #E57828;
@@ -8792,7 +8789,6 @@ html {
   display: block;
   text-align: center;
   padding: 24px 0 6px;
-  vertical-align: top;
 }
 .globalStock .sub_catch .catch_wrap .chart_catch_wrap .data_area .area .analysis_score .score strong {
   display: inline-block;

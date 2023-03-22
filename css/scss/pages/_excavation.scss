@@ -686,7 +686,7 @@
                 font-size: 10px;                
                 letter-spacing: normal;
                 text-align: right;
-                float: right;
+                // float: right;
                 color: #d3d3d3;
             }            
         }
@@ -876,7 +876,7 @@
         padding: 0 10px;
 
         .terms_btn {
-            float:right;            
+            // float:right;            
             display:inline-block;
             width:76px;
             background: $colorg;
@@ -1117,7 +1117,7 @@
                         display:block;
                         text-align:center;
                         padding:24px 0 6px;
-                        vertical-align:top;
+                        // vertical-align:top;
                     }
                     .score strong {
                         display:inline-block;
