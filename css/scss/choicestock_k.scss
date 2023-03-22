@@ -27,23 +27,14 @@ body {
 
 @include tablet {    
     /* tablet */
-    .globalStock .wrap {
-
-    }  
 }
 
 @include mobile375 {    
     /* mobile375 */
-    .globalStock .wrap {
-
-    }    
 }
 
 @include mobile {    
     /* mobile320 */
-    .globalStock .wrap {
-
-    }    
 }
 
 // components
@@ -100,7 +91,7 @@ body {
             display: block;
             font-size: $font15;
             color: $col333;
-            vertical-align: top;            
+            // vertical-align: top;            
             b {
                 font-weight: normal;                
             }
